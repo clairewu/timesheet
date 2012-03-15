@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.left_dashboard {
+    float: left;
+    width: 25%;
+}
+
+.main {
+    margin: 0 0 0 25%;
+    width: auto;
+}
+
+.single-form-content {
+    border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid solid solid;
+    border-width: medium 1px 1px;
+    font-weight: normal;
+    padding: 0;
+}

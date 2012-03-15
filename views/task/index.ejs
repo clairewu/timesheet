@@ -1,0 +1,28 @@
+<h1><%= title %></h1>
+	<div id="TaskList">
+	    <table id="myDataTable" class="display">
+		  <thead>
+				 <tr>
+					 <th class = single-form-content>Name</th>
+					 <th class = single-form-content>Project Name</th>
+					 <th class = single-form-content>Status</th>
+					 <th class = single-form-content>%Done</th>
+				 </tr>
+		  </thead>
+		  <tbody> 
+		       <% for(var i = 0, len = tasks.length; i < len; i++) {
+                    var task = tasks[i];
+               %>
+               <tr>
+                    <td class = single-form-content><a href="/task/edit?task_id=<%= task.id %>"><%= task.name %></a></td>
+                    <td class = single-form-content><%= task.project_name %></td>
+					<td class = single-form-content><%= task.status_type_id %></td>
+					<td class = single-form-content><%= task.pourcentage_done*10 %></td>
+               </tr>
+			   <% } %>
+		  </tbody>
+		</table>
+	</div>
+	<div id="ProjectCreate">
+		<a href="/task/create">Create a Task</a>
+	</div>

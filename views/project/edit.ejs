@@ -1,0 +1,41 @@
+<h1><%= title %></h1>
+	<div id="ProjectEdit">
+			<form id='edit_project_form' class='form-horizontal' action=<%= action %> method='post'>
+				
+				<div class='control-group'>
+					<label class='control-label' for='project_name'>Project name</label>
+					<% if(locals.project_name){ %>
+						<input class='input-xlarge' id='project_name' name='project_name' size='30' value='<%= project_name %>' />
+					<% }else{ %>
+						<input class='input-xlarge' id='project_name' name='project_name' size='30' />
+					<% } %>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='project_leader'>Project Leader</label>
+					<% if(locals.project_leader){ %>
+						<input class='input-xlarge' id='project_leader' name='project_leader' size='30' value='<%= project_leader %>' />
+					<% }else{ %>
+						<input class='input-xlarge' id='project_leader' name='project_leader' size='30' />
+					<% } %>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='project_desc'>Project Description</label>
+					<% if(locals.project_desc){ %>
+						<input class='input-xlarge' id='project_desc' name='project_desc' size='30' value='<%= project_desc %>' />
+					<% }else{ %>
+						<input class='input-xlarge' id='project_desc' name='project_desc' size='30' />
+					<% } %>
+				</div>
+				<% if(locals.project_id){ %>
+					<input type='hidden' id='project_id' name='project_id' value=<%= project_id %> />
+				<% } %>
+				<div class='form-actions'>
+					<input type='submit' class='btn' value='Save' />
+				</div>
+			</form>
+			<% if(locals.project_id){ %>
+				<div id="TaskCreate">
+					<a href="/task/create?project_id=<%= project_id %>">Create a Task</a>
+				</div>
+			<% } %>
+	</div>

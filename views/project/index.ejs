@@ -1,0 +1,24 @@
+<h1><%= title %></h1>
+	<div id="ProjectList">
+	    <table id="myDataTable" class="display">
+		  <thead>
+				 <tr>
+					 <th class = single-form-content>Name</th>
+					 <th class = single-form-content>Leader</th>
+				 </tr>
+		  </thead>
+		  <tbody> 
+		       <% for(var i = 0, len = projects.length; i < len; i++) {
+                    var project = projects[i];
+               %>
+               <tr>
+                    <td class = single-form-content><a href="/project/edit?project_id=<%= project.id %>"><%= project.name %></a></td>
+                    <td class = single-form-content><%= project.leader %></td>
+               </tr>
+			   <% } %>
+		  </tbody>
+		</table>
+	</div>
+	<div id="ProjectCreate">
+		<a href="/project/create">Create a project</a>
+	</div>

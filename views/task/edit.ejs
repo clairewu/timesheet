@@ -1,0 +1,79 @@
+<h1><%= title %></h1>
+	<div id="TaskEdit">
+			<form id='edit_task_form' class='form-horizontal' action=<%= action %> method='post'>
+				<div class='control-group'>
+					<label class='control-label' for='task_name'>task name</label>
+					<% if(locals.task_name){ %>
+						<input class='input-xlarge' id='task_name' name='task_name' size='30' value='<%= task_name %>' />
+					<% }else{ %>
+						<input class='input-xlarge' id='task_name' name='task_name' size='30' />
+					<% } %>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='project_id'>Project Id</label>
+					<% if(locals.project_id){ %>
+						<input class='input-xlarge' id='project_id' name='project_id' value=<%= project_id %> size='100' />
+					<%}else{%>
+						<input class='input-xlarge' id='project_id' name='project_id' size='100' />
+					<%}%>
+				</div>
+				<div class='control-group'>
+					<label class='control-label' for='task_desc'>task Description</label>
+					<% if(locals.task_desc){ %>
+						<input class='input-xlarge' id='task_desc' name='task_desc' value='<%= task_desc %>' size='100' />
+					<%}else{%>
+						<input class='input-xlarge' id='task_desc' name='task_desc' size='100' />
+					<%}%>
+				</div>
+				<div>
+					<label class='control-label' for='task_status'>Status *</label>
+					<select size=1 onChange='SetPourDone();setActualDate();changeField()' id="status_type_id" name="status_type_id" class="ace-dropdown">
+					
+						</optgroup>
+						<optgroup label="Waiting">
+							<% if(locals.status_type_id==0){ %>
+								<option  id="0" value="0" selected > To do</option>
+							<%}else{%>
+								<option  id="0" value="0" > To do</option>
+							<%}%>
+						</optgroup>
+						<optgroup label="In Progress">
+							<% if(locals.status_type_id==1){ %>
+								<option  id="1" value="1" selected > In Progress</option>
+							<%}else{%>
+								<option  id="1" value="1" > In Progress</option>
+							<%}%>
+							<% if(locals.status_type_id==2){ %>
+								<option  id="2" value="2" selected > To Verify</option>
+							<%}else{%>
+								<option  id="2" value="2" > To Verify</option>
+							<%}%>
+						</optgroup>
+						<optgroup label="Completed">
+							<% if(locals.status_type_id==3){ %>
+								<option  id="3" value="3" selected > Completed</option>
+							<%}else{%>
+								<option  id="3" value="3" > Completed</option>
+							<%}%>
+					</select>
+				</div>
+				<div>
+					<label class='control-label' for='task_done'>% Done </label>
+					<select style="display:Display" id="pourcentage_done" name="pourcentage_done" onchange="changeField();changeMasterRecurrencyField()" class="ace-dropdown">
+					<% for(var i=0; i<=10; i++) {%>
+						<% if(locals.pourcentage_done==i){ %>
+							<option value=<%= i %> selected ><%= i*10 %>%</option>
+						<% }else{ %>
+							<option value=<%= i %> ><%= i*10 %>%</option>
+						<% } %>
+					<% } %>
+					</select>
+				</div>		
+				<% if(locals.task_id){ %>
+					<input type='hidden' id='task_id' name='task_id' value=<%= task_id %> />
+				<% } %>
+				<div class='form-actions'>
+					<input type='submit' class='btn' value='Save' />
+				</div>
+			</form>
+		</div>
