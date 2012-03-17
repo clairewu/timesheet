@@ -65,5 +65,7 @@ app.get('/reset_pass',routes.reset_pass);
 app.get('/setting', routes.change_pass);
 app.post('/setting', routes.change_pass);
 
+app.get('/about', routes.about);
+
 app.listen(config.port);
 console.log("Express server listening on port %d", config.port);

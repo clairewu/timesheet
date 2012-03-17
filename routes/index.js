@@ -20,7 +20,8 @@ exports.edit_project = project_ctrl.edit;
 exports.edit_task = task_ctrl.edit;
 exports.tasks = task_ctrl.index;
 
-
+var static_ctrl = require('../controllers/static');
+exports.about = static_ctrl.about;
 
 // as one middleware
 exports.auth_user = sign_ctrl.auth_user;
