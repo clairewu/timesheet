@@ -1,0 +1,30 @@
+/**
+ * config
+ */
+
+exports.config = {
+	name: 'My Timesheet',
+	host: 'http://127.0.0.1',
+	session_secret: 'timesheet',
+	auth_cookie_name: 'timesheet',
+	port: 81,
+	
+	// mail SMTP
+	mail_port: 465,
+	mail_user: 'user@gmail.com',
+	mail_pass: 'pass',
+	mail_host: 'smtp.gmail.com',
+	mail_sender: 'user@gmail.com',
+	mail_use_authentication: true
+};
+
+exports.db_options = {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'stock',
+    database: 'stock'
+};
+
+
+	
