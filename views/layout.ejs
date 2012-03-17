@@ -1,5 +1,7 @@
 <HEAD>
-	<title><%= title %></title>
+	<%if(locals.title){%>
+		<title><%= title %></title>
+	<%}%>
 	<link rel='stylesheet' type='text/css' href='/stylesheets/style.css'/>
 	<link rel='stylesheet' type='text/css' href='/stylesheets/mycssmenu_styles.css'/>
 

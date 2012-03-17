@@ -26,6 +26,70 @@
 						<input class='input-xlarge' id='project_desc' name='project_desc' size='30' />
 					<% } %>
 				</div>
+				<div class='control-group'>
+					<div>
+						<label class='control-label' for='estimates'>Estimates:</label>
+					</div>
+					<div>
+						<label class='control-label' for='estimate_start'>-Start Date</label>
+						<input class='input-xlarge' id='estimate_start' name='estimates_start' size='100' />
+					</div>
+					<div>
+						<label class='control-label' for='estimate_end'>-End Date</label>
+						<input class='input-xlarge' id='estimate_end' name='estimates_end' size='100' />
+					</div>
+					<div>
+						<label class='control-label' for='estimate_hours'>-Hours</label>
+						<input class='input-xlarge' id='estimate_hours' name='estimate_hours' size='100' />
+					</div>
+				</div>
+				<div class='control-group'>
+					<div>
+						<label class='control-label' for='actuals'>Actuals:</label>
+					</div>
+					<div>
+						<label class='control-label' for='actual_start'>-Start Date</label>
+						<input class='input-xlarge' id='actual_start' name='estimates_start' size='100' />
+					</div>
+					<div>
+						<label class='control-label' for='actual_end'>-End Date</label>
+						<input class='input-xlarge' id='actual_end' name='actual_end' size='100' />
+					</div>
+					<div>
+						<label class='control-label' for='actual_hours'>-Hours</label>
+						<input class='input-xlarge' id='actual_hours' name='actual_hours' size='100' />
+					</div>
+				</div>
+				<div class='control-group'>
+					<div>
+					<label class='control-label' for='Assgignments'>Assgignments:</label>
+					<label class='control-label' ><a href="/project/assign_user">Assign a New User</a></label>
+					</div>
+					<div id="UserList">
+						<table id="UserListTable" class="display">
+						  <thead>
+								 <tr>
+									 <th class = single-form-content>Username</th>
+									 <th class = single-form-content>First Name</th>
+									 <th class = single-form-content>Last Name</th>
+								 </tr>
+						  </thead>
+						  <tbody>
+								<% if(locals.users){ %>
+								   <% for(var i = 0, len = users.length; i < len; i++) {
+										var user = users[i];
+								   %>
+								   <tr>
+										<td class = single-form-content><%= user.username %></td>
+										<td class = single-form-content><%= user.first_name %></td>
+										<td class = single-form-content><%= user.last_name %></td>
+								   </tr>
+								   <% } %>
+							   <% } %>
+						  </tbody>
+						</table>
+					</div>
+				</div>
 				<% if(locals.project_id){ %>
 					<input type='hidden' id='project_id' name='project_id' value=<%= project_id %> />
 				<% } %>

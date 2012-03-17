@@ -15,9 +15,18 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.bodyParser());
+
   app.use(express.methodOverride());
-  app.use(app.router);
+  
   app.use(express.static(__dirname + '/public'));
+
+  app.use(express.cookieParser());
+  app.use(express.session({
+		secret:config.session_secret,
+  }));
+  
+  // custom middleware
+  app.use(routes.auth_user);
 });
 
 app.configure('development', function(){
@@ -29,6 +38,15 @@ app.configure('production', function(){
 });
 
 // Routes
+app.get('/signup', routes.signup);
+app.post('/signup', routes.signup);
+app.get('/signin', routes.signin);
+app.post('/signin', routes.signin);
+
+app.get('/signout', routes.signout);
+
+app.get('/search_pass', routes.search_pass);
+app.post('/search_pass', routes.search_pass);
 
 app.get('/', routes.index);
 app.get('/projects', routes.projects);
@@ -42,6 +60,10 @@ app.get('/task/create', routes.create_task);
 app.post('/task/create', routes.create_task);
 app.get('/task/edit', routes.edit_task);
 app.post('/task/edit', routes.edit_task);
+
+app.get('/reset_pass',routes.reset_pass);
+app.get('/setting', routes.change_pass);
+app.post('/setting', routes.change_pass);
 
 app.listen(config.port);
 console.log("Express server listening on port %d", config.port);
