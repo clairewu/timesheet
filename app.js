@@ -15,16 +15,13 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.bodyParser());
-
-  app.use(express.methodOverride());
-  
+  app.use(express.methodOverride());  
   app.use(express.static(__dirname + '/public'));
 
   app.use(express.cookieParser());
   app.use(express.session({
 		secret:config.session_secret,
-  }));
-  
+  }));  
   // custom middleware
   app.use(routes.auth_user);
 });
@@ -54,6 +51,8 @@ app.get('/project/create', routes.create_project);
 app.post('/project/create', routes.create_project);
 app.get('/project/edit', routes.edit_project);
 app.post('/project/edit', routes.edit_project);
+app.get('/project/assign_user', routes.project_assign_user);
+app.post('/project/assign_user', routes.project_assign_user);
 
 app.get('/tasks', routes.tasks);
 app.get('/task/create', routes.create_task);

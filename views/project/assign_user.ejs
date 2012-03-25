@@ -1,0 +1,603 @@
+<html><!-- Version=8.27 --><!-- Copyright (c) 1999-2006 Replicon Inc. All rights reserved. --><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="EXPIRES" content="Fri Jan 1 12:00:00 PST 1999">
+<title>Project Team</title>
+<link id="mainStylesheet" rel="stylesheet" type="text/css" href="/assign_user/OldSchoolStylesheet.css" title="Default Stylesheet">
+<!-- Version=8.27 -->
+<!-- Copyright (c) 1999-2006 Replicon Inc. All rights reserved. -->
+<script type="text/javascript">htmlAbsolute="/14-3-2012/";</script><script type="text/javascript" src="/assign_user/rjsform.js"></script><script language="Javascript"><!--
+var doNotSubmit = false;
+//-->
+</script><script language="javascript" src="/assign_user/rbrowserdetector.js"></script><script language="javascript" src="/assign_user/util.js"></script><script language="javascript" src="/assign_user/stringutil.js"></script><script language="javascript" src="/assign_user/revent.js"></script><script language="javascript" src="/assign_user/coordinates.js"></script><script language="javascript" src="/assign_user/subclass.js"></script><script language="javascript" src="/assign_user/RegisterControl.js"></script><script type="text/javascript" src="/assign_user/ScriptResource_002.txt"></script>
+<script type="text/javascript" src="/assign_user/ScriptResource.txt"></script>
+
+<script type="text/javascript" src="/assign_user/ScriptResource_002.txt"></script>
+<script type="text/javascript" src="/assign_user/ScriptResource.txt"></script>
+<script type="text/javascript" src="/assign_user/ScriptResource_003.txt"></script>
+<script type="text/javascript" src="/assign_user/vector.js"></script><script type="text/javascript" src="/assign_user/ga-functions.js"></script><script language="JavaScript"><!--
+var calendarWindow=null;
+var findWindow=null;
+var userWindow=null;
+
+function CloseExtraWindows()
+{
+if (calendarWindow && ( String(calendarWindow.close) != "undefined" ) )
+calendarWindow.close();
+
+if (findWindow && ( String(findWindow.close) != "undefined" ) )
+findWindow.close();
+
+if (userWindow && ( String(userWindow.close) != "undefined" ) )
+userWindow.close();
+}
+
+
+//-->
+</script></head>
+<body onunload=" CloseExtraWindows();">
+<form name="editform">
+
+<center class="force-left-align">
+
+
+<table border="0" cellpadding="2" cellspacing="2">
+
+<tbody><tr><td align="CENTER">
+<h1>Create Project Team</h1>
+</td></tr>
+
+</tbody></table>
+
+
+<table border="0" cellpadding="2" cellspacing="2">
+<tbody><tr>
+<td>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td colspan="2">
+<h3>Users: </h3>
+</td></tr>
+
+<tr><td>
+Last Name starts with: </td><td>
+<input size="20" name="UserSelectLastName" type="TEXT">
+<script language="JavaScript"><!--
+focusfield = GetFieldNamed("UserSelectLastName",document.editform);
+//-->
+</script><script language="JavaScript"><!--
+focusfield = GetFieldNamed("UserSelectLastName",document.editform).focus();
+if (focusfield) focusfield.focus();
+//-->
+</script><script language="Javascript"><!--
+function changeState(buttonId,state,buttonClassName)
+{
+if(!buttonClassName) buttonClassName = 'button';
+
+var className = buttonClassName;
+switch (state)
+{
+case 1:
+className = buttonClassName+' '+buttonClassName+'Over';
+break;
+case 2:
+className = buttonClassName+' '+buttonClassName+'Down';
+break;
+}
+
+try
+{
+document.getElementById(buttonId).className = className;
+}
+catch (error)
+{
+// I don't care if it fails
+}
+}
+//--></script><table class="button" id="button_Find" onmouseover="changeState('button_Find',1,'button');" onmouseout="changeState('button_Find',0,'button');" onmouseup="changeState('button_Find',1,'button');" onmousedown="changeState('button_Find',2,'button');" onclick="loadAvailable('_User.Preference.Temp.Projects.SearchLastName',document.editform.UserSelectLastName.value);" title="Apply &quot;Last name starts with&quot; filter" cellspacing="0">
+<tbody><tr>
+<td class="leftCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="text">Find<br><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="rightCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+</tr>
+</tbody></table>
+
+<script language="Javascript"><!--
+setTimeout("changeState('button_Find',0,'button')",1);
+//--></script></td></tr>
+
+<tr><td>
+Department: </td>
+<td id="DepartmentDropdownContainer"><table class="dropDownControlContainer dropDownControlContainerUserSelectDepartmentId"><tbody><tr><td><table class="dropDownControl" id="UserSelectDepartmentId___Table"><tbody><tr id="UserSelectDepartmentId___DropDownControl"><td><input value="&lt; All &gt;" style="color: rgb(0, 0, 0);" readonly="readonly" class="dropDownText" id="UserSelectDepartmentId___DropDownText" type="text"></td><td style="width: 16px;" class="buttonDropDownUp" id="UserSelectDepartmentId___DropDownButton"></td></tr></tbody></table></td></tr><tr><td><div style="display: none;" id="UserSelectDepartmentId___DropDownWindow" class="dropDownWindowContainer dropDownControlContainerUserSelectDepartmentId"></div></td></tr></tbody></table></td>
+
+<input name="UserSelectDepartmentId" value="All" type="hidden">
+
+<script language="javascript"> // build node data
+var rootNodeList = new Array();
+var nodeMap = new Object();
+ var node = new HierarchyTreeNode('1', nodeMap[ '' ], 'Company' );
+ nodeMap['1'] = node;
+
+if ('' == '')
+rootNodeList[rootNodeList.length] = node;
+ var node = new HierarchyTreeNode('2', nodeMap[ '1' ], 'Finance' );
+ nodeMap['2'] = node;
+
+if ('1' == '')
+rootNodeList[rootNodeList.length] = node;
+ var node = new HierarchyTreeNode('3', nodeMap[ '1' ], 'Development' );
+ nodeMap['3'] = node;
+
+if ('1' == '')
+rootNodeList[rootNodeList.length] = node;
+ var node = new HierarchyTreeNode('4', nodeMap[ '1' ], 'Human Resources' );
+ nodeMap['4'] = node;
+
+if ('1' == '')
+rootNodeList[rootNodeList.length] = node;
+</script><script language="javascript"> // set hidden field for submission
+DropDownSetHiddenFieldListener = function(value,text) 
+{ 
+document.editform["UserSelectDepartmentId"].value = value;
+}
+var dropDown = new DropDown("UserSelectDepartmentId", rootNodeList, nodeMap);
+// options
+ dropDown.treeSetOptionAllText("< "+"All"+" >");
+dropDown.addAllOptionToNodeMap();
+ 
+
+var initText = "#cstring:#";
+ var node = nodeMap['All'];
+if(IsNullOrUndefined(node)) 
+{
+// add node if it is not found...
+node = new HierarchyTreeNode('All', nodeMap[ '' ], initText );
+nodeMap['All'] = node;
+rootNodeList.splice(0,0,node);
+}
+else
+{
+initText = node.getText();
+}
+ 
+
+dropDown.onClickItem.addEventListener ( new REventListener(DropDownSetHiddenFieldListener, this) );
+ 
+dropDown.attach($("DepartmentDropdownContainer"));
+
+ dropDown.setSelectedItem("All", initText);
+</script><script language="Javascript">      function departmentOnChange()
+    {
+      var value = $I("UserSelectDepartmentId").getSelectedItemId();
+      if (value == 'All')
+        value = '';
+      loadAvailable("_User.Preference.Temp.Projects.SearchDepartmentId",value);
+    }
+    $I("UserSelectDepartmentId").onClickItem.addEventListener( new REventListener(departmentOnChange) );
+  </script></tr>
+
+</tbody></table>
+
+</td>
+</tr>
+<tr>
+<td>
+
+<table>
+<tbody><tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tbody><tr><td>
+<h3>Available Project Team Members: </h3>
+</td></tr>
+<tr><td>
+<!-- Calvin: CLASS="scrollable" use DIV tag to create a horizontal scroll bar for "Available Project Team Memebers:" list onscroll="onDivScroll();" -->
+<div id="divAvailable" style="align: left; overflow: auto; width: 277px; height: 240px; border: 1px groove;">
+<!-- Calvin: SELECT.STYLE.min-width effects on DIV_SELECT scrollbars when actual SELECT.Options' width less or greater than DIV's width
+IE: perfect on both scrollbars; 
+FireFox: horizontal scrollbar perfect; vertical one still visible on right side if "...less than...", however acceptable
+Chrome: can't see lengthy SELECT options by moving horizontal scrollbar (overlaped) because of setting up .min-width
+will see a redundant vertical scrollbar in the mid if "...less than..."
+-->
+<select id="lstAvailable" name="availablelist" multiple="multiple" size="21" style="overflow: hidden; font: 10pt MS Sans Serif; width: 277px;">
+<%for (var i=0; i < user_list.length; i++){
+  var user = user_list[i];
+  if(!user.project_id){
+%>
+	<option value="User<%= i %>"><%= user.username %></option>
+  <%}
+}%>
+</select>
+</div> 
+</td></tr>
+</tbody></table>
+</td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100">
+<tbody><tr><td align="CENTER">
+<table class="button" id="button_%3E%3E" onmouseover="changeState('button_%3E%3E',1,'button');" onmouseout="changeState('button_%3E%3E',0,'button');" onmouseup="changeState('button_%3E%3E',1,'button');" onmousedown="changeState('button_%3E%3E',2,'button');" onclick="transferToSelected();" title="Add selected users to the Project Team" cellspacing="0">
+<tbody><tr>
+<td class="leftCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="text textShort">&gt;&gt;<br><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="rightCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+</tr>
+</tbody></table>
+
+<script language="Javascript"><!--
+setTimeout("changeState('button_%3E%3E',0,'button')",1);
+//--></script></td></tr>
+<tr><td align="CENTER">
+<table class="button" id="button_%3C%3C" onmouseover="changeState('button_%3C%3C',1,'button');" onmouseout="changeState('button_%3C%3C',0,'button');" onmouseup="changeState('button_%3C%3C',1,'button');" onmousedown="changeState('button_%3C%3C',2,'button');" onclick="transferFromSelected();" title="Remove selected users from the Project Team" cellspacing="0">
+<tbody><tr>
+<td class="leftCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="text textShort">&lt;&lt;<br><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="rightCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+</tr>
+</tbody></table>
+
+<script language="Javascript"><!--
+setTimeout("changeState('button_%3C%3C',0,'button')",1);
+//--></script></td></tr>
+</tbody></table>
+</td>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tbody><tr><td>
+<h3>Project Team Members: </h3>
+</td></tr>
+<tr><td>
+<div id="divSelected" style="align: left; overflow: auto; width: 277px; height: 240px; border: 1px groove;">
+<select id="lstSelected" name="selectedlist" multiple="multiple" size="14" style="overflow: hidden; font: 10pt MS Sans Serif; width: 277px; height: 240px;">
+<%for (var i=0; i < user_list.length; i++){
+  var user = user_list[i];
+  if(user.project_id){
+%>
+	<option value="User<%= i %>"><%= user.username %></option>
+  <%}
+}%>
+</select>
+</div>
+</td></tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="2" cellspacing="2">
+<tbody><tr class="force-left-align">
+<td align="CENTER"><table class="button" id="button_Save" onmouseover="changeState('button_Save',1,'button');" onmouseout="changeState('button_Save',0,'button');" onmouseup="changeState('button_Save',1,'button');" onmousedown="changeState('button_Save',2,'button');" onclick="save();" title="Save" cellspacing="0">
+<tbody><tr>
+<td class="leftCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="text">Save<br><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="rightCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+</tr>
+</tbody></table>
+
+<script language="Javascript"><!--
+setTimeout("changeState('button_Save',0,'button')",1);
+//--></script></td>
+<td width="20"></td>
+<td align="CENTER"><table class="button" id="button_Cancel" onmouseover="changeState('button_Cancel',1,'button');" onmouseout="changeState('button_Cancel',0,'button');" onmouseup="changeState('button_Cancel',1,'button');" onmousedown="changeState('button_Cancel',2,'button');" onclick="window.parent.close();" title="Cancel" cellspacing="0">
+<tbody><tr>
+<td class="leftCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="text">Cancel<br><img class="spacer" src="/assign_user/1pixel.gif"></td>
+<td class="rightCap"><img class="spacer" src="/assign_user/1pixel.gif"></td>
+</tr>
+</tbody></table>
+
+<script language="Javascript"><!--
+setTimeout("changeState('button_Cancel',0,'button')",1);
+//--></script></td>
+</tr>
+</tbody></table>
+
+</center>
+
+</form>
+
+<!--iframe name="load" src="/assign_user/replicon.htm" style="display: none;"></iframe-->
+
+<script language="Javascript"><!--
+
+function loadAvailable(filterPreferenceName, filterPreferenceValue)
+{
+  var setPref = '';
+  if (filterPreferenceName)
+    setPref = '&assign=' + filterPreferenceName + ',' + encodeURIComponent(filterPreferenceValue);
+  window.load.location = "assign_user?nextpage=projects/editprojectteam_transfer" + setPref;
+}
+
+/**********************
+ * Create Member Object *
+ **********************/
+function Member(type,id,name)
+{
+  this.type=type;
+  this.id=id;
+  this.name=name;
+  this.uniqueKey=type+id;
+
+  this.copy=Member_copy;
+  this.getType=Member_getType;
+  this.getId=Member_getId;
+  this.getName=Member_getName;
+  this.getUniqueKey=Member_getUniqueKey;
+  this.equals=Member_equals;
+}
+
+function Member_copy()
+{
+  var o=new Member(this.type,this.id,this.name);
+  return o;
+}
+function Member_getType() { return this.type; }
+function Member_getId() { return this.id; }
+function Member_getName() { return this.name; }
+function Member_equals(a) { return this.type==a.type && this.id==a.id; }
+function Member_getUniqueKey() { return this.uniqueKey; }
+
+
+
+var availableMap = new Array();
+var selectedMap = new Array();
+var availableList = new Vector();
+var selectedList = new Vector();
+var availableSorted = false;
+var selectedSorted = false;
+var memberMap = new Array();
+
+function clearAvailableList()
+{
+  availableList.empty();
+  availableMap = new Array();
+}
+
+function addToAvailableList(member)
+{
+  var key=member.getUniqueKey();
+  if (!availableMap[key])
+  {
+    availableList.addElement(member);
+    availableMap[key]=member;
+    memberMap[key]=member;
+  }
+  availableSorted=false;
+}
+
+function addToMemberList(member)
+{
+  var key=member.getUniqueKey();
+  if (!selectedMap[key])
+  {
+    selectedList.addElement(member);
+    selectedMap[key]=member;
+    memberMap[key]=member;
+  }
+  selectedSorted=false;
+}
+
+function removeFromMemberList(member)
+{
+  for (var i=0;i<selectedList.length;i++)
+    if (selectedList[i].equals(member))
+    {
+      selectedList.deleteElement(i);
+      selectedMap[member.getUniqueKey()]=false;
+      break;
+    }
+}
+
+function compareMember(a,b)
+{
+  if (a.type.toUpperCase()>b.type.toUpperCase())
+    return 1;
+  if (a.type.toUpperCase()<b.type.toUpperCase())
+    return -1;
+  if (a.name.toUpperCase()>b.name.toUpperCase())
+    return 1;
+  if (a.name.toUpperCase()<b.name.toUpperCase())
+    return -1;
+  return 0;
+}
+
+function updateAvailableList()
+{
+  var selectedFromList=document.editform.availablelist;
+  var list=availableList.getArray();
+  if (!availableSorted)
+  {
+    list.sort(compareMember);
+    availableSorted=true;
+  }
+
+  var optionsIndex=0;
+  var optionsList=selectedFromList.options;
+  optionsList.length=list.length;
+  var optionsLength=optionsList.length;
+  for (var i=0;i<list.length;i++)
+  {
+    var member=list[i];
+    var key=member.getUniqueKey();
+    if (!selectedMap[key])
+    {
+      var value=key;
+      if (optionsIndex<optionsLength)
+      {
+        optionsList[optionsIndex].text=member.getName();
+        optionsList[optionsIndex].value=value;
+        optionsList[optionsIndex].selected=false;
+      }
+      else
+        f.newOption(member.getName(),value);
+      optionsIndex++;
+    }
+  }
+  for (i=optionsList.length-1;i>=optionsIndex;i--)
+    optionsList[i]=null;
+  
+  /* Calvin: SELECT visible items and vitical scrollbar issue */
+  var tagSelect = document.getElementById("lstAvailable");
+  var tagSelectDiv = document.getElementById("divAvailable");
+  accomodateListSize(optionsIndex, tagSelect, tagSelectDiv);   
+}
+
+function updateMemberList()
+{
+  var selectedFromList=document.editform.selectedlist;
+  var list=selectedList.getArray();
+  if (!selectedSorted)
+  {
+    list.sort(compareMember);
+    selectedSorted=true;
+  }
+
+  var optionsIndex=0;
+  var optionsList=selectedFromList.options;
+  optionsList.length=list.length;
+  var optionsLength=optionsList.length;
+  for (var i=0;i<list.length;i++)
+  {
+    var member=list[i];
+    var key=member.getUniqueKey();
+    if (optionsIndex<optionsLength)
+    {
+      optionsList[optionsIndex].text=member.getName();
+      optionsList[optionsIndex].value=key;
+      optionsList[optionsIndex].selected=false;
+    }
+    else
+      f.newOption(member.getName(),key);
+    optionsIndex++;
+  }
+  for (i=optionsList.length-1;i>=optionsIndex;i--)
+    optionsList[i]=null;
+  
+  // Calvin: SELECT visible items and vitical scrollbar issue 
+  var tagSelect = document.getElementById("lstSelected");
+  var tagSelectDiv = document.getElementById("divSelected");
+  accomodateListSize(optionsIndex, tagSelect, tagSelectDiv);   
+}
+
+// Calvin: SELECT.size (visible items) and SELECT.style.width (redundant vertical scrollbar in the mid issue)
+function accomodateListSize(realOptionCount, tagSelect, tagSelectDiv)
+{
+  // SELECT tag's visible items
+  tagSelect.size = realOptionCount + 11;    // magic number 11: just leave some white lines to remove vertical scrolling issue
+   
+  // Redundant vertical scrollbar in the mid issue, especially on Chrome
+  // Carefull about following: neither "tagSelect.width" nor "tagSelect.style.width="0""
+  tagSelect.style.width = "";          // Firstly: have to force .offsetWidth (actual width) get refreshed 
+  if (parseInt(tagSelect.offsetWidth) <= parseInt(tagSelectDiv.style.width))    
+    tagSelect.style.width = tagSelectDiv.style.width;       
+  if (parseInt(tagSelect.offsetHeight) <= parseInt(tagSelectDiv.style.height))    
+    tagSelect.style.height = tagSelectDiv.style.height;       
+}
+
+function getMemberForId(value)
+{
+  console.log(memberMap);
+  console.log(value);
+  return memberMap[value];
+}
+
+/***** Transfer Function *****/
+function transferToSelected()
+{
+  var selectedFromList=document.editform.availablelist;
+  for (var i=0;i<selectedFromList.options.length;i++)
+  {
+    if (!selectedFromList.options[i].selected)
+      continue;
+    addToMemberList(getMemberForId(selectedFromList.options[i].value))
+  }
+  updateAvailableList();
+  updateMemberList();
+}
+
+function transferFromSelected()
+{
+  var selectedToList=document.editform.selectedlist;
+  for (var i=0;i<selectedToList.length;i++)
+  {
+    if (!selectedToList.options[i].selected)
+      continue;
+    removeFromMemberList(getMemberForId(selectedToList.options[i].value))   }
+  updateAvailableList();
+  updateMemberList();
+}
+
+
+<%for (var i=0; i < user_list.length; i++){
+  var user = user_list[i];
+  if(user.project_id){
+%>
+    addToMemberList(new Member("User", "<%= i %>", "<%= user.username %>"));
+  <%}else{%>
+    addToAvailableList(new Member("User", "<%= i %>", "<%= user.username %>"));
+  <%}%>
+<%}%>
+
+function save()
+{
+  var teamDepartmentIndex=0;
+  var teamUserIndex=0;
+  var modulePrefix="module";
+  var teamDepartmentPrefix=modulePrefix+":Project.Team.Departments";
+  var teamUserPrefix=modulePrefix+":Project.Team.Users";
+  var teamAllPrefix=modulePrefix+":Project.Team.All";
+
+  var output='<HTML><head><link rel="stylesheet" type="text/css" href="/a/OldSchoolStylesheet.ashx?cid=timesheet0&d=274719819&rev=6" title="Default Stylesheet" /><link rel="stylesheet" type="text/css" href="/a/StyleSheet.axd?d=xYrFc11BltizPq-tS6lSW-pw1pJxLC3xr8exnZrDlXcLUaNexU6jBmtxZylkzG9jtz_AH3qbGVA-tidWwqgKWnr53OB3-tLOBKxt6vkXuX9J2SbihttPRdNg6sl4xh6iHaNQXxGEr6ko796GZtxyTQ0kXp41&t=634672321870000000&c=1&b=FF_10.0&cid=timesheet0&r=6" />   </head><BODY ONLOAD="document.submit.submit();"><FORM NAME="submit" METHOD=POST ACTION="assign_user" TARGET="_parent">';
+    output+=createHidden("nextpage","projects/closepopup");
+    output+=createHidden(modulePrefix,"updateproject");
+    output+=createHidden(modulePrefix+":function","update");
+    output+=createHidden(modulePrefix+":Project.Id","2");
+    output+=createHidden(teamDepartmentPrefix+".function","empty");
+    output+=createHidden(teamUserPrefix+".function","empty");
+    output+=createHidden(teamAllPrefix+".function","remove");
+
+    for (var i=0;
+       i<selectedList.getLength();
+       ++i)
+    {
+        var teamSelection=selectedList.getElement(i).copy();
+        var type = teamSelection.getType();
+        var id = teamSelection.getId();
+
+        if (type=="Department")
+        {
+            output+=createHidden(teamDepartmentPrefix+teamDepartmentIndex+'.DepartmentId',id);
+            teamDepartmentIndex++;
+        }
+        else if (type=="User")
+        {
+            output+=createHidden(teamUserPrefix+teamUserIndex+'.UserId',id);
+            teamUserIndex++;
+        }
+        else
+        {
+            output+=createHidden(teamAllPrefix+"1.function","add");
+        }
+    }
+
+  output+="</FORM></BODY></HTML>";
+
+  document.open();
+  document.charset='utf-8';
+  document.write(output);
+  document.close();
+}
+function createHidden(name,value)
+{
+  return '<INPUT TYPE="HIDDEN" NAME="'+name+'" VALUE="'+value+'">';
+}
+
+updateMemberList();
+loadAvailable();
+//--></script>
+
+</body></html>

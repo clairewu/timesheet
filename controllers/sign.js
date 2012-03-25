@@ -185,18 +185,20 @@ exports.change_pass = function(req,res,next){
 			var old_pass = sanitize(req.body.old_pass).trim();
 			var new_pass = sanitize(req.body.new_pass).trim();
 			
-			var md5sum = crypto.createHash('md5');
+			/*var md5sum = crypto.createHash('md5');
 			md5sum.update(old_pass);
-			old_pass = md5sum.digest('hex');
+			old_pass = md5sum.digest('hex');*/
+			old_pass = md5(old_pass);
 
 			if(old_pass != rows[0].password){
 				res.render('sign/change_pass', {error:'Incorrect current password'});
 				return;
 			}
 
-			md5sum = crypto.createHash('md5');
+			/*md5sum = crypto.createHash('md5');
 			md5sum.update(new_pass);
-			new_pass = md5sum.digest('hex');
+			new_pass = md5sum.digest('hex');*/
+			new_pass = md5(new_pass);
 			db.query('update user set password = ? where username = ? ', [new_pass, name], function(err){
 				if(err) return next(err);
 				res.render('sign/change_pass', {success:'Password has been changed.'});
@@ -233,7 +235,7 @@ exports.auth_user = function(req,res,next){
 // private
 function gen_session(user,res){
 	var auth_token = encrypt(user.username + '\t' + user.password +'\t' + user.email, config.session_secret);
-	res.cookie(config.auth_cookie_name, auth_token, {path: '/',maxAge: 1000*60*60*24*7}); //cookie period of validity: 1 week			
+	res.cookie(config.auth_cookie_name, auth_token, {path: '/',maxAge: 1000*60*60*24*7}); //cookie period of validity: 1 week
 }
 function encrypt(str,secret){
    var cipher = crypto.createCipher('aes192', secret);

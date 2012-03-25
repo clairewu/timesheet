@@ -1,0 +1,26 @@
+<html><!-- Version=8.27 --><!-- Copyright (c) 1999-2006 Replicon Inc. All rights reserved. --><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="EXPIRES" content="Fri Jan 1 12:00:00 PST 1999">
+<title>Replicon Web TimeSheet</title>
+<link id="mainStylesheet" rel="stylesheet" type="text/css" href="/assign_user/OldSchoolStylesheet.css" title="Default Stylesheet">
+<!-- Version=8.27 -->
+<!-- Copyright (c) 1999-2006 Replicon Inc. All rights reserved. -->
+<script type="text/javascript">htmlAbsolute="/14-3-2012/";</script><script type="text/javascript" src="/assign_user/rjsform.js"></script><script language="Javascript"><!--
+var doNotSubmit = false;
+//-->
+</script><script language="JavaScript"><!--
+  var f = window.parent;
+  f.clearAvailableList();
+<%for (var i=0; i < user_list.length; i++){
+  var user = user_list[i];
+%>
+	addToAvailableList(new Member("User",i,<%= user.username %>));
+<%}%>
+         
+  f.updateAvailableList();
+
+//-->
+</script></head><body>
+</body></html>

@@ -63,7 +63,11 @@
 				<div class='control-group'>
 					<div>
 					<label class='control-label' for='Assgignments'>Assgignments:</label>
-					<label class='control-label' ><a href="/project/assign_user">Assign a New User</a></label>
+					<% if(locals.project_id){ %>
+						<label class='control-label' ><a href="/project/assign_user?project_id=<%= project_id %>">Assign a New User</a></label>
+					<% }else{ %>
+						<label class='control-label' ><a href="/project/assign_user">Assign a New User</a></label>
+					<% } %>
 					</div>
 					<div id="UserList">
 						<table id="UserListTable" class="display">

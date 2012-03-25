@@ -15,8 +15,10 @@ exports.change_pass = sign_ctrl.change_pass;
 
 exports.projects = project_ctrl.index;
 exports.create_project = project_ctrl.create;
-exports.create_task = task_ctrl.create;
 exports.edit_project = project_ctrl.edit;
+exports.project_assign_user = project_ctrl.assign_user;
+
+exports.create_task = task_ctrl.create;
 exports.edit_task = task_ctrl.edit;
 exports.tasks = task_ctrl.index;
 

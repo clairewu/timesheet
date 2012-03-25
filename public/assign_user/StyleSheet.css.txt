@@ -1,0 +1,2056 @@
+/* This was Base.css before it was prepended to Transition.css */
+/*** Base Element Styles ***/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin:0;
+  padding:0;
+}
+html {
+  -webkit-text-size-adjust:none;
+  background-color:#f8f8f8;
+}
+body {
+  font-family:Arial,Sans-Serif;
+  font-size:12px;
+  color:#000000;
+  background-color:#f8f8f8;
+}
+a {
+  color:#336699;
+}
+a:hover {
+  color:#3366cc;
+}
+ul {
+  list-style-position:outside;
+  margin:0 0 0 20px;
+  list-style-type:disc;
+}
+p {
+  margin:10px 0;
+}
+img {
+  border:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align:left;
+  font-weight:normal;
+}
+h1, h2 {
+  margin-bottom:10px;
+}
+h1 {
+  font-size:20px;
+}
+h2 {
+  font-size:18px;
+}
+h3 {
+  font-size:16px;
+}
+h4 {
+  font-size:14px;
+}
+h5 {
+  font-size:12px;
+  font-weight:bold;
+}
+h6 {
+  font-size:12px;
+}
+
+/*** Common elements ***/
+.pageEmptyContainer {
+	padding:10px 10px 20px 10px;
+	float:left;
+	min-width:761px;
+}
+.pageContentContainer {
+	background-color:#ffffff;
+	padding:10px 10px 20px 10px;
+	border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+	float:left;
+	min-width:761px;
+}
+.pageContentContainer p, .pageEmptyContainer p {
+	max-width:761px;
+}
+.pageContentContainerFrame {
+	margin-left:10px;
+}
+.sweeper {
+  clear:both;
+}
+.smallText {
+  font-size:11px;
+}
+.details {
+  color:#444444;
+}
+.disabled {
+  color:#999999;
+}
+.layoutTable {
+	margin:0;
+	padding:0;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.layoutTable td, .layoutTable th {
+	margin:0;
+	padding:0;
+	vertical-align:top;
+	text-align:left;
+}
+.columns {
+  margin:0 -5px;
+}
+.columnsEnd {
+  clear:left;
+}
+.column1_5, .column2, .column3, .column4 {
+  float:left;
+}
+.column1_5 {
+    width:66.6666666%;
+}
+.column2 {
+  width:50%;
+}
+.column3 {
+  width:33.3333333%;
+}
+.column4 {
+  width:25%;
+}
+.columnInner {
+  padding:0 5px;
+}
+
+
+/*** Form Elements ***/
+textarea, input, select, .divDropdown {
+  font-family:Arial,Sans-Serif;
+  font-size:12px;
+}
+
+/* If font-family is set, dropdown stops working on IE8... */
+textarea, select, .divDropdown { /* IE6 does no like the next rule so it gets this one to fallback to */
+  line-height:18px;
+  padding:1px 2px;
+  border:solid 1px #cccccc;
+  background:#ffffff;
+}
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="url"], input[type="tel"], textarea, select, .divDropdown {
+  line-height:18px;
+  padding:1px 2px;
+  border:solid 1px #cccccc;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+  background:#ffffff;
+  box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;
+}
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="url"], input[type="tel"] {
+  height:18px;
+}
+
+/* Height messes up the list mode selects and has to be reset using attribute selectors, which of course are not supported in IE quirks mode.
+ * But IE doesn't seem to support height on selects anyway, so we just don't set it for IE. */
+
+select {
+  height:18px;
+}
+select[size], select[multiple] {
+  height:auto;
+}
+
+input[type="number"] {
+  text-align:right;
+}
+input[type="checkbox"] {
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="number"]:hover, input[type="email"]:hover, input[type="url"]:hover, input[type="tel"]:hover, textarea:hover, select:hover, .divDropdown:hover, .dateselector td.dsbtn:hover, .calendar a.dsbtn:hover, .calendar td a:hover {
+  background-color:#d7ecff;
+}
+
+input[type="text"][disabled="disabled"], input[type="password"][disabled="disabled"], input[type="number"][disabled="disabled"], input[type="email"][disabled="disabled"], input[type="url"][disabled="disabled"], input[type="tel"][disabled="disabled"], textarea[disabled="disabled"], select[disabled="disabled"], .divDropdown[disabled="disabled"], .divDropdownDisabled, .dateselectorDisabled {
+  background-color:#f8f8f8;
+  cursor:default;
+	opacity:0.5;
+  filter:alpha(opacity=50);
+	color:#666666;
+}
+select {
+  padding:1px;
+  cursor:pointer;
+}
+textarea {
+	height:60px;
+}
+
+.divDropdown {
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+  color:#000000;
+  text-decoration:none;
+  padding-right:16px;
+  min-width:80px;
+  vertical-align:baseline;
+  background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+  background-position:right center;
+  background-repeat:no-repeat;
+}
+.divDropdown:hover {
+	color:#000000;
+}
+.divDropdownSelectionNeeded {
+	color:#666666;
+}
+.divDropdownSelectionNeeded:hover {
+	color:#666666;
+}
+.divDropdownDisabled:hover {
+	color:#666666;
+}
+.divDropdownContent {
+  border:solid 1px #cccccc;
+  overflow-y:auto;
+  overflow-x:visible;
+  background-color:#ffffff;
+  position:absolute;
+  z-index:100;
+  display:none;
+  cursor:default;
+  box-shadow:0 3px 8px rgba(0,0,0,0.4);-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.4);-moz-box-shadow:0 3px 8px rgba(0,0,0,0.4);
+  padding:1px;
+}
+.divDropdownContentMobile {
+  border:none;
+  box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;
+  transform-origin:0 0;-webkit-transform-origin:0 0;-moz-transform-origin:0 0;-o-transform-origin:0 0;
+  padding:4px;
+}
+/*
+.divDropdownContentIPad {
+  border-color:transparent;
+  border-width:6px 6px 6px 6px;
+  -webkit-border-image:url("../Images/iPadDropdownFrame.png") 6 6 6 6 stretch stretch;
+  -webkit-box-shadow:0 0 20px rgb(0,0,0,0.6);
+  -webkit-border-radius:6px;
+}
+*/
+.divDropdownContent h6 {
+	color:#515a64;
+	font-size:11px;
+	line-height:15px;
+	font-weight:bold;
+	text-align:left;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-bottom:solid 1px #cccccc;
+	padding:5px 10px;
+}
+.divDropDownList {
+  margin:0;
+  list-style:none;
+}
+.divDropDownList li {
+  display:block;
+  white-space:nowrap;
+  line-height:20px;
+	_border-bottom:solid 1px #ffffff;
+}
+.divDropDownList li a {
+  color:#000000;
+  text-decoration:none;
+  display:block;
+  white-space:nowrap;
+  padding:2px 9px;
+  cursor:pointer;
+}
+.divDropdownContentIPad .divDropDownList li a {
+	padding-top:6px;
+	padding-bottom:6px;
+}
+.divDropDownList li.disabled {
+  padding:0 2px;
+  font-style:italic;
+  color:#888888;
+}
+.divDropDownList li.selected {
+  background-color:#a8c3df;
+}
+.divDropDownList li.selected a {
+  color:#000000;
+}
+.divDropDownList li a:hover {
+  background-color:#d7ecff;
+}
+
+.calendar {
+	border-spacing:0;
+	border-collapse:separate;
+	table-layout:fixed;
+	width:154px;
+}
+.calendar .calendarSelect {
+	font-size:11px;
+	padding:0;
+	height:18px;
+}
+.calendar th {
+	color:#515a64;
+	font-weight:bold;
+	height:22px;
+	font-size:11px;
+	vertical-align:middle;
+}
+.calendar .calendarMonthHeader {
+	position:relative;
+}
+.calendar td {
+	width:22px;
+	height:22px;
+	line-height:22px;
+	color:#515a64;
+	text-align:center;
+	border:none;
+}
+.calendar td a {
+  border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:11px;
+	color:#515a64;
+	display:block;
+	line-height:18px;
+	padding:2px;
+	cursor:pointer;
+}
+
+/* <a> inside a large calendar td cell needs to be displayed inline for nowrap to work */
+.calendar.large td.cell.holiday a {
+	display: inline;
+}
+
+.calendar td.dsoutofrange a {
+	border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;
+	color:#d0d0d0;
+	background-color:#eeeeee;
+	cursor:default;
+} 
+.calendar td.dsselected a {
+  color:#000000;
+  background-color:#a8c3df;
+}
+.calendar td.dstoday a {
+	padding:0;
+  color:#000000;
+	border:solid 2px #ffd478;
+}
+.calendar td.dsothermonth a {
+	color:#d0d0d0;
+} 
+.calendar.large {
+	width:auto;
+}
+.calendar.large td {
+	height:32px;
+	width:32px;
+}
+.calendar.large .colHeading {
+	font-size:11px;
+	line-height:14px;
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+}
+.calendar.large .weekday, .calendar.large .weekday a, .calendar.large .weekday a:hover {
+	font-size:12px;
+	background-color:#ffffff;
+}
+.calendar.large .holiday, .calendar.large .holiday a, .calendar.large .holiday a:hover {
+	font-size:12px;
+	background-color:#f5f5f6;
+}
+.dateselector {
+	border-spacing:0;
+	border-collapse:separate;
+	table-layout:fixed;
+	display:inline-table;
+  vertical-align:baseline;
+	height:20px;
+	border:solid 1px #cccccc;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+}
+.dateselector td {
+	padding:0 !important;
+	border:none !important;
+	height:20px;
+  background:#ffffff;
+}
+.calendar a.dsbtn {
+	display:block;
+	position:absolute;
+	top:0;
+	height:100%;
+}
+.dateselector td.dsbtn, .calendar a.dsbtn {
+	width:11px !important;
+	cursor:pointer;
+}
+.dateselector td.dsbtn {
+	vertical-align:middle;
+}
+.calendar a.dsleft {
+	left:0;
+}
+.calendar a.dsright {
+	right:0;
+}
+.calendar a.dsbtn span {
+	display:block;
+	width:4px;
+	height:8px;
+	background-image: url(http://na1s3.replicon.com/a/WebResource.axd?d=PoS799f5jRbvCdKh457upvOTBkJCwsKxGxKzLv3y9_su7nhK1KuyLWtPSJ9Q7__kZ8ASfKRbm4mN2LDtpj7MjCvG5F9XuE-c6rGQpJpEA1_MMt8lVWI49EC5IPSfQX9WdKBhlTf3T_FZSJvn2eNeSUGkMjXPPl65A4DrXs0lVMI9bWL90&t=634672321870000000);
+	margin:0 4px 0 3px;
+}
+.dateselector td.dsbtn div
+{
+	width:4px;
+	height:8px;
+	background-repeat:no-repeat;
+}
+.calendar a.dsright span {
+	background-position:-4px 0;
+	margin:0 3px 0 4px;
+}
+.dateselector td.dsright div
+{
+	margin:0 3px 0 4px;
+}
+.calendar a.dsbtn span {
+	position:relative;
+	top:50%;
+	margin-top:-4px;
+}
+.dateselectorDisabled .dsbtn {
+	display:none;
+}
+.dateselector td.dsfield {
+	width:113px;
+}
+.dateselector td.dsfield input {
+	border:none;
+	border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;
+	width:109px;
+}
+
+/* nospritecompat class is given to date selector, and the DIVs with sprites are hidden, on IE7 */
+.dateselector.nospritecompat td.dsfield input {
+	background-image: url(http://na1s3.replicon.com/a/WebResource.axd?d=uhFmbDeUn7AajJs94akfL3St9WRyknFEdc2XeWhSI3Q5z917fLupPqDMB_aQ3NdbnwXvufgu_q3WauEPBjMI-F11_9_uEgFkMZ80ddDeUky9RQGuKqSgUhE-httU5uxnL5vj2fYIopPdIgrd8F87D4pEuNbGHmBO0KFLliWJ2kHHXL_t0&t=634672321870000000);
+	background-repeat:no-repeat;
+	background-position:95px center;
+}
+.dateselectorDisabled td input[type="text"] {
+	opacity:1;
+  filter:alpha(opacity=100);
+}
+.dsdropdown {
+	padding:0;
+}
+.dsdropdown .divDropDownList li {
+  display:block;
+  white-space:nowrap;
+  line-height:20px;
+  padding:0 1px;
+	border-bottom:solid 1px #cccccc;
+}
+.dsdropdown .calendarContainter, .userSelectContent .userSelectFilter {
+	border:solid 1px #cccccc;
+	margin:12px 4px 4px 4px;
+	padding:12px 10px 8px 10px;
+	min-width:172px;
+	overflow:visible;
+	position:relative;
+}
+.dsdropdown .calendarContainter .calendarLabel, .userSelectContent .userSelectFilter h4 {
+	font-weight:bold;
+  padding:0 4px;
+  margin:0;
+  background:#ffffff;
+  position:absolute;
+  top:-7px;
+  left:6px;
+  font-size:11px;
+}
+.dsdropdown .calendar {
+	margin:0 auto;
+}
+.userSelectContent .userSelectFilter {
+	padding-bottom:0;
+	width:200px;
+}
+.userSelectContent .userSelectFilter .fieldList {
+	margin:0;
+}
+.userSelectContent .userSelectFilter li {
+	margin-bottom:10px;
+}
+.userSelectContent .userSelectFilter label {
+	font-size:11px;
+	color:#515a64;
+	margin-bottom:2px;
+}
+.userSelectContent .userSelectFilter input[type="text"] {
+	width:192px;
+	font-size:11px;
+	line-height:16px;
+  height:16px;
+}
+.userSelectContent .userSelectFilter .divDropdown {
+	display:block;
+	font-size:11px;
+	white-space:normal;
+	line-height:16px;
+}
+
+
+@media print {
+  input[type="text"], input[type="number"], input[type="email"], input[type="url"], input[type="tel"], textarea, select {
+    border:none;
+    background-image:none;
+  }
+  input[type="button"], input[type="submit"] {
+    display:none;
+  }
+  .divDropdown {
+    border:none;
+    background:transparent;
+    padding-right:2px;
+  }
+}
+
+
+
+/* Below is what used to be Transition.css before Base.css was prepended to it. */
+
+html, body {
+	padding:0 !important;
+}
+td {
+	font-size:12px;
+}
+
+center {
+	margin:4px 20px;
+
+}
+
+.expGUI_print > center {
+	margin: 0;
+}
+
+h1 {
+	padding:8px 10px;
+	margin:0;
+}
+.box {
+	background:#ffffff;
+	border:solid 1px #dddddd;
+	padding:10px;
+	border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+	/*box-shadow:0 0 8px rgba(0,0,0,0.15);-webkit-box-shadow:0 0 8px rgba(0,0,0,0.15);-moz-box-shadow:0 0 8px rgba(0,0,0,0.15);*/
+	margin:0 5px 10px 5px;
+}
+
+/* Margin on IE has to include side padding to avoid overlaps */
+.layoutTable td {
+	vertical-align:middle;
+}
+/* these are no longer needed, can be removed from teh html entirely, using css to make them do nothing for now */
+.boxRight, .boxTop, .boxTitle, .boxTitle span, .boxContent, .boxBottom, .boxFooter div, .boxTopTabs, .boxTopTabsRight, .tabStrip, .tabStrip li, .tabStrip li a {
+	background:transparent;
+	margin:0;
+	padding:0;
+}
+.boxTopTabs {
+	background-color:#f8f8f8;
+    margin :-11px -11px 0 -11px;
+    zoom:1;
+}
+.boxTopTabsRight
+{
+    width: 100%;
+}
+.tabStrip 
+{
+  border-bottom:1px solid #dddddd;
+  font-size:0;
+  font-weight:normal;
+  list-style:none;
+  margin-bottom:10px;
+  text-align:left;
+  height:auto;
+  white-space:nowrap;
+}
+
+/* height: auto above messes up the positioning on the user list page when no tabs are present */
+#UserList #UserList___tabRow .tabStrip ul#UserListtabs {
+	height: 34px;
+}
+
+/* Reset display: inline set by old stylesheet, to prevent tabs from being centered, etc. */
+.tabStrip ul
+{
+	display: block;
+}
+
+.tabStrip li {
+	font-size:12px;
+	white-space:nowrap;
+
+
+	/* Use inline-block to layout LIs horizontally. Floating layout breaks on IE. */
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+
+	float: none;
+}
+
+/* On the reports page, using floating layout for tabStrip, because tabs are hidden/shown using js, which sets display:block */
+html#reports_edit-report_page .tabStrip ul {
+	overflow: hidden;
+}
+html#reports_edit-report_page .tabStrip li {
+	float:left;
+}
+
+
+.tabStrip li a {
+	background-color:#eeeeee;
+	border:1px solid #dddddd;
+	border-bottom:none;
+	border-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:0;
+	padding:0 20px;
+	margin-right:10px;
+	white-space:nowrap;
+	text-decoration:none;
+	min-width:inherit;
+	line-height:33px;
+
+	/* Some original styles are using float here, get rid of it */
+	float: none;
+
+	/* Old styles have display:block here, which breaks IE */
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+.tabStrip li.selected a {
+  background-color:#ffffff;
+  cursor:auto;
+  margin-bottom:-1px;
+  padding-bottom:1px;
+}
+.tabStripLineStyle {
+	padding:0 10px;
+	color: #FFFFFF;
+}
+
+.listPage .recordList {
+	background-color:#ffffff;
+}
+.listPage .tabRow {
+	background-color:#f8f8f8;
+}
+.listPage .viewRow .panel .cap0 {
+	background-color:#dddddd;
+}
+.listPage .viewRow .panel .cap1, .listPage .viewRow .panel .cap2 {
+	background-color:#f5f5f6;
+	border-color:#dddddd;
+}
+.listPage .viewRow .panel h2 {
+	margin-bottom:0;
+	padding:1px 10px 3px 10px;
+	background-color:#f5f5f6;
+	border-color:#dddddd;
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	line-height:22px;
+	font-size:15px;
+}
+.listPage .viewRow .panel h2 .headerContent {
+	font-size:12px;
+	font-weight:normal;
+	text-shadow:none;
+}
+.listPage .viewRow .panel .content {
+	background-color:#ffffff;
+	border-color:#dddddd;
+}
+.listPage .controlRow {
+	border-color:#ffffff;
+}
+.listPage .dataGrid th, .listPage .dataGrid td {
+}
+.listPage .dataGrid th {
+	font-size:11px;
+	line-height:14px;
+	text-align:left;
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-right:none;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+.listPage .dataGrid td {
+	border-right:none;
+	background-color:#ffffff;
+	font-weight:normal;
+}
+.listPage .dataGrid .rowOdd td {
+	background-color:#ffffff;
+}
+.listPage .dataGrid .rowSelect td {
+	background-color:#a8c3df;
+	color:#000000;
+}
+.listPage .treeNodeSelect {
+	background-color:#a8c3df !important;
+  color:#000000 !important;
+}
+.listPage .treeNodeDown {
+  background-color:#d7ecff;
+  color:#000000;
+}
+.listTree li {
+	background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=qWy8TlAMuodn6hgIGLXX220BnAtiv2Ses2cenDqPsAnAIz00IGuSJA-KNiVcJ180Az54RyrTEszzi0uocRbu9v0TW7yAQDzXfLnmZWZIGgu7qG9aW_KiEJCMBurUtvDR6kjkYuoOXv3ijWpGKQh0ATm9pcNLpL2FLWa_EJSZnbDiLeCi0&t=634672321870000000);
+}
+.listTree div {
+	height:20px;
+  line-height:20px;
+  background-position:0 2px;
+}
+/* Positioning js doesn't seem to handle different heights on IE. Set the heights to follow the original style.
+ * This is not ideal and doesn't look that good... */
+.filterBox {
+	border:solid 1px #dddddd;
+	margin:0 auto 0 20px;
+}
+.filterBox th, .filterBox td, .filterBox.mass-edit-project-team {
+	background-color:#ffffff;
+	font-size:12px;
+}
+.filterBox th {
+	padding:4px 10px;
+}
+.filterBox td {
+	padding:4px;
+}
+.dropDownControl {
+  border:solid 1px #cccccc;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+}
+.buttonDropDownUp, .buttonDropDownDown, .buttonDropDownOver {
+	border-bottom-color:#cccccc;
+}
+.buttonDropDownUp, .buttonDropDownOver, .buttonDropDownDown {
+	background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+}
+.dropDownControl td {
+	padding:0;
+}
+.dropDownControl input {
+	border:none;
+}
+
+.listGUI {
+	margin:0 auto 0 0;
+	padding:0;
+}
+.listGUI .recordList 
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+.listGUI .recordList th, .listGUI .recordList td {
+	padding:6px 10px 6px 20px;
+	font-size:11px;
+	line-height:14px;
+	text-align:left;
+}
+.listGUI .recordList th {
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-top:solid 1px #cccccc;
+	font-weight:bold;
+	text-align: center;
+}
+.listGUI .recordList th a {
+	color:#515a64;
+}
+.listGUI .recordList th.numbering {
+	border-top:none;
+	padding:0;
+}
+.listGUI .recordList td {
+	font-weight:normal;
+	background-color:#ffffff;
+}
+.listGUI .recordList .menu, .listGUI .recordList td.menuFooter {
+	padding:4px 10px 4px 0;
+	background-color:#ffffff;
+}
+.listGUI .recordList td.menuFooter {
+	background-color:#f5f5f6;
+	color:#515a64;
+}
+.listGUI .recordList td.cell {
+	padding:4px 10px 4px 20px;
+}
+.listGUI .recordList .colFooter {
+	padding:4px 0;
+	background-color:#f5f5f6;
+	color:#515a64;
+}
+.listGUI .recordList .approvalFooter, .listgui .recordlist th.approvalFooter
+{
+	padding: 4px 10px 4px 20px;
+}
+.listGUI .recordList .colFooter a {
+	color:#515a64;
+	background:transparent;
+}
+.listGUI .recordList .actionList {
+	background:transparent;
+	border-top:solid 1px #cccccc;
+	padding:10px 0 0 0;
+}
+.listGUI .recordList .actionList td {
+	background-color:transparent;
+	padding:0;
+}
+.listGUI .recordList td center {
+	padding:0;
+	margin:0;
+}
+.listGUI .recordList td.menuFooter .layoutTable td {
+	background-color:Transparent;
+	padding:0;
+}
+
+
+/* Above td styles leak over to buttons, so redefine some button styles here */
+.button td.text {
+	font-weight: bold;
+	text-align: center;
+}
+
+.recordList .GanttEditorBox td {
+	padding:0;
+}
+#logoList #fileRow .
+.BarPropertiesDialog {
+	border:1px solid #a4a4a4;
+  background-color:#ffffff;
+	box-shadow:0 3px 8px rgba(0,0,0,0.4);-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.4);-moz-box-shadow:0 3px 8px rgba(0,0,0,0.4);
+}
+.modalTitleBar 
+{
+    color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-bottom:solid 1px #bbbbbb;
+	font-weight:bold;
+    font-size:12px !important;
+    margin:0;
+}
+.BarBoxTitle {
+	color:#515a64 !important;
+}
+.BarBoxTitleBar
+{
+	background-color: #f5f5f6 !important;
+}
+
+.label {
+	background-color:Transparent;
+	width:1%;
+}
+/* width:1% above messes up the layout on some pages, reset it */
+html#admin_edit-approval-path_page .label,
+table#user-preferences_bottom_table .label
+{
+	width: auto;
+}
+
+.label td, td.label {
+	font-weight:bold;
+	color:#515a64;
+}
+.requiredMark, .requiredMarkLegend {
+  color:#666666 !important;
+}
+.editRows .labelCell, .editRows .controlCell, .labelCell, .controlCell {
+	padding:4px 2px;
+}
+/* fix for IE7 where the labels weren't showing up properly causing spacing issues */
+
+.editRows .labelCell, .editRows .controlCell {
+	height:22px;
+	line-height:22px;
+	width:auto;
+}
+.labelText {
+	font-weight:bold;
+	color:#515a64;
+}
+.spacingCell {
+	padding:4px 10px;
+}
+.editRowsBlock .labelCell {
+	background:transparent;
+	width:inherit;
+	line-height:22px;
+}
+.editRowsBlock .controlCell {
+	line-height:22px;
+}
+.editRows .requiredMark, .editRowsBlock .requiredMark {
+  padding-left: 4px;
+}
+.editPersonalInfo {
+	width:inherit;
+}
+.editPersonalInfo .spacingCell {
+  width:100px;
+}
+.historicalListCollection .labeledColumnLayout {
+	border-bottom:solid 1px #f5f5f6;
+}
+.historicalListCollection .labeledColumnLayout .rowTitle .rowTitleCell {
+	color:#515a64;
+	font-size:11px;
+	line-height:14px;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border:none;
+	border-bottom:solid 1px #bbbbbb;
+	padding:6px 2px;
+}
+.historicalListCollection .labeledColumnLayout .rowCell {
+	border-top:solid 1px #f5f5f6;
+	border-left:solid 1px #ededed;
+	border-right:none;
+	border-bottom:none;
+	vertical-align:middle;
+	background-color:#ffffff;
+}
+.historicalListCollection .labeledColumnLayout .rowOdd .rowCell {
+	background-color:#ffffff;
+}
+.historicalListCollection .labeledColumnLayout .lastCell {
+	border-right:solid 1px #ededed;
+}
+.dateselector td.dsbtn div {
+	top:0;
+	left:0;
+}
+.dsdropdown, .divDropDownPopup, .dropDownWindowScrollable, .comboBoxWindowScrollable, .UserControlFilterPopup {
+	border:solid 1px #cccccc;
+	box-shadow:0 3px 8px rgba(0,0,0,0.4);-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.4);-moz-box-shadow:0 3px 8px rgba(0,0,0,0.4);
+}
+.comboBoxControl {
+	border:1px solid #cccccc;
+}
+.comboBoxControl input {
+	border:none;
+}
+.dscal td.dsday:hover, .dscal td.dsday.dshover, .dsshortcut:hover, .dsshortcut.dshover {
+	color:#000000 !important;
+	background-color:#d7ecff !important;
+}
+.dscal td.dsselected, .treeNodeSelect {
+	color:#000000 !important;
+	background-color:#a8c3df !important;
+}
+td .UserControl {
+	border:solid 1px #cccccc;
+  background-color:#ffffff;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+}
+.UserControl td a.DropDownButton {
+	padding-top:0;
+	padding-bottom:0;
+	background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+}
+.divDropDown 
+{
+  border:solid 1px #cccccc;
+  background-color:#ffffff;
+  border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+  background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+
+  display: block; /* To make dropdowns cover the entire cell. */
+}
+.divDropDown:hover, .UserControl td a.DropDownButton:hover 
+{
+	background-color:#d7ecff;
+  background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+}
+.TimeOffCalendar .calendar {
+	width:auto;
+}
+.reportFilterBox h4 {
+	background-image:none;
+}
+
+@media screen   /* otherwise block out report header by a black box while printing on Chrom 17 */
+{
+    .ReportHeader {
+	    border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+    }
+}
+
+.TimeOffCalendar .titleBar, .TimeOffCalendar .calendar .header {
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	font-weight:bold;
+	font-size:12px;
+}
+.listGUI .displayList {
+	border-collapse:separate;
+	border-spacing:0;
+	margin:0;
+}
+.listGUI .displayList th, .listGUI .displayList td {
+	padding:6px 10px 6px 20px;
+	font-size:11px;
+	line-height:14px;
+	text-align:left;
+}
+.listGUI .displayList .label td {
+	padding:0;
+}
+.listGUI .displayList th {
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	font-weight:bold;
+	border-bottom:solid 1px #bbbbbb;
+}
+.listGUI .displayList td {
+	padding-top:4px;
+	padding-bottom:4px;
+	font-weight:normal;
+	background-color:#ffffff;
+}
+.listPage .pagesDiv td {
+	padding:0;
+	vertical-align:middle;
+}
+
+.expGUI {
+	background-color:#ffffff;
+	padding:10px 10px 20px 10px;
+	border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+	float:left;
+	min-width:761px;
+}
+.expGUI h1 {
+	padding:0;
+}
+.expGUI hr {
+	background:none repeat scroll 0 0 #ededed;
+	border:none;
+  border-top:1px solid #ededed;
+}
+.expGUI .expense, .expGUI .summaryTable, .expGUI .approvalDetailsTable {
+	border-collapse:separate;
+	border-spacing:0;
+	margin:0;
+}
+.expGUI b {
+	color:#515a64;
+  font-weight:normal;
+  margin:0 4px 0 10px;
+}
+.expGUI h4 {
+	margin-top:20px;
+}
+.expGUI .expense th {
+	color:#515a64;
+	font-size:11px;
+	line-height:14px;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-bottom:solid 1px #bbbbbb;
+	padding:6px 2px;
+}
+.expGUI .expense .menu, .expGUI .expense td.cell {
+	border-bottom:solid 1px #ccc;
+	border-left:solid 1px #ccc;
+	border-right:none;
+	border-top:none;
+	height:38px;
+	vertical-align:middle;
+	background-color:#ffffff;
+	padding:0 2px;
+	font-size:12px;
+}
+.expGUI .expense td.cell:last-child {
+	border-right:solid 1px #ccc;
+}
+.expGUI .expense td.cell a {
+	margin:0 10px;
+}
+.expGUI .expense td.cell input, .expGUI .expense td.cell select {
+	border:none;
+	border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;
+	padding:10px 2px;
+	height:18px !important;
+	line-height:18px;
+	font-family:Arial,Sans-Serif !important;
+	font-size:12px !important;
+}
+.expGUI .expense td.actionBar {
+	background-color:#f5f5f6;
+	padding:4px;
+}
+.expGUI .expense .clear {
+	padding:20px 0 0 0;
+}
+.expGUI .summaryTable th, .expGUI .approvalDetailsTable th, .expGUI .summaryTable td, .expGUI .approvalDetailsTable td {
+	padding:6px 10px 6px 20px;
+	font-size:11px;
+	line-height:14px;
+	text-align:left;
+}
+.expGUI .summaryTable th, .expGUI .approvalDetailsTable th {
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-top:solid 1px #cccccc;
+	font-weight:bold;
+}
+.expGUI .summaryTable td, .expGUI .approvalDetailsTable td {
+	padding-top:4px;
+	padding-bottom:4px;
+	font-weight:normal;
+}
+.expGUI .summaryTable td:last-child, .expGUI .approvalDetailsTable td:last-child {
+	padding-right:20px;
+}
+.expGUI .summaryTable .clientTotalRow td {
+	background-color:#f5f5f6;
+}
+
+.tsGUI .timesheet {
+	border-collapse:separate;
+	border-spacing:0;
+	margin:0;
+}
+
+
+.tsGUI .timesheet.inout {
+	empty-cells: show; /* This is supposed to be the default, but apparently it's not for Firefox */
+}
+/* IE way of setting border-spacing... */
+.tsGUI .timesheet th {
+	color:#515a64;
+	font-size:11px;
+	line-height:14px;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-bottom:solid 1px #bbbbbb;
+	padding:6px 2px;
+}
+.tsGUI .timesheet th a {
+	color:#515a64;
+}
+.tsGUI .timesheet .holiday, .tsGUI .timesheet .durationTitle {
+	background-color:#f4f4f5;
+	color:#515a64;
+}
+.tsGUI .timesheet .etcTitle, .tsGUI .timesheet .inTitle, .tsGUI .timesheet .outTitle, .tsGUI .timesheet .weekday {
+	background-color:#f5f5f6;
+	color:#515a64;
+}
+.tsGUI .timesheet .evenRow td, .tsGUI .timesheet .oddRow td {
+	border-top:solid 1px #cccccc;
+	border-left:solid 1px #cccccc;
+	border-right:none;
+	border-bottom:none;
+	height:38px;
+	vertical-align:middle;
+	background-color:#ffffff;
+	padding:0 2px;
+	font-size:12px;
+}
+.tsGUI .timesheet .evenRow td.menuCell, .tsGUI .timesheet .oddRow td.menuCell {
+	border-top:solid 1px #f5f5f6;
+	border-left:solid 1px #ededed;
+	border-right:none;
+	border-bottom:none;
+	height:38px;
+	vertical-align:middle;
+	background-color:#ffffff;
+	padding:0 2px;
+	font-size:12px;	
+	white-space:nowrap;
+}
+.tsGUI .timesheet td.etcCell td {
+	height:auto;
+}
+.tsGUI .timesheet .evenRow td, .tsGUI .timesheet .evenRow td.cell, .tsGUI .timesheet .evenRow .etcCell, .tsGUI .timesheet .oddRow td, .tsGUI .timesheet .oddRow td.cell, .tsGUI .timesheet .oddRow .etcCell {
+	background-color:#ffffff;
+}
+.tsGUI .timesheet .evenRow td.inOutCell, .tsGUI .timesheet .oddRow td.inOutCell {
+	background-color:#ffffff;	
+	white-space:nowrap;
+}
+.tsGUI .timesheet .evenRow td.textCell, .tsGUI .timesheet .evenRow .divDropDown, .tsGUI .timesheet .evenRow .inputCell, .evenRow .timesheet .oddRow td.textCell, .tsGUI .timesheet .oddRow .divDropDown, .tsGUI .timesheet .oddRow .inputCell {
+	background-color:#ffffff;
+}
+.tsGUI .timesheet .evenRow td:last-child, .tsGUI .timesheet .oddRow td:last-child {
+	border-right:solid 1px #ededed;
+}
+.tsGUI .timesheet .evenRow td td, .tsGUI .timesheet .oddRow td td, .tsGUI .timesheet .evenRow td td:last-child, .tsGUI .timesheet .oddRow td td:last-child {
+	border:none;
+}
+.tsGUI .timesheet td input, .tsGUI .timesheet td select, .tsGUI .timesheet td .divDropdown {
+	border:none;
+	border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;
+	padding:10px 2px;
+	height:18px;
+	line-height:18px;
+	font-family:Arial,Sans-Serif !important;
+	font-size:12px !important;
+}
+.tsGUI .timesheet td .divDropdown {
+	padding: 10px 12px 10px 10px;
+}
+.tsGUI .timesheet .evenRow .divDropDown:hover, .tsGUI .timesheet .oddRow .divDropDown:hover {
+	background-color:#d7ecff;
+  background-image: url(http://na1s4.replicon.com/a/WebResource.axd?d=L-J8u-L9jSg4ZbEIQbL6bBpnYAfk5bhv5QglcdnQJC6KixfihjCQO-BLZwOj4x42F75ZcsRX_QUchtBKD5A59T3zhSPe19T2zC5iWZtAklZ4lcU5G0NbzkCMpP4OOzD3aAqbfSe9ZVsg-QY6TTdgUozoxUcbsf07plxXswyMBCas-lAm0&t=634672321870000000);
+}
+.tsGUI .timesheet td input:hover,
+.tsGUI .timesheet td select:hover,
+.tsGUI .timesheet .oddRow td input:hover,
+.tsGUI .timesheet .oddRow td select:hover,
+.tsGUI .timesheet .evenRow td input:hover,
+.tsGUI .timesheet .evenRow td select:hover {
+	background-color:#d7ecff;
+}
+.tsGUI .timesheet .taskTimeOffFooter {
+	background-color:#f5f5f6;
+	padding:4px;
+	height:auto;
+	border:none;
+}
+.tsGUI .timesheet .taskTimeOffFooter td {
+	height:inherit;
+}
+.tsGUI .timesheet .taskTimeOffFooter .button td.text, .tsGUI .timesheet .taskTimeOffFooter .button td.leftCap, .tsGUI .timesheet .taskTimeOffFooter .button td.rightCap {
+	height: 23px;
+}
+.tsGUI .timesheet .columnTotalRow td, .tsGUI .timesheet .dayTotalRow td {
+	background-color:#f5f5f6;
+	color:#515a64;
+	height:auto;
+	border:none;
+	padding:6px 2px;
+}
+.tsGUI .timesheet .columnTotalRow td.textCell {
+	background-color:#f5f5f6;
+	color:#000000;
+}
+.tsGUI .timesheet .infoRow td, .tsGUI .timesheet .dayHeaderRow td, .tsGUI .timesheet .dayTotalRow td, .tsGUI .timesheet .columnTotalRow td {
+	padding:6px 10px;
+}
+.tsGUI .timesheet .dayTotalRow td.right, .tsGUI .timesheet .columnTotalRow td.grandtotal {
+	color:#000000;
+}
+.tsGUI .timesheet .evenRow td.textCell, .tsGUI .timesheet .oddRow td.textCell {
+	vertical-align:middle;
+}
+.tsGUI .commentTable, .tsGUI .approvalDetailsTable {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+.tsGUI .commentTable th, .tsGUI .approvalDetailsTable th, .tsGUI .commentTable td, .tsGUI .approvalDetailsTable td {
+	padding:6px 10px 6px 20px;
+	font-size:11px;
+	line-height:14px;
+	text-align:left;
+}
+.tsGUI .commentTable th, .tsGUI .approvalDetailsTable th {
+	color:#515a64;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	border-top:solid 1px #cccccc;
+	font-weight:bold;
+}
+.tsGUI .commentTable td, .tsGUI .approvalDetailsTable td {
+	padding-top:4px;
+	padding-bottom:4px;
+	font-weight:normal;
+}
+.tsGUI .commentTable td:last-child, .tsGUI .approvalDetailsTable td:last-child {
+	padding-right:20px;
+}
+
+div.collapsableContainer {
+  border:1px solid #ededed;
+	border-top:solid 1px #cccccc;
+}
+div.collapsableContainerHeader {
+  color:#515a64;
+	font-size:11px;
+	line-height:14px;
+	font-weight:bold;
+	text-align:left;
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+	padding:6px 2px;
+	border-bottom:1px solid #ededed;
+}
+.expandableOptionList .collapsable {
+  border:1px solid #dddddd;
+  border-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0;-moz-border-radius:4px 4px 0 0;-webkit-border-radius:4px;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:0;
+}
+.expandableOptionList .collapsableHeader {
+  background-color:#f5f5f6;
+  color:#515a64;
+  padding:6px;
+  line-height:16px;
+	font-weight:bold;
+}
+.expandableOptionList .collapsableContent {
+  border-bottom:1px solid #dddddd;
+  border-left:1px solid #dddddd;
+  border-right:1px solid #dddddd;
+  background:#ffffff;
+  border-radius:4px;border-top-right-radius:0;border-top-left-radius:0;-moz-border-radius:0 0 4px 4px;-webkit-border-radius:4px;-webkit-border-top-right-radius:0;-webkit-border-top-left-radius:0;
+}
+
+.listtable .titlerow th {
+	text-shadow:#ffffff 0 1px 1px;
+	background-color:#f5f5f6;
+  border-right:1px solid #ededed;
+  color:#515a64;
+	font-size:11px;
+	line-height:14px;
+	font-weight:bold;
+	padding:6px 2px;
+}
+.listtable td.cell {
+  border-right:1px solid #f5f5f6;
+	padding:6px 2px;
+  background-color:#ffffff;
+}
+.listtable .rowOdd td.cell {
+  background-color:#ffffff;
+}
+.reportControlHeading {
+	background:#ffffff;
+	border-bottom:solid 1px #dddddd;
+}
+.showHideReportFilters, .reportFilterBox h4 span {
+	background-color:#ffffff;
+}
+
+.button {
+	line-height:16px !important;
+}
+.buttonSmall {
+	line-height:14px !important;
+}
+.button td, .buttonSmall td {
+	border:none !important;
+	vertical-align:middle !important;
+}
+
+.listGUI .recordList .numbering
+{
+    display:none;
+}
+
+#ApproverTypesTable .label 
+{ 
+    width:auto;
+}
+
+.label label 
+{
+	font-weight:bold;
+	color:#515a64;
+}
+
+#emailPreferencesTable
+{
+    width: 700px;
+}
+/* VU Timesheet #4 - Cell bubble overlapping the cell */
+#cell, #cellFrame_content_l {
+	background-color: #f8f8f8;
+	margin-left: 18px;
+	padding-right: 18px;
+}
+
+#cell {
+	/* This is not necessary to fix overlap but IMHO looks better */
+	padding-top: 15px;
+}
+
+
+
+/* VU Timesheet #6 - Dropdown hover text color */
+.divDropDownList li a:hover {
+	color: black;
+}
+
+
+
+/* VU Timesheet #8 - Scrollbar on holidays calendar */
+#holiday-calendar-wrapper {
+	margin: 0;
+}
+
+
+
+/* VU Timesheet #12 - Input cell padding on IE */
+/* VU Timesheet #151 - Input cell alignment on IE */
+/* VU Timesheet #3 - disabled dropdown styles */
+.tsGUI .timesheet td .disabledDivDropDown {
+	color: #888888;
+}
+
+.tsGUI .timesheet .evenRow .disabledDivDropDown:hover,
+.tsGUI .timesheet .oddRow .disabledDivDropDown:hover {
+	background-color: #ffffff;
+}
+
+
+
+/* VU Timesheet #7 - inline popup header */
+.InlinePopup .header {
+	background-color: #f5f5f6 !important;
+	color: #515a64 !important;
+}
+
+
+
+/* Remove scrollbars from Team Member Assignments popup menu */
+html#project_popup_team-member-assignments_menu body {
+	height: 100%;
+	overflow: hidden;
+}
+html#project_popup_team-member-assignments_menu td[align="center"] {
+	text-align: center;
+}
+
+
+
+/* Fix the delete user page to have things properly left aligned */
+#DeleteController_sectionConfirm, #DeleteController_sectionConfirm div.centerContent, #deleteActivityForm .centered.centerContent
+{
+	text-align:left;
+	margin-left: 10px;
+}
+#DeleteController_sectionConfirm ul
+{
+	margin-left: 20px;
+}
+/* Fix an issue where sometimes the space is missing underneath the tabs in the user page */
+#UserList #Users_treePanel,#UserList #Users_dataGridPanel
+{
+	top:51px !important;
+}
+
+
+/* New style for the Timesheet List report, intended to match the new style of the actual timesheet. */
+.force-no-margin
+{
+	margin: 0px;
+}
+
+.RptTsTable {
+	border-spacing: 0;
+}	
+/* IE way of setting border-spacing... */
+.RptTsTable .RptTsCellHeader,
+.RptTsTable .RptTsDataCellHeader,
+.RptTsTable .RptTsTotalDataCell
+{
+	background-color: #f5f5f6;
+	color: #515a64;
+	font-size: 11px;
+	font-weight: normal;
+}
+.RptTsTable .RptTsCellHeader.RptTsTotalCellHeader,
+.RptTsTable .RptTsDataCellHeader,
+.RptTsTable .RptTsTotalDataCell
+{
+	font-weight: bold;
+}
+.RptTsTable .RptTsCellHeader,
+.RptTsTable .RptTsDataCellHeader
+{
+	border-bottom: solid 1px #bbb;
+	height: 38px;
+}
+.RptTsTable .RptTsTotalCellHeader
+{
+	background-color: #f5f5f6;
+}
+.RptTsTable .RptTsCell,
+.RptTsTable .RptTsDataCell
+{
+	background-color: white;
+	border-top: solid 1px #F5F5F6;
+	border-left: solid 1px #EDEDED;
+	border-right: none;
+	border-bottom: none;
+	height: 38px;
+	padding: 0 2px;
+}
+
+@media print 
+{
+  .RptTsTable .RptTsCell,
+  .RptTsTable .RptTsDataCell,
+  .RptTsTable .RptTsCellHeader,
+  .RptTsTable .RptTsDataCellHeader,
+  .RptTsTable .RptTsTotalCell,
+  .RptTsTable .RptTsTotalCellHeader
+  {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px 1px 1px 1px;
+  }
+}
+
+/* Override width=100% attribute which was preventing table from being left aligned. */
+table#projects_task-selector {
+	width: auto;
+}
+#dynamicSizedContainer .editRowsBlock, #editActivityButtonDiv .bottomButtons, #dynamicSizedContainer .bottomButtons,
+#editApproverTypeMain .editRowsBlock,#editApproverTypeMain .bottomButtons, #ApprovalPathForm
+{
+	text-align:left;
+	margin-left: 10px;
+}
+#editActivityButtonDiv.bottomButtons {
+	width: auto;
+}
+.ApprovalPathFormCenter{
+	text-align:left !important;
+	margin-left: 10px;
+}
+
+.UDFSaveButton
+{
+	text-align:left;
+}
+#Users_dataGridPanel___content
+{
+	top:21;
+}
+
+/* ASP page has page style setting this to "24em !important"... */
+html#timecard_settings_page .editRows .labelCell {
+	width: 26em !important;
+}
+
+
+/* Alignment fix for user quick add table */
+table#admin_user-quick-add_main-table .cell {
+	padding: 0 2px;
+	vertical-align: middle;
+}
+table#admin_user-quick-add_main-table .dropDownControlContainer td {
+	padding: 0 2px;
+}
+table#admin_user-quick-add_main-table .dropDownControlContainer .dropDownText {
+	width: 100px;
+}
+
+.tsgui .timesheet .inputcellcomment 
+{
+	border-bottom: solid 2px blue !important;
+}
+#ReportOption .reportFilter
+{
+	background: #DCDCDC;
+}
+.QBExportSettingsCenter
+{
+	margin: 4px 4px;
+}
+/* Firefox 3.6 shows scrollbars on drop down lists */
+#deletePageGeneric center, #deletePageGeneric .errorMessage, #deletePageGeneric p,
+#constraintViolationPageGeneric, #constraintViolationPageGeneric .errorMessage, #constraintViolationPageGeneric p
+{
+	text-align:left !important;
+}
+
+
+/* Left alignment */
+body.tsGUI > center,
+center.force-left-align > table
+{
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+
+	width: auto !important; /* some tables have width set to near 100% */
+}
+body.tsGUI,
+body.expGUI > center,
+.force-left-align-text-only,
+.errorMessage,
+.force-left-align
+{
+	text-align: left !important;
+}
+div#disclaimers-page-button-row {
+	/* Some genius used position: absolute to center here... */
+	position: static !important;
+}
+table#softwareUpdateHeaderTable,
+span#NewsDisplay table.newsDisplayTable
+{
+	margin: 1em;
+	width: auto;
+}
+table#csv-import-table {
+	margin: 0 !important;
+}
+table.editRowsBlockContainer.force-left-align-text-only {
+	width: auto;
+}
+table.edit-timeoff-request-button-row {
+	width: auto !important;
+}
+.editRowsBlockContainer {
+	text-align: left;
+}
+.editRowsBlockContainer .editRowsBlock {
+	margin: 0;
+}
+.editRowsBlockContainer .bottomButtons {
+	text-align: left;
+}
+html#delete-paycode-page .centered {
+	margin: 1em 3em;
+}
+html#delete-paycode-page .centerContent {
+	text-align: left;
+}
+table#user-preferences_bottom_table 
+{
+	table-layout:fixed;
+	width:700px;
+}
+table#timesheet
+{
+/*	table-layout:fixed;
+	width:100%; */
+}
+.tsgui .timesheet .warning
+{
+	background: #DCDCDC;
+	color: black;
+}
+.recordList .progressBarNewStyle td
+{
+	padding:0;
+}
+.listgui .displaylist .endDateInput
+{
+	padding-left:0;
+}
+.expenseReceipt h1 
+{
+	background-color: #DCDCDC;
+	color: #000;
+}
+.heading div
+{
+	font-weight:bold;
+}
+.tsGUI .timesheet .evenRow td.cell, .tsGUI .timesheet .oddRow td.cell
+{
+	border:none;
+	outline:none;
+	padding:0;
+}
+
+/* DE2328 - Styles above break inout timesheet borders */
+.tsGUI .timesheet.inout .evenRow td.cell, .tsGUI .timesheet.inout .oddRow td.cell
+{
+	border-top:solid 1px #cccccc;
+	border-left:solid 1px #cccccc;
+	border-right:none;
+	border-bottom:none;
+}
+
+.tsGUI .timesheet .evenRow td.inOutDurationCell, .tsGUI .timesheet .oddRow td.inOutDurationCell
+{
+	border-left: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.tsGUI .timesheet .inputCell
+{    
+	border-top:solid 1px #cccccc;
+	border-left:solid 1px #cccccc;
+	border-right:none;
+	border-bottom:none;
+}
+.tsGUI .timesheet .oldTimesheetActiveCell
+{
+	border:1px solid #cccccc;
+	outline:none;
+}
+.tsgui .contentdivcontainer th 
+{
+	padding-left:2px;
+}
+.massTaskEditConfirm, .massTaskEditConfirm .recordList
+{
+	text-align:left !important;
+}
+#projects_task-selector td.massTaskSelectBoxes select, .boxContent td.massTaskSelectBoxes select
+{
+	height: auto;
+}
+.filterBox
+{
+	border-collapse: separate;
+}
+#editForm .listGUI .recordList .cell.center table
+{
+	border-spacing:0;
+}
+.editRoleTable .box
+{
+	width:910px;
+}
+.expenseDetailButtonRow, .expenseRequestOffline
+{
+	text-align:left !important;
+}
+.expenseReceipt h1
+{
+	text-align:left;
+}
+.fusion-chart-padding-cell
+{
+	width: 0px;
+}
+.fusion-legend
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.collapsableContainerHeaderShrunk
+{
+	background: none repeat scroll 0 0 #F5F5F6;
+	color: #515A64;
+}
+.listGUI .noRecordsMessage, .listGUI .addNewMessage, .listGUI .addNewButton
+{
+	text-align:left;
+}
+.editPage #errors .errorPanel
+{
+	margin-left:20px;
+	
+}
+.editPage #errors .errorPanel .scrollingErrorPanel
+{
+	border:none;
+	overflow:hidden;
+}
+
+#DeleteApproverTypeForm .centered {
+	margin-left: 10px;
+}
+
+#deleteActivityForm .centered.centerContent ul, #DeleteApproverTypeForm .centerContent ul {
+	margin-left: 10px;
+}
+
+.filterBox.mass-edit-project-team {
+	margin-bottom: 10px;
+}
+
+/* Hide white space between user selection titles and lists */
+.edit-activity-page.editRowsBlock br {
+	display: none;
+}
+.edit-activity-page.editRowsBlock .button br {
+	display: block;
+}
+
+html#reports_edit-report_page .bottom-buttons {
+	margin-bottom: 5px;
+}
+
+#substitute-user-login-page center {
+	text-align: center;
+}
+#substitute-user-login-page h1 {
+	text-align: center;
+}
+#substitute-user-login-page .button-table {
+	padding: 10px;
+}
+#substitute-user-login-page .button-table td {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+/* Neutralize the JS that makes this have scrollbars instead of expanding to content height. */
+#editActivityForm #dynamicSizedContainer {
+	overflow: visible !important;
+}
+
+
+
+#notificationControlContainer {
+	position:absolute;
+	top:20px;
+	left:240px;
+	z-index: 1;
+}
+
+#notificationControlContainer .notificationControl {
+	/* Styles from the prototype */
+	margin:0;
+	background:#e5e5e5;
+	background-image:-moz-linear-gradient(top, #f1f1f1, #e5e5e5);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e5e5e5));
+	box-shadow:0 1px 4px rgba(0,0,0,0.6);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+	border-radius:4px;border-top-right-radius:0;border-top-left-radius:0;-moz-border-radius:0 0 4px 4px;-webkit-border-radius:4px;-webkit-border-top-right-radius:0;-webkit-border-top-left-radius:0;
+	min-width:591px;
+	white-space:nowrap;
+	padding:8px 10px;
+	text-align:center;
+	font-size:11px;
+	line-height:15px;
+
+	display: block;
+	border-bottom: none;
+	height: auto;
+}
+
+/* Hide icon and close button */
+#notificationControlContainer .notificationControl .notificationControlIcon,
+#notificationControlContainer .notificationControl .notificationControlClose {
+	display: none !important;
+}
+
+/* Link colors, some old messages set colors inline, hence !important */
+#notificationControlContainer .notificationControl a {
+	color: #369 !important;
+}
+#notificationControlContainer .notificationControl a:hover {
+	color: #36c !important;
+}
+
+/* Move accountBar above the notification bar in order to have account bar shadow on top of the notification bar */
+.pageHeader .accountBar {
+	position: absolute;
+	z-index: 2;
+}
+.pageHeader .topMenu {
+	margin-top: 87px;
+}
+
+.DefaultUserPreferenceCheckBoxLists
+{
+	width:40%;
+}
+.redErrors
+{
+	font-weight:bold !important;
+	color:Gray;
+}
+#viewreportperiodsystem center 
+{
+	text-align: left;
+}
+#showtimeoff .zeroWidth
+{
+	width: 0px !important;
+}
+#deletereport .smallerButton
+{
+	width: 80px;
+}
+#deletereport .widerButton
+{
+	width: 500px;
+}
+.warning
+{
+	color:Black;
+}
+.timecardDashboardHeading{
+    border: 1px solid #BBB;
+	margin: 20px;
+}
+.timecardDashboardHeading h4{
+    background: #F5F5F6;
+    color: #515A64;
+}
+.timecardReport .ReportHeadingRow {
+	background: #4A87C3;
+	color: #ffffff;
+}
+
+.timecardReport .ReportGroup {
+    background-color: #F5F5F6;
+}
+
+.timecardReport
+{
+    margin: 20px !important;
+	float:left;
+}
+
+.buttonSmall td.leftCap {
+    background: url("/html/common/silver/buttons/leftCapSmall.gif") no-repeat scroll 0 0 transparent;  
+    width:6px;
+}
+
+.buttonSmall td.text {
+    background: url("/html/common/silver/buttons/backSmall.gif") no-repeat scroll 0 0 transparent;
+    color: #111111 !important;
+}
+.buttonSmall td.rightCap {
+    background: url("/html/common/silver/buttons/rightCapSmall.gif") no-repeat scroll 0 0 transparent;
+}
+.buttonSmall td.leftCap .spacer, .buttonSmall td.rightCap .spacer {
+width: 6px;
+height: 1px;
+}
+.buttonSmallOver td.leftCap {
+    background: url("/html/common/silver/buttons/leftCapSmall_o.gif") no-repeat scroll 0 0 transparent;
+}
+.button td.leftCap {
+    background: url("/html/common/silver/buttons/leftCap.gif") no-repeat scroll 0 0 transparent;
+    width: 7px;
+}
+.buttonSmallOver td.text {
+    background: url("/html/common/silver/buttons/backSmall_o.gif") no-repeat scroll 0 0 transparent;
+    color: #111111 !important;
+}
+.buttonSmallOver td.rightCap {
+    background: url("/html/common/silver/buttons/rightCapSmall_o.gif") no-repeat scroll 0 0 transparent;
+}
+.button td.text {
+    background: url("/html/common/silver/buttons/back.gif") no-repeat scroll 0 0 transparent;
+    color: #111111 !important;
+}
+.button td.rightCap {
+    background: url("/html/common/silver/buttons/rightCap.gif") no-repeat scroll 0 0 transparent;
+}
+.button td.leftCap .spacer, .button td.rightCap .spacer {
+width: 7px;
+height: 1px;
+}
+.buttonOver td.leftCap {
+    background: url("/html/common/silver/buttons/leftCap_o.gif") no-repeat scroll 0 0 transparent;
+}
+.buttonOver td.text {
+    background: url("/html/common/silver/buttons/back_o.gif") no-repeat scroll 0 0 transparent;
+    color: #333333 !important;
+}
+.buttonOver td.rightCap {
+    background: url("/html/common/silver/buttons/rightCap_o.gif") no-repeat scroll 0 0 transparent;
+}
+.verticalButton {
+    width: 23px;
+}
+.verticalButton td.icon {
+    background: url("/html/common/silver/buttons/vBack.gif") no-repeat scroll left bottom transparent;
+    color: #111111 !important;
+    height: 17px;
+    width: 23px;
+}
+.verticalButton td.topCap     
+{
+	background: url("/html/common/silver/buttons/topCap.gif") no-repeat scroll left bottom transparent;
+    height: 3px;
+    width: 23px;
+}
+.verticalButton td.bottomCap     
+{
+	background: url("/html/common/silver/buttons/bottomCap.gif") no-repeat scroll left top transparent;
+    height: 3px;
+    width: 23px;
+}
+.verticalButtonOver td.icon {
+    background: url("/html/common/silver/buttons/vBack_o.gif") no-repeat scroll left top transparent;
+    color: #333333 !important;
+}
+.verticalButtonOver td.topCap {
+    background: url("/html/common/silver/buttons/topCap_o.gif") no-repeat scroll left bottom transparent;
+}
+.verticalButtonOver td.bottomCap {
+    background: url("/html/common/silver/buttons/bottomCap_o.gif") no-repeat scroll left top transparent;
+}
+.ReportHeadingRow {
+    background: none repeat scroll 0 0 #4A87C3;
+    color: #FFFFFF;
+}
+.RptExpHeaderRow, .RptExpCurrencyHeader {
+    background: none repeat scroll 0 0 #4A87C3;
+    color: #FFFFFF;
+}
+.project-rates-close-button
+{
+	margin-left:2px;
+}
+#divReport
+{
+	padding-left: 0px !important;
+	margin-top: 10px; 
+	margin-right: 10px; 
+	margin-bottom: 10px; 
+	margin-left: 10px;
+}
+
+a.send-offline-timesheet {
+	position: absolute;
+	right: 0;
+	margin: 13px 20px 0 0;
+}
+
+.timesheetArea
+{
+    border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 10px;
+}
+
+.weekHover td
+{
+	color:#3366CC !important;
+	background-color:#D7ECFF !important;
+}

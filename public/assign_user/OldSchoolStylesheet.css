@@ -1,0 +1,5069 @@
+
+html {
+}
+
+
+html {
+}
+
+/* General */
+html {
+margin:0;
+padding:0;
+height:100%
+}
+body {
+font-family:Sans-Serif;
+font-size:10pt;
+background:#efefed;
+	color:#000000;
+margin:0;
+padding:0;
+}
+@media print {
+body {
+background:#ffffff;
+ }
+}
+a {
+color:black;
+}
+a:hover {
+color:#4040A0;
+}
+img {
+border:none;
+}
+table {
+font-size:inherit;
+}
+td {
+font-size:10pt;
+}
+
+/* general page object formating */
+h1 {
+text-align:center;
+font-size:14pt;
+font-weight:bold;
+margin:0;
+}
+h2 {
+text-align:center;
+font-size:12pt;
+font-weight:bold;
+margin:0;
+padding:1px;
+}
+h3 {
+text-align:left;
+font-size:12pt;
+font-weight:bold;
+margin:0;
+padding:1px;
+}
+h4 {
+text-align:left;
+font-size:10pt;
+font-weight:bold;
+margin:0;
+padding:0;
+}
+.errorMessage {
+text-align:center;
+font-size:12pt;
+font-weight:bold;
+font-style:italic;
+}
+.disabled, .disabled table {
+color:#808080;
+}
+.disabled a {
+color:#808080;
+}
+.whiteBack {
+background:#ffffff;
+}
+.red {
+color:#ff0000;
+}
+.green {
+color:#009900;
+}
+.blue {
+color:#000088;
+}
+.blink {
+text-decoration:blink;
+}
+.on {
+display:on;
+}
+.off {
+display:none;
+}
+.busyBanner {
+position:absolute;
+left:0px;
+top:0px;
+background-color:#ededed;
+	width:100%;
+	height:100%;
+	opacity:0.9;
+	text-align:center;
+	vertical-align:middle;
+	display:none;
+}
+.clear {
+clear:both;
+}
+.waitingDisplay {
+position:absolute;
+top:0px;
+right:0px;
+color:white;
+background:red;
+font-weight:bold;
+}
+
+.passiveBanner {
+background:#FCFBC7;
+	text-align:center;
+	margin:0 0 10px 0;
+padding:2px 4px;
+border-bottom:solid 1px #F3EA34;
+}
+.passiveBanner img {
+vertical-align:-2px;
+}
+
+.layoutTable {
+margin:0;
+padding:0;
+border-spacing:0;
+border-collapse:collapse;
+}
+.layoutTable td, .layoutTable th {
+margin:0;
+padding:0;
+}
+
+/* form page formating */
+.requiredMark {
+font-weight:bold;
+color:red !important;
+}
+.requiredMarkLegend {
+font-weight:bold;
+color:red !important;
+}
+.errorCell {
+border:2px solid red;
+}
+.small, .small td {
+font-size:8pt;
+}
+.large, .large td {
+font-size:12pt;
+}
+.label {
+margin:0;
+padding:2px;
+vertical-align:top;
+}
+.labelBox {
+border-spacing:0;
+border-collapse:collapse;
+}
+.labelBox td {
+margin:2px;
+}
+
+.titleBox {
+border-spacing:0;
+border-collapse:collapse;
+margin:0;
+padding:0;
+}
+.titleBox th {
+font-size:10pt;
+font-weight:normal;
+margin:0;
+padding:2px;
+text-align:left;
+}
+
+
+/* color select formating */
+.colorSelect .chooserTable {
+border:2px solid #777777;
+	background-color:#ededed;
+border-spacing:0;
+}
+.colorSelect .chooserTable td{
+padding:2px;
+}
+.colorSelect .chart {
+width:121px;
+height:121px;
+background:transparent url(/14-3-2012/common/hsChart.png) no-repeat top left; 
+}
+.colorSelect .chartChooser {
+cursor:pointer;
+position:absolute;
+top:0px;
+left:0px;
+width:11px;
+height:11px;
+overflow:hidden;
+background:transparent url(/14-3-2012/common/chooser.gif) no-repeat top left; 
+}
+.colorSelect .slider {
+padding:0;
+margin:0;
+border-collapse:collapse;
+border-spacing:0;
+}
+.colorSelect .slider td {
+padding:0;
+margin:0;
+height:1px;
+width:10px;
+}
+.colorSelect .sliderBar {
+cursor:pointer;
+position:absolute;
+top:0px;
+left:0px;
+padding:0;
+margin:0;
+height:3px;
+width:14px;
+overflow:hidden;
+background:#000000;
+}
+.colorSelect .colorSample {
+width:75px;
+height:75px;
+}
+.colorSelect .colorValue {
+margin:4px 0 0 0;
+width:75px;
+}
+
+/* list pages formating */
+.filterBox {
+border-spacing:0;
+border-collapse:collapse;
+margin:0;
+padding:0;
+margin-left:auto;
+margin-right:auto;
+}
+.filterBox th {
+font-size:12pt;
+margin:0;
+padding:0;
+text-align:left;
+}
+.filterBox th.right {
+text-align:right;
+}
+
+.errorSpan
+{
+font-weight:bold;
+color:red;
+}
+.listGUI {
+padding:1em 0;
+margin-left:auto;
+margin-right:auto;
+}
+
+.listGUI .pageList {
+width:100%;
+}
+.listGUI .pageList .previousPage {
+text-align:left;
+font-weight:bold;
+}
+.listGUI .pageList .nextPage {
+text-align:right;
+font-weight:bold;
+}
+.listGUI .pageList .pageNumbers {
+text-align:center;
+white-space:nowrap;
+}
+.listGUI .pageList .disabled {
+color:#aaaaaa;
+}
+.listGUI .empty {
+font-weight:bold;
+}
+.listGUI .noRecordsMessage, .listGUI .addNewMessage, .listGUI .addNewButton {
+text-align:center;
+padding:5px;
+margin:0;
+}
+.listGUI .addNewMessage {
+font-weight:bold;
+font-size:12pt;
+}
+.listGUI .recordList {
+}
+.listGUI .recordList .disabled {
+color:#808080;
+}
+.listGUI .recordList .disabled a {
+color:#808080;
+}
+.listGUI .recordList .disabled a:hover {
+color:#8494bd;
+}
+.listGUI .recordList th {
+font-size:10pt;
+padding:2px 4px;
+}
+.listGUI .recordList th.numbering {
+background:none;
+text-align:right;
+}
+.listGUI .recordList th a {
+text-decoration:none;
+}
+.listGUI .recordList th.ascending {
+padding-right:16px;
+padding-left:16px;
+background-image:url(/14-3-2012/common/icons/sortUp.png);
+background-repeat:no-repeat;
+background-position:top right;
+}
+.listGUI .recordList th.descending {
+padding-right:16px;
+padding-left:16px;
+background-image:url(/14-3-2012/common/icons/sortDown.png); 
+background-repeat:no-repeat;
+background-position:top right;
+}
+.listGUI .recordList .numbering {
+background:none;
+text-align:right;
+}
+.listGUI .recordList .menu {
+text-align:right;
+vertical-align:top;
+white-space:nowrap;
+}
+.listGUI .recordList .colFooter {
+text-align:center;
+font-weight:bold;
+white-space:nowrap;
+}
+.listGUI .recordList .menuFooter {
+font-size:8pt;
+text-align:right;
+white-space:nowrap;
+}
+.listGUI .recordList .columnMoveLeft {
+background:transparent url(/14-3-2012/common/left.gif) no-repeat top right; 
+width:10px;
+height:11px;
+}
+.listGUI .recordList .columnMoveRight {
+background:transparent url(/14-3-2012/common/right.gif) no-repeat top left; 
+width:10px;
+height:11px;
+}
+.listGUI .recordList .columnHide {
+color:#ffffff;
+	text-decoration:none;
+	font-size:9pt;
+	font-weight:bold;
+}
+.listGUI .recordList .columnShow {
+background:transparent url(/14-3-2012/common/show.gif) no-repeat top left; 
+width:15px;
+height:11px;
+}
+.listGUI .recordList .actionList {
+width:100%;
+}
+.listGUI .recordList td.cell {
+padding:0 2px;
+text-align:left;
+vertical-align:top;
+white-space:nowrap;
+background:#ffffff;
+}
+
+.listGUI .recordList .hierarchyElement {
+padding:0;
+margin:0;
+background:none;
+vertical-align:top;
+}
+.listGUI .recordList td.left, .listGUI .recordList th.left {
+text-align:left;
+}
+.listGUI .recordList td.center, .listGUI .recordList th.center {
+text-align:center;
+}
+.listGUI .recordList td.right, .listGUI .recordList th.right {
+text-align:right;
+}
+.listGUI .recordList td.top, .listGUI .recordList th.top {
+vertical-align:top;
+}
+.listGUI .recordList td.middle, .listGUI .recordList th.middle {
+vertical-align:middle;
+}
+.listGUI .recordList td.bottom, .listGUI .recordList th.bottom {
+vertical-align:bottom;
+}
+.listGUI .recordList td.wrap {
+white-space:normal;
+}
+.listGUI .recordList .button, .listGUI .recordList .buttonSmall {
+display:block; /* work around gecko problem */
+}
+.recordList .hierarchyTreeTable {
+width:100%;
+}
+@media print {
+.listGUI .recordList {
+border-spacing:0;
+border-collapse:collapse
+}
+.listGUI .recordList td, .listGUI .recordList th {
+border:solid 1px black;
+margin:0;
+}
+.listGUI .recordList .actionList, .listGUI .recordList .menu, .listGUI .recordList .menuHeader, .listGUI .recordList .menuFooter {
+display:none;
+}
+}
+
+.listGUI .displayList {
+}
+.listGUI .displayList th {
+font-size:10pt;
+padding:2px 4px;
+}
+.listGUI .displayList th.numbering {
+background:none;
+text-align:right;
+}
+.listGUI .displayList th a {
+text-decoration:none;
+}
+.listGUI .displayList .numbering {
+background:none;
+color:#000000;
+	text-align:right;
+}
+.listGUI .displayList td {
+padding:0 2px;
+text-align:left;
+vertical-align:middle;
+white-space:nowrap;
+}
+.listGUI .displayList td.wrap {
+white-space:normal;
+}
+
+.listGUI .jumpTo {
+margin-left:auto;
+margin-right:auto;
+}
+
+/* menu formating */
+
+.sideMenuTop {
+background-image:none;
+}
+html > .sideMenuTop {
+background-image:url(/14-3-2012/common/sideTop.png);
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+.sideMenuSmall {
+background-image:none;
+}
+html > .sideMenuSmall, html > .sideMenuSmallASP {
+background-image:url(/14-3-2012/common/sideTopSmall.png);
+background-repeat:no-repeat;
+}
+.sideMenu, .sideMenuSmall {
+margin:0;
+padding:0;
+}
+.sideMenu .container {
+margin:0;
+padding:0 0 1px 0;
+width:200px;
+overflow-x:hidden;
+overflow-y:visible;
+}
+.sideMenu .expandCollapse {
+margin:0px 5px 0 0;
+float:right;
+}
+.sideMenuSmall .expandCollapse {
+position:absolute;
+top:14px;
+left:3px;
+}
+.sideMenu h1 {
+font-size:11pt;
+text-transform:uppercase;
+text-align:center;
+margin:0;
+padding:14px 0 0 0;
+width:200px;
+}
+.sideMenuSmall h1 {
+margin:0;
+height:18px;
+width:23px;
+}
+.sideMenu ul {
+list-style:none;
+padding:0;
+margin:0;
+}
+.sideMenu ul li {
+padding:0 0 0 18px;
+font-weight:bold;
+}
+.sideMenu ul li.expandable ul, ul li.collapsible ul, .sideMenu ul li.heading ul {
+list-style:disc;
+padding:0 0 0 18px;
+margin:0;
+}
+.sideMenu ul li.expandable ul li, ul li.collapsible ul li, .sideMenu ul li.heading ul li {
+padding:0;
+margin:0;
+}
+.sideMenu ul li.expandable ul, .sideMenu ul li.expandable hr {
+display:none;
+}
+.sideMenu li.collapsible ul, .sideMenu li.collapsible hr {
+display:block;
+}
+.sideMenu .bottomBack {
+height:100%;
+width:200px;
+text-align:center;
+overflow:hidden;
+}
+.sideMenu .userInfo {
+margin-left:auto;
+margin-right:auto;
+}
+.sideMenu .userInfo td {
+text-align:center;
+font-size:9pt;
+padding:4px;
+color:#000000;
+	background-image:none;
+}
+html > .sideMenu .userInfo td {
+background-image:url(/14-3-2012/common/sideShade.png);
+background-repeat:repeat;
+}
+.sideMenu a {
+text-decoration:none;
+}
+.sideMenu a {
+font-size:9pt;
+}
+.sideMenu .calendar {
+margin:16px 0 7px 0;
+}
+.sideMenu .calendar td {
+height:18px; 
+}
+.sideMenu .calendar .cell {
+width:18px; 
+}
+.sideMenu hr {
+border:0;
+height:2px;
+margin:6px 8px;
+color:#ffffff;
+	background-color:#ffffff;
+opacity:0.4;
+filter:Alpha(Opacity=40);
+}
+.sideMenu li.expandable hr, li.collapsible hr {
+margin:6px 8px 6px 0;
+}
+.sideMenu .menuSection {
+margin:10px 14px 0 14px;
+padding:0;
+width:172px;
+}
+.sideMenu .menuSection .menuSectionFooter {
+height:5px;
+overflow:hidden;
+width:172px;
+}
+html > .sideMenu .menuSection .menuSectionFooter {
+background:transparent url(/14-3-2012/common/sideMenuSectionFooter.png) no-repeat top left;
+}
+.sideMenu .menuSectionCollapse, .sideMenu .menuSectionExpand {
+cursor:pointer;
+}
+.sideMenu .menuSectionCollapse .menuSectionFooter {
+height:6px;
+}
+html > .sideMenu .menuSectionCollapse .menuSectionFooter {
+background-image:url(/14-3-2012/common/sideMenuSectionFooterCollapse.png);
+}
+.sideMenu .menuSectionExpand .menuSectionFooter {
+height:7px;
+}
+html > .sideMenu .menuSectionExpand .menuSectionFooter {
+background-image:url(/14-3-2012/common/sideMenuSectionFooterExpand.png);
+}
+.sideMenu .menuSection h3 {
+margin:0;
+padding:2px 1px 1px 2px;
+font-size:10pt;
+width:172px;
+}
+html > .sideMenu .menuSection h3 {
+background:transparent url(/14-3-2012/common/sideMenuSectionHeader.png) no-repeat top left;
+}
+.sideMenu .menuSection h3 img {
+vertical-align:text-bottom;
+margin:0 4px 0 0;
+}
+.sideMenu .menuSection h3 span {
+vertical-align:text-bottom;
+}
+.sideMenu .menuSection .menuSectionContent {
+padding:2px 2px 0 2px;
+cursor:default;
+width:172px;
+}
+html > .sideMenu .menuSection .menuSectionContent 
+{
+cursor:default;
+padding:2px 2px 0;
+width:172px;
+}
+.sideMenu .menuSection ul {
+list-style:none;
+padding:0;
+margin:0;
+}
+.sideMenu .menuSection ul li{
+padding:0;
+margin:0 0 0 20px;
+text-indent:-10px;
+}
+
+/* timesheet formating */
+.tsGUI {
+}
+.tsGUI .timesheet img {
+vertical-align:-3px;
+}
+.tsGUI .timesheet img.infoIcon {
+cursor:help;
+}
+.tsGUI .timesheet th {
+padding:2px 4px;
+font-size:10pt;
+font-weight:bold;
+text-align:center;
+}
+.tsGUI .timesheet .filterHeading {
+padding:2px 4px;
+font-size:10pt;
+font-weight:bold;
+text-align:center;
+white-space:nowrap;
+}
+.tsGUI .timesheet .filterTitle {
+text-align:center;
+float:left;
+}
+.tsGUI .timesheet .filterImage {
+text-align:right;
+float:right;
+}	
+.tsGUI .timesheet .weekday {
+font-weight:normal;
+}
+.tsGUI .timesheet .holiday {
+font-weight:normal;
+}
+.timeoffOverdrawn 
+{
+color: Red !important;
+}
+.tsGUI .timesheet .evenRow td, .tsGUI .timesheet .oddRow td {
+padding:0;
+}
+.tsGUI .timesheet .nameIconContainer {
+border:none;
+border-spacing:0;
+border-collapse:collapse;
+}
+.tsGUI .timesheet .nameIconContainer td {
+padding:0;
+margin:0;
+}
+.tsGUI .timesheet td.right {
+text-align:right;
+}
+.tsGUI .timesheet .etcCell td {
+background:none;
+}
+.tsGUI .timesheet .evenRow td.cell, .tsGUI .timesheet .evenRow td.inOutCell, .tsGUI .timesheet .oddRow td.cell, .tsGUI .timesheet .oddRow td.inOutCell {	
+background:none;
+vertical-align:top;
+text-align:center;
+}
+.tsGUI .timesheet	.inoutUnderline, .tsGUI .timesheet	.inoutUnderlineWide {
+height:2px;
+width:62px;
+margin:-1px 0;
+vertical-align:baseline;
+}
+.tsGUI .timesheet	.inoutUnderlineWide {
+width:78px;
+}
+.tsGUI .timesheet .inputCell {
+width:42px;
+text-align:right;
+border:solid 1px #bbbbbb;
+}
+.tsGUI .timesheet .inputCellComment {
+border-bottom:solid 2px blue;
+margin-bottom:-1px;
+}
+.tsGUI .timesheet .evenRow td.cell, .tsGUI .timesheet .oddRow td.cell {	
+width:42px;
+}
+.tsGUI .timesheet .disabled td.cell, .tsGUI .timesheet .disabled td.cell {	
+text-align:right;
+white-space:nowrap;
+background:#cccccc
+}
+.tsGUI .timesheet .evenRow td.textCell, .tsGUI .timesheet .oddRow td.textCell {	
+background:#ffffff;
+	text-align:right;
+	width:38px;
+	vertical-align:top;
+	padding:0 2px;
+}
+.tsGUI .timesheet .evenRow td.menuCell, .tsGUI .timesheet .oddRow td.menuCell {
+text-align:right;
+padding:0 1px;
+}
+.tsGUI .timesheet .oddRow td.textCell, .tsGUI .timesheet .oddRow .divDropDown, .tsGUI .timesheet .oddRow .inputCell {
+background-color:#fbfbfb;
+}
+.tsGUI .timesheet .divDropDown:hover, .tsGUI .timesheet input:hover, .tsGUI .timesheet .oddRow .divDropDown:hover, .tsGUI .timesheet .oddRow input:hover {
+background-color:#fbf8eb;
+}
+.tsGUI .timesheet .disabledDivDropDown, .tsGUI .timesheet .oddRow .disabledDivDropDown, .tsGUI .timesheet .disabledDivDropDown:hover, .tsGUI .timesheet .oddRow .disabledDivDropDown:hover {
+background-color:ThreeDFace;
+}
+
+.tsGUI .timesheet .evenRow td.wideCentered, .tsGUI .timesheet .oddRow td.wideCentered {
+width:60px;
+text-align:center;
+vertical-align:middle;
+}
+.tsGUI .timesheet .disabled td.textCell {	
+background:#cccccc;
+	white-space:nowrap;
+	padding:0 2px;
+}
+.tsGUI .timesheet .taskTimeOffFooter {
+text-align:left;
+}
+.tsGUI .timesheet .dayHeaderRow td {
+background:#ffffff;
+	font-weight:bold;
+}
+.tsGUI .timesheet .dayHeaderRow td.clear {
+background-color:transparent;
+}
+.tsGUI .timesheet .infoRow td {
+background:#ffffff;
+}
+.tsGUI .timesheet .infoRow td.clear {
+background-color:transparent;
+}
+.tsGUI .timesheet .infoRow td.conflict {
+color:#cf122e;
+}
+.tsGUI .timesheet .dayTotalRow td {
+font-weight:bold;
+}
+.tsGUI .timesheet .dayTotalRow td.clear {
+background-color:transparent;
+}
+.tsGUI .timesheet .infoRow td.right, .tsGUI .timesheet .dayTotalRow td.right {
+text-align:right;
+}
+.tsGUI .timesheet .columnTotalRow td {
+text-align:right;
+font-weight:bold;
+}
+.tsGUI .timesheet .columnTotalRow td.clear {
+background:transparent;
+}
+.tsGUI .timesheet .columnTotalRow td.left {
+text-align:left;
+}
+.tsGUI .timesheet .columnTotalRow td.cell {
+background:none;
+font-weight:bold;
+padding:0;
+text-align:center;
+}
+.tsGUI .timesheet .columnTotalRow td.textCell {
+background:#ffffff;
+	color:#000000;
+text-align:right;
+font-weight:bold;
+}
+.tsGUI .timesheet .clear {
+background:none;
+}
+.tsGUI .cellInfoBar {
+width:100%;
+}
+.tsGUI .commentView {
+margin:2px;
+}
+.tsGUI .commentView th {
+font-size:10pt;
+font-weight:bold;
+}
+.tsGUI .commentTable, .tsGUI .approvalDetailsTable {
+margin:2px;
+}
+.tsGUI .commentTable th, .tsGUI .approvalDetailsTable th {
+font-size:10pt;
+font-weight:bold;
+}
+.tsGUI .commentTable td, .tsGUI .approvalDetailsTable td {
+background:#ffffff;
+}
+
+.tsGUI .timesheet td.totalCell {
+text-align:right;
+font-weight:bold;
+background:#ffffff;
+}
+.tsGUI .timesheet td.hasExtraInfo {
+border-bottom:solid 2px blue;
+}
+
+/* cell coments popup */
+.tsGUI .contentDivContainer {
+background-color:#f8f8f8;
+	color:#000000;
+}
+.tsGUI .contentDivContainer th, .tsGUI .contentDivContainer td {
+font-size:10pt;
+white-space:nowrap;
+padding:1px 0 1px 0;
+}
+.tsGUI .contentDivContainer th {
+text-align:right;
+font-weight:bold;
+padding-right:10px;
+}
+.tsGUI .contentDivContainer h4 {
+border-bottom:solid 1px #d0d0d0;
+	padding:0;
+	margin:10px 0 0 0;
+white-space:nowrap;
+}
+.tsGUI .contentDivContainer .rowDetails td, .tsGUI .contentDivContainer .rowDetails th {
+font-size:8pt;
+}
+.tsGUI .cellFrame {
+height:14px;
+width:14px;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+.tsGUI .cellFrame_solid, .tsGUI .cellFrame_ie6_solid {
+background-color:#f8f8f8;
+}
+.tsGUI .cellFrame_bl {
+background:transparent url(/14-3-2012/common/timesheetCell/bl.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_br {
+cursor:pointer;
+background:transparent url(/14-3-2012/common/timesheetCell/br.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_br_c {
+cursor:pointer;
+background:transparent url(/14-3-2012/common/timesheetCell/br_c.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_br_e {
+cursor:pointer;
+background:transparent url(/14-3-2012/common/timesheetCell/br_e.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_b_c {
+cursor:pointer;
+height:14px;
+width:6px;
+background:transparent url(/14-3-2012/common/timesheetCell/b_c.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_b_e {
+cursor:pointer;
+height:14px;
+width:6px;
+background:transparent url(/14-3-2012/common/timesheetCell/b_e.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_tl {
+background:transparent url(/14-3-2012/common/timesheetCell/tl.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_tr {
+background:transparent url(/14-3-2012/common/timesheetCell/tr.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_t {
+background:transparent url(/14-3-2012/common/timesheetCell/t.png) repeat-x 0 0;
+}
+.tsGUI .cellFrame_b {
+background:transparent url(/14-3-2012/common/timesheetCell/b.png) repeat-x 0 0;
+}
+.tsGUI .cellFrame_l {
+background:transparent url(/14-3-2012/common/timesheetCell/l.png) repeat-y 0 0;
+}
+.tsGUI .cellFrame_r {
+background:transparent url(/14-3-2012/common/timesheetCell/r.png) repeat-y 0 0;
+}
+.tsGUI .cellFrame_ibl {
+height:19px;
+width:19px;
+background:transparent url(/14-3-2012/common/timesheetCell/ibl.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_itr {
+height:19px;
+width:19px;
+background:transparent url(/14-3-2012/common/timesheetCell/itr.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_ibr {
+height:19px;
+width:19px;
+background:transparent url(/14-3-2012/common/timesheetCell/ibr.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_itl {
+height:19px;
+width:19px;
+background:transparent url(/14-3-2012/common/timesheetCell/itl.png) no-repeat 0 0;
+}
+.tsGUI .cellFrame_ie6_br {
+cursor:pointer;
+}
+.tsGUI .cellFrame_ie6_br_c {
+cursor:pointer;
+}
+.tsGUI .cellFrame_ie6_br_e {
+cursor:pointer;
+}
+.tsGUI .cellFrame_ie6_b_c {
+cursor:pointer;
+height:14px;
+width:6px;
+}
+.tsGUI .cellFrame_ie6_b_e {
+cursor:pointer;
+height:14px;
+width:6px;
+}
+.tsGUI .cellFrame_ie6_ibl {
+height:19px;
+width:19px;
+}
+.tsGUI .cellFrame_ie6_itr {
+height:19px;
+width:19px;
+}
+.tsGUI .cellFrame_ie6_ibr {
+height:19px;
+width:19px;
+}
+.tsGUI .cellFrame_ie6_itl {
+height:19px;
+width:19px;
+}
+
+/* timesheet summary table */
+.tsGUI .summaryTable th {
+padding:2px 4px;
+font-size:10pt;
+font-weight:bold;
+text-align:center;
+white-space:nowrap;
+}
+.tsGUI .summarytable td.textCell.left {	
+background:#ffffff;
+	text-align:left;
+	width:42px;
+	vertical-align:top;
+}
+.tsGUI .summarytable td.textCell.right {	
+background:#ffffff;
+	text-align:right;
+	width:42px;
+	vertical-align:top;
+}
+.tsGUI .summaryTable .columnTotal td {
+text-align:right;
+font-weight:bold;
+background:#c0c0c0;
+}
+.tsGUI .headingLink {
+text-decoration:none;
+}
+.tsGUI .headingLink span {
+text-decoration:underline;
+}
+.tsGUI .subSection
+{
+margin-top:20px;
+}
+
+.tsGUI_print {
+background:#ffffff;
+}
+.tsGUI_print, .tsGUI_print td, .tsGUI_print th {
+font-size:0.9em;
+}
+.tsGUI_print h3 {
+font-size:1.3em;
+}
+.tsGUI_print .timesheet {
+margin:2px;
+border-spacing:0;
+border-collapse:collapse;
+}
+.tsGUI_print .timesheet td, .tsGUI_print .timesheet th, .tsGUI_print .summaryTable th {
+border:solid #000000 1px;
+margin:0;
+padding:1px 2px;
+vertical-align:top;
+}
+.tsGUI_print .timesheet th, .tsGUI_print .commentTable th, .tsGUI_print .approvalDetailsTable th, .tsGUI_print .summaryTable th {
+background:#666666;
+	color:#ffffff;
+padding:2px 4px;
+}
+.tsGUI_print .timesheet .textCell, .tsGUI_print .summaryTable td.textCell.right {	
+text-align:right;
+white-space:nowrap;
+width:42px;
+}
+.tsGUI_print .timesheet .etcCell td {
+border:none;
+}
+.tsGUI_print .timesheet .columnTotalRow td.textCell, .summaryTable .columnTotal td {
+font-weight:bold;
+}
+.tsGUI_print .timesheet .dayHeaderRow td {
+background:#e6e6e6;
+}
+.tsGUI_print .timesheet .columnTotalRow td, .tsGUI_print .summaryTable .columnTotal td {
+background:#e6e6e6;
+}
+.tsGUI_print .timesheet .infoRow td.right, .tsGUI_print .timesheet .dayTotalRow td.right, .summaryTable .columnTotal td {
+text-align:right;
+}
+.tsGUI_print .timesheet .clear {
+border:none;
+}
+.tsGUI_print .commentTable, .tsGUI_print .approvalDetailsTable, .tsGUI_print .summaryTable {
+margin:2px;
+border-spacing:0;
+border-collapse:collapse;
+}
+.tsGUI_print .commentTable td, .tsGUI_print .commentTable th, .tsGUI_print .approvalDetailsTable td, .tsGUI_print .approvalDetailsTable th, .tsGUI_print .summaryTable td {
+border:solid #000000 1px;
+margin:0;
+vertical-align:top;
+}
+.tsGUI_print .commentTable td, .tsGUI_print .approvalDetailsTable td, .tsGUI_print .summaryTable td {
+padding:1px 2px;
+}
+.tsGUI_print .subSection
+{
+margin-top:20px;
+}
+.signaturetable .signatureline {
+width: 225px;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: black;
+margin-right: 25px;
+}
+.signaturetable .dateline {
+width: 125px;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: black;
+}
+.signaturetable .hspacer {
+width: 15px;
+}
+.signaturetable .vspacer {
+height: 25px;
+}
+
+#stopwatchCursor {
+font-size:10pt;
+font-weight:bold;
+}	
+
+
+/* expense sheet formating */
+.expGUI .expense th, .expGUI .summaryTable th {
+padding:2px 4px;
+font-size:10pt;
+font-weight:bold;
+text-align:center;
+white-space:nowrap;
+}
+.expGUI .summaryTable td, .expGUI .expense td.cell {
+padding:0 2px;
+background:#ffffff;
+}
+.expGUI .expense td {
+white-space:nowrap;
+}
+
+/* Calvin */
+.expGUI .expense td.left, .expGUI .summaryTable td.left {
+text-align:left;
+}
+
+.expGUI .expense td.right, .expGUI .summaryTable td.right {
+text-align:right;
+}
+.expGUI .expense td.center {
+text-align:center;
+}
+.expGUI .expense .disabled td.cell {
+background:#cccccc;
+}
+.expGUI .expense .taskCell {
+}
+* .expGUI .expense .taskCell {
+}
+.expGUI .expense .task {
+min-width: 100%;
+}
+.expGUI .expense .menu {
+text-align:center;
+}
+.expGUI .expense .clear, .expGUI .expense .clear td, .expGUI .summaryTable .clear, .expGUI .summaryTable .clear td {
+background:none;
+}
+.expGUI .expense td.actionBar {
+padding:2px;
+text-align: left;
+}
+.expGUI .summaryTable .clientTotalRow td {
+background:#e0e0e0;
+	text-align:right;
+	font-weight:bold;
+}
+.expGUI .summaryTable .totalRow td {
+background:#c0c0c0;
+	text-align:right;
+	font-weight:bold;
+}
+.expGUI .approvalDetailsTable {
+margin:2px;
+}
+.expGUI .approvalDetailsTable th {
+font-size:10pt;
+font-weight:bold;
+}
+.expGUI .approvalDetailsTable td {
+background:#ffffff;
+}
+
+
+.expGUI_print {
+background:#ffffff;
+}
+.expGUI_print, .expGUI_print td, .expGUI_print th {
+font-size:1em;
+}
+.expGUI_print h3 {
+font-size:1.3em;
+}
+.expGUI_print .expense, .expGUI_print .summaryTable {
+margin:2px;
+border-spacing:0;
+border-collapse:collapse;
+width:99%;
+}
+.expGUI_print .expense td, .expGUI_print .expense th, .expGUI_print .summaryTable td, .expGUI_print .summaryTable th, .expGUI_print .approvalDetailsTable td, .expGUI_print .approvalDetailsTable th {
+border:solid #000000 1px;
+margin:0;
+padding:1px 2px;
+vertical-align:top;
+}
+.expGUI_print .expense td.right, .expGUI_print .summaryTable td.right {
+text-align:right;
+}
+.expGUI_print .expense th, .expGUI_print .summaryTable th, .expGUI_print .approvalDetailsTable th {
+background:#666666;
+	color:#ffffff;
+padding:2px 4px;
+}
+.expGUI_print .expense .clear, .expGUI_print .expense .clear td, .expGUI_print .summaryTable .clear, .expGUI_print .summaryTable .clear td {
+border:none;
+}
+.expGUI_print .summaryTable .clientTotalRow td {
+background:#f6f6f6;
+	text-align:right;
+	font-weight:bold;
+}
+.expGUI_print .summaryTable .totalRow td {
+background:#e6e6e6;
+	text-align:right;
+	font-weight:bold;
+}
+.expGUI_print .approvalDetailsTable {
+margin:2px;
+border-spacing:0;
+border-collapse:collapse;
+}
+
+
+/* calendar formating */
+.calendar {
+border-spacing:0;
+}
+.calendar td {
+height:2em; 
+white-space:nowrap;
+}
+.calendar td a { 
+text-decoration:none;
+}
+.calendar td a:hover {
+text-decoration:underline;
+}
+.calendar .info, .calendar .info a, .calendar .info a:hover {
+font-weight:normal; 
+}
+.calendar .colHeading { 
+font-weight:bold;
+text-transform:capitalize; 
+text-align:center;
+}
+.calendar .cell {
+width:2em; 
+}
+.calendar .today { 
+font-weight:bold; 
+}
+
+
+/* report formating */
+@media screen {
+.ControlBarClass { 
+display:block;
+}
+}
+@media print {
+.ControlBarClass {
+display:none; 
+}
+}
+.report .reportFilter {
+width:98%;
+}
+
+
+/* new List Page */
+
+.listPage {
+margin:0;
+padding:0;
+height:100%;
+overflow:hidden;
+/*background:#efefed url(/14-3-2012/common/Progress.gif) no-repeat center center;*/
+}
+.listPage table {
+font-size:inherit;
+}
+.listPage .dataGrid {
+border-spacing:0;
+}
+.listPage .dataGrid img {
+cursor:pointer;
+}
+.listPage .dataGrid td {
+border-right:solid 1px #D0D0D0;
+	padding:3px;
+	white-space:nowrap;
+}
+.listPage .dataGrid td.lastCell {
+border-right:none;
+}
+.listPage .dataGrid th {
+border-right:solid 1px #D0D0D0;
+	background:#e8e8e8;
+color:#000000;
+	font-size:10pt;
+	padding:3px;
+	white-space:nowrap;
+}
+.listPage .dataGrid th.lastCell {
+border-right:none;
+}
+.listPage .dataGrid th.menuCell {
+white-space:normal;
+font-weight:normal;
+padding-top:1px;
+padding-bottom:1px;
+vertical-align:middle;
+font-size:7pt;
+line-height:0.9em;
+}
+.listPage .dataGrid th.sortableColumn, .tsGUI .timesheet th a {
+cursor:pointer;
+}
+.listPage .dataGrid th.ascending, .tsGUI .timesheet th.ascending {
+padding-left:16px;
+background-image:url(/14-3-2012/common/icons/sortUp.png);
+background-repeat:no-repeat;
+}
+.listPage .dataGrid th.descending, .tsGUI .timesheet th.descending {
+padding-left:16px;
+background-image:url(/14-3-2012/common/icons/sortDown.png); 
+background-repeat:no-repeat;
+}
+
+
+.listPage .dataGrid .row {
+cursor:default;
+}
+.listPage .dataGrid .row td {
+vertical-align:top;
+}
+.listPage .dataGrid .rowOdd td {
+background-color:#f2f2f2;
+}
+.listPage .dataGrid .rowOver td {
+cursor:pointer;
+text-decoration:underline;
+}
+.listPage .dataGrid .rowSelect td {
+background-color:#b0c4de;
+	color:#000000;
+cursor:default;
+}
+.listPage .noRecordsMessage {
+margin:10px;
+}
+
+
+.listPage .dragItem {
+background-color:#b0c4de;
+	filter:alpha(opacity=75);
+	opacity:.75;
+	border-collapse:collapse;
+	border-color:#000000;
+border-style:solid;
+border-width:1px;
+white-space:nowrap;
+}
+.listPage .dragItem td {
+white-space:nowrap;
+}
+.listPage .tabSet {
+border-collapse:collapse;
+}
+.listPage .tabItem {
+width:80px;
+text-align:center;
+border-width:1px;
+border-color:#000000;
+	border-style:solid;
+	background-color:#E0E0E0;
+cursor:pointer;
+}
+.listPage .selectedTabItem {	
+width:80px;
+text-align:center;
+border-width:1px;
+border-color:#000000;
+	border-style:solid;
+	background-color:#FFFFFF;
+cursor:pointer;
+}
+
+.listPage .recordList {
+background:#f8f8f8;
+	margin:0;
+	padding:0 0 50px 0;
+}
+.listPage .tabRow, .listPage .viewRow, .listPage .controlRow {
+padding:0;
+margin:0;
+}
+.listPage .tabRow {
+margin:6px 0 0 0;
+}
+.listPage .viewRow {
+overflow:hidden;
+margin:0 10px;
+}
+.listPage .viewRow .panel {
+overflow:hidden;
+padding:0;
+position:absolute;
+}
+.listPage .viewRow .panel .cap0 {
+background-color:#bbbbbb;
+	margin:0 4px 0 4px;
+height:1px;
+overflow:hidden;
+}
+.listPage .viewRow .panel .cap1 {
+border-left:solid 2px #bbbbbb;
+	border-right:solid 2px #bbbbbb;
+	margin:0 2px 0 2px;
+height:1px;
+overflow:hidden;
+}
+.listPage .viewRow .panel .cap2 {
+border-left:solid 1px #bbbbbb;
+	border-right:solid 1px #bbbbbb;
+	margin:0 1px 0 1px;
+height:2px;
+overflow:hidden;
+}
+.listPage .viewRow .panel h2 {
+border-left:solid 1px #bbbbbb;
+	border-right:solid 1px #bbbbbb;
+	min-height:22px;
+	padding:0 3px 3px 3px;
+}
+.listPage .viewRow .panel h2 .headerContent {
+float:right;
+font-weight:bold;
+font-size:10pt;
+}
+.listPage .viewRow .panel h2 .headerContent a {
+cursor:pointer;
+}
+.listPage .viewRow .panel .content {
+overflow:auto;
+padding:0;
+margin:0;
+border:solid 1px #bbbbbb;
+}
+.listPage .viewRow .panel .collapsedContent {
+display:none;
+font-weight:bold;
+text-align:center;
+}
+.listPage .viewRow .panelHCollapsed h2 span {
+display:none;
+}
+.listPage .viewRow .panelHCollapsed .content {
+display:none;
+}
+.listPage .viewRow .panelHCollapsed .collapsedContent {
+display:block;
+}
+
+/* ie seems to miscalculate the height of the .controlRow element if there is no border */
+.listPage .controlRow {
+border:solid 1px #f8f8f8;
+	margin:0 9px;
+}
+.listPage .controlRow .pagesDiv {
+float:right;
+}
+.listPage .controlRow .pagesDiv td, .listPage .controlRow .pagesDiv select {
+font-size:8pt;
+}
+.listPage .button {
+display:block; /* work around gecko problem */
+}
+.listPage .controlRow .buttonDiv {
+float:left;
+}
+.listPage .controlRow .buttonGroupDiv {
+float:left;
+padding:0 0 0 10px;
+}
+.listPage .controlRow .buttonGroupContainer {
+float:left;
+font-size:8pt;
+border:solid 1px #bbbbbb;
+	padding:1px;
+}
+.listPage .controlRow .buttonGroupDiv td {
+font-size:8pt;
+padding:0;
+margin:0;
+}
+.listPage .controlRow .buttonGroupDiv .buttonGroupLabel {
+white-space:nowrap;
+}
+.listPage .controlRow .buttonGroupDiv .buttonDiv {
+float:none;
+display inline;
+}
+.listPage .controlRow .buttonGroupDiv .buttonDiv table {
+display:block;
+}
+@media print {
+body, html {
+font-size:8pt;
+}
+td {
+font-size:8pt;
+}
+.listPage .tabRow, .listPage .controlRow {
+display:none; 
+}
+.listPage .viewRow {
+position:inherit;
+overflow:visible;
+height:auto;
+width:auto;
+border:none;
+}
+.listPage .viewRow .panel {
+position:inherit;
+overflow:visible;
+}
+}
+
+.divDropDown {
+color:#000000;
+	text-decoration:none;
+	display:block;
+	background:#ffffff url("/14-3-2012/common/default/dropdowns/down.png") no-repeat right center;
+border:solid 1px #bbbbbb;
+	padding:1px 14px 1px 2px;
+white-space:nowrap;
+}
+.divDropDown:hover {
+background-image:url("/14-3-2012/common/default/dropdowns/downo.png");
+}
+.disabledDivDropDown, .disabledDivDropDown:hover {
+color:InactiveCaption;
+background:ThreeDFace url("/14-3-2012/common/default/dropdowns/downd.png") no-repeat right center;
+border-color:#bbbbbb;
+	cursor:default;
+}
+.divDropDownPopup {
+border:solid 1px #888888;
+	overflow:auto;
+	overflow-y:auto;
+	overflow-x:visible;
+	background-color:#ffffff;
+position:absolute;
+display:none;
+cursor:default;
+}
+.divDropDownList {
+padding:0;
+margin:1px;
+z-index:1000;
+}
+.divDropDownList li {
+padding:0;
+margin:0;
+display:block;
+white-space:nowrap;
+}
+.divDropDownList li a {
+color:#000000;
+	text-decoration:none;
+	display:block;
+	white-space:nowrap;
+}
+.divDropDownList li.selected {
+background-color:#6699cc;
+}
+.divDropDownList li.selected a {
+color:#000000;
+}
+.divDropDownList li a:hover {
+background-color:#336699;
+	color:#ffffff;
+}
+.tsGUI .divDropDownList li a.getMore {
+background-color:#CCCCCC;
+	color:#000000;
+}
+.tsGUI .divDropDownList li a.getMore:hover {
+color:#ffffff;
+}
+.tsGUI .divDropDownList li a.selectTaskOption, .tsGUI .selectTaskOption {
+color:#8080FF;
+}
+.tsGUI .divDropDownList li a.selectTaskOption:hover, .tsGUI .selectTaskOption:hover {
+color:#9F9FFE;
+}
+.tsGUI .divDropDownList li a.costAllocatedOption, .tsGUI .costAllocatedOption {
+color:#0A296E;
+}
+.tsGUI .divDropDownList li a.costAllocatedOption:hover, .tsGUI .costAllocatedOption:hover {
+color:#0D358D;
+}
+.tsGUI .costAllocatedItem {
+font-style:italic;
+}
+
+.tsGUI .handle {
+opacity:0.5;
+overflow:hidden;
+cursor:col-resize;
+width:3px;
+height:15px;
+}
+
+
+.expenseReceipt span.error {
+color:red;
+font-weight:bold;
+}
+#expenseentrylist {
+width:90%;
+background-color:#eee;
+}
+#expenseentrylist td {
+padding:2px;
+background-color:#fff;
+}
+#expenseentrylist .header td {
+text-align:center;
+font-weight:bold;
+color:white;
+background-color:#336699;
+}
+#expenseentrylist td.amount {
+text-align:right;
+}
+#expenseentrylist .imageicon {
+text-align:center;
+}
+
+.bottomButtons {
+text-align:center;
+}
+.bottomButtons table {
+margin:0 5px 0 5px;
+}
+
+.historicalControl {
+border:solid 1px;
+width:auto;
+}
+.historicalControlCurrentValue {
+font-weight:bold;
+}
+.historicalControl .labelCell {
+text-align:center;
+width:auto !important;
+}
+.historicalControl .labelText {
+white-space:nowrap;
+width:100%;
+}
+.historicalControl .buttons {
+margin:5px 20px 5px 20px;
+}
+
+.InlinePopup {
+border:1px solid;
+width:500px;
+position:absolute;
+}
+
+.InlinePopup .header {
+font-size:12pt;
+text-align:center;
+border:none;
+}
+
+.InlinePopup .closeButton {
+float: right;
+margin: 2px 2px 0 0;
+}
+
+.TimeOffCalendar .calendar {
+border-color:#a4a4a4;
+	border-width:1px;
+	border-style:solid;
+	border-collapse:separate;
+	padding:0px;
+	margin:0px;
+}
+
+.TimeOffCalendar .calendar .header {
+border-color:#a4a4a4;
+	border-width:1px;
+	border-style:solid;
+	border-top:0px none;
+border-bottom:0px none;
+border-collapse:separate;
+font-weight:400;
+font-size:10pt;
+text-align:center;
+}
+
+.TimeOffCalendar .titleBar {
+border-color:#a4a4a4;
+	border-width:1px;
+	border-style:solid;
+	border-collapse:collapse;
+	border-bottom:0px none;
+text-align:center;
+}
+
+.TimeOffCalendar .eventBar {
+font-size:8pt;
+border-color:#000000;
+	border-width:1px;
+	border-style:solid;
+	color:#000000;
+text-align:center;
+}
+
+.TimeOffCalendar .eventBarHighlighted {
+font-size:8pt;
+font-weight:bold;
+border-color:#FF0000;
+	border-width:1px;
+	border-style:solid;
+	color:#000000;
+text-align:center;
+}
+
+.miniCalendar {
+font-size:8pt;
+width:158px;
+height:155px;
+border:2px;
+border-style:solid;
+}
+
+.miniCalendar .titleStyle {
+font-size:8pt;
+font-weight:bold;
+width:50%;
+}
+
+.miniCalendar .dayHeaderStyle {
+font-size:8pt;
+font-weight:bold;
+}
+
+.miniCalendar .dayStyle {
+width:20px;
+height:17px;
+cursor:pointer;
+cursor:hand;
+}
+
+.miniCalendar .otherMonthDayStyle {
+color:#B5B2B5;
+	background:#B5B2B5;
+}
+
+.miniCalendar .weekendDayStyle{
+cursor:pointer;
+cursor:hand;
+}
+
+.miniCalendar .todayDayStyle {
+cursor:pointer;
+cursor:hand;
+}
+
+.LegendBox {
+height:17px;
+width:17px;
+border-color:Black;
+border-width:1px;
+border-style:Outset;
+display:block;	
+}
+.LegendTimeOffBox {
+height:17px;
+width:17px;
+color:White;
+border-color:Black;
+border-width:1px;
+border-style:solid;
+display:block;	
+}
+.LegendBankedBox {
+height:17px;
+width:17px;
+color:White;
+border-color:Black;
+border-width:1px;
+border-style:dashed;
+display:block;	
+}
+.LegendBoxSaved {
+height:17px;
+width:17px;
+border-color:Black;
+border-width:1px;
+border-style:solid;
+display:block;	
+}
+
+.calendarVisibility {
+font-size:8pt;
+color: Black;
+cursor:pointer;
+cursor:hand;
+text-decoration: none;
+}
+
+.calendarVisibility:hover {
+color: Black;
+text-decoration: underline;
+}
+
+.buttonTable .button
+{
+display:block;
+}
+.alertPanel
+{
+background-color: #fcfac7;
+	width: 100%;
+}
+
+.HistoricalApprovalContainer {
+width: 100%;
+}
+
+.listPage .dataGrid .timetooltip table
+{
+border-style: none; 
+border-collapse:collapse;
+padding: 0px 0px;
+}
+
+.listPage .dataGrid .timetooltip tr
+{
+border-style: none;
+padding: 0px 0px;
+width:100%;
+}
+
+.listPage .dataGrid .timetooltip td
+{
+border-style: none;
+padding: 0px 0px;
+width:100%;
+}
+ 
+/* menu formating */
+.sideMenuTop {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideTop.png',sizingMethod='crop');
+}
+.sideMenuSmall {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideTopSmall.png',sizingMethod='crop');
+}
+.sideMenu .userInfo td {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideShade.png',sizingMethod='scale');
+}
+.sideMenu .menuSection .menuSectionFooter {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideMenuSectionFooter.png',sizingMethod='crop');
+}
+.sideMenu .menuSectionCollapse .menuSectionFooter {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideMenuSectionFooterCollapse.png',sizingMethod='crop');
+}
+.sideMenu .menuSectionExpand .menuSectionFooter {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideMenuSectionFooterExpand.png',sizingMethod='crop');
+}
+.sideMenu .menuSection h3 {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideMenuSectionHeader.png',sizingMethod='crop');
+}
+.sideMenu .menuSection .menuSectionContent {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideMenuSectionContent.png',sizingMethod='scale');
+}
+.tsGUI .cellFrame_ie6_bl {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/sideTop.png',sizingMethod='crop');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/bl.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_br {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/br.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_br_c {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/br_c.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_br_e {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/br_e.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_b_c {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/b_c.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_b_e {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/b_e.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_tl {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/tl.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_tr {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/tr.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_t {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/t.png',sizingMethod='scale');
+}
+.tsGUI .cellFrame_ie6_b {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/b.png',sizingMethod='scale');
+}
+.tsGUI .cellFrame_ie6_l {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/l.png',sizingMethod='scale');
+}
+.tsGUI .cellFrame_ie6_r {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/r.png',sizingMethod='scale');
+}
+.tsGUI .cellFrame_ie6_ibl {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/ibl.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_itr {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/itr.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_ibr {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/ibr.png',sizingMethod='crop');
+}
+.tsGUI .cellFrame_ie6_itl {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/14-3-2012/common/timesheetCell/itl.png',sizingMethod='crop');
+}
+
+
+
+
+
+html {
+}
+
+DIV.collapsableContainer
+{
+border: solid 1px #bbbbbb;
+	background-color: #f8f8f8;
+	text-align:left;
+}
+DIV.collapsableContainerHeader
+{
+	background-color: #E0E0E0;
+	border-bottom: solid 1px #bbbbbb;
+	text-align:left;
+	font-weight: bold;
+}
+DIV.collapsableContainerHeaderShrunk
+{
+background-color: #EDF0F9;
+	border-width: 0px;
+text-align:left;
+font-weight: bold;
+}
+DIV.innerCollapsableContainer
+{
+border-bottom: solid 1px #bbbbbb;
+	border-top: solid 1px #bbbbbb;
+	background-color: #f8f8f8;
+	text-align:left;
+}
+.listtable .titlerow th
+{
+border-right: solid 1px #D0D0D0;
+	background: #e8e8e8;
+	color: #000000;
+	font-size:10pt;
+	padding:3px;
+	white-space: nowrap;
+}
+.listtable .titlerow th.lastCell {
+border-right: none;
+}
+.listtable td.cell {
+border-right: solid 1px #D0D0D0;
+	padding: 3px;
+vertical-align: top;
+}
+.listtable td.lastCell {
+border-right: none;
+}
+.listtable .rowOdd td.cell {
+background-color: #f2f2f2;
+}
+.listtable .titlerow td.titlecell
+{
+font-weight: bold;
+}
+.bold 
+{
+font-weight: bold;
+}
+.select_all
+{
+font-weight:normal;
+font-size: 8pt;
+text-decoration: underline;
+}
+TEXTAREA 
+{
+font-family: Arial,Courier;
+font-size: 10pt;
+}
+.loggedin 
+{
+color: #ADADAD;
+	font-weight: bold;
+}	
+.title 
+{
+font-size:16pt;
+color: #336797;
+}
+.sublist 
+{
+list-style-position: inside;
+}
+.cellspaced
+{
+border-left: solid 1px #bbbbbb;
+	border-right: solid 1px #bbbbbb;
+	border-top: solid 1px #bbbbbb;
+	padding-left:10px;
+	font-size: 9pt;
+vertical-align:top;
+}
+.listtable 
+{
+padding: 0px;	
+border-collapse: collapse;
+}
+
+.error 
+{
+border: solid 2px red;
+}
+.greytext
+{
+font-size: 12pt;
+color: gray;
+}	
+
+.footerpanel
+{	
+}
+
+.footertable 
+{
+width: 100%;
+padding: 2px 2px 2px 2px;
+}
+
+.reportGroupTitle 
+{
+font-weight: bolder;
+font-size: medium;
+}
+.alert 
+{
+font-weight: bold;
+}
+
+.reportControlHeading
+{
+background: #f8f8f8 url(/14-3-2012/common/box/boxBottom.png) bottom left repeat-x;
+padding: 0 0 6px 0;
+}
+.reportControlHeading .button {
+display: block; /* work around gecko problem */
+}
+.showHideReportFilters
+{
+background-color: #f8f8f8;
+	margin-right:5px;
+	font-size: 8pt;
+color: #bbbbbb;
+}
+.progressBarDiv
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color: #f8f8f8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=85);
+	opacity:.85;
+	border: solid 2px #d0d0d0;
+}
+.reportDivDropDownPopup
+{
+	padding: 10px;
+}
+.reportDivDropDownPopup h5
+{
+font-size: 10pt;
+margin: 0 0 10px 0;
+}
+.compositeFilterControlList th
+{
+text-align: right;
+white-space: nowrap;
+}
+
+.dashboardHeading {
+margin: 0 auto;
+width: 80%;
+background: #efefed;
+}
+.dashboardHeading h4 {
+margin: 0;
+padding: 2px 2px 5px 2px;
+}
+.dashboardHeading .reportFilterBox h4, .dashboardHeading .reportFilterBox h4 span{
+background: #efefed;
+}
+.dashboardHeading .buttonRow {
+float: right;
+}
+
+.reportFilterBox
+{
+float: left;
+margin: 3px 10px 0 10px;
+height: 43px;
+}
+.reportFilterBox .divDropDown
+{
+margin-top: 1px;
+margin-bottom: 1px;
+}
+.reportFilterBox h4
+{
+background: transparent url(/14-3-2012/common/reportFilterHeadingBack.png) no-repeat 0 8px;
+}
+.reportFilterBox h4 span
+{
+background-color: #f8f8f8;
+	margin-left: 6px;
+padding-left: 2px;
+padding-right: 2px;
+}
+.reportFilterBox .reportFilterContent
+{
+padding-left: 4px;
+width: 320px;
+}
+html > .reportFilterBox .reportFilterContent
+{
+width: auto;
+min-width: 320px;
+}
+
+.reportFilterLargeBox
+{
+height: 73px;
+}
+
+.TemplateRepeater 
+{
+border: inherit;
+}
+.TemplateRepeater td.addRow 
+{ 
+background: url("/14-3-2012/common/icons/add.gif") no-repeat center right;
+width: 0px;
+height: 16px;
+padding-right: 16px;
+}
+
+.TemplateRepeater td.removeRow 
+{ 
+background: url("/14-3-2012/common/icons/delete.gif") no-repeat center right;
+width: 0px;
+height: 16px;
+padding-right: 16px;
+}
+
+.tooltip
+{ COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 10px; background: #EEEEF1; }
+/* report formating */
+@media screen 
+{
+.collapsableContainer
+{
+display: block; 
+}
+
+.innerCollapsableContainer
+{
+display: block; 
+}
+
+.collapsableContainerHeader
+{
+display: block; 
+}
+
+.collapsableContainerHeaderShrunk
+{
+display: block; 
+}
+
+.reportControlHeading
+{
+display: block; 
+}
+.ReportMeasureHeadingCell
+{
+font-style:italic;
+}
+.ReportCell
+{
+padding: 4px 5px 4px 5px;
+white-space:nowrap;
+vertical-align:top;
+}
+.ReportHeadingCell
+{
+text-align: center;
+white-space:nowrap;
+padding-left: 5px;
+padding-right: 5px;
+}
+.ReportTable
+{
+background-color: #f8f8f8;
+		border-collapse: collapse;
+text-align: left;
+padding: 4px 5px 4px 5px;
+white-space:nowrap;
+vertical-align:top;
+font-size: 8pt;
+}
+.ReportTable th
+{
+font-size: 8pt;
+padding-left: 5px;
+padding-right: 5px;	
+}
+.ReportTable th a
+{
+color: #ffffff;
+	}
+	.ReportTable td 
+{	
+font-size: 8pt;
+padding-left: 5px;
+padding-right: 5px;
+border: solid 1px #CDCDCD;
+	}
+	.ReportHeadingRow
+	{
+		background-color: #B0C4DE;
+		font-weight: bold;
+}
+.BorderBottom
+{
+border-bottom: solid 1px #FFFFFF;
+	}
+	.BorderRight 
+{
+border-right: solid 1px #FFFFFF;
+	}
+	.BorderLeft 
+{
+border-left: solid 1px #FFFFFF;
+	}
+	.ReportGroup
+	{
+		background-color: #E0E0E0;
+		border: inherit
+}
+.ReportGroupTotal
+{
+background-color: #E0E0E0;
+		font-weight: bold;
+border: inherit
+}
+.ReportGrandTotal
+{
+background-color: #B0C4DE;
+		font-weight: bold;
+border: inherit
+}
+.ReportRow
+{
+background-color: #FFFFFF;
+		border: inherit
+}
+.ReportAlternateRow
+{
+background-color: #FFFFFF;
+		border: inherit
+}
+.ReportCollapsedRow
+{
+}
+.ReportHierarchySpacer
+{
+width: 11px;
+height: 1px;
+float: left;
+overflow: hidden;
+}
+.ReportHierarchyPlus
+{
+background-image: url(/14-3-2012/common/plus.gif);
+width: 11px;
+height: 11px;
+float: left;
+overflow: hidden;
+position:relative;
+top:5px;
+}
+.ReportHierarchyMinus
+{
+background-image: url(/14-3-2012/common/minus.gif);
+width: 11px;
+height: 11px;
+float: left;
+overflow: hidden;
+top: 50%;
+position:relative;
+top:5px;
+}
+.RptTs
+{
+text-align:center;
+background-color:#efefed;
+		font-size:smaller;
+	}
+	.RptTsTable
+	{
+		text-align:left;
+	}
+	.RptTsRow
+	{
+		background-color:#B5C7DE;
+}
+.RptTsAltRow
+{
+background-color:#A5B6CE;
+	}
+	.RptTsTotalRow
+	{
+		background-color:#31659C;
+color:#FFFFFF;
+		font-weight:bold;
+	}
+	.RptTsCell 
+{
+background-color:#FFFFFF;
+		text-align:right;
+		margin: 1px;
+}
+.RptTsTotalCell
+{
+background-color:#FFFFFF;	
+		color:#000000;
+}
+.RptTsHeaderRow td
+{
+background-color:#31659C;
+		color:#FFFFFF;
+font-weight:bold;
+text-align:center;
+}
+.RptTsCellHeader
+{
+background-color:#B5C7DE;
+		color:#000000;
+font-weight:normal;
+width:45px;
+}
+.RptTsTotalCellHeader
+{
+font-weight:bold;
+width:55px;
+}
+.RptTsUserName
+{
+font-size:medium;
+font-weight:bold;
+font-size:large;
+}
+.RptTsHeading
+{
+font-weight:bold;
+}
+.RptTsDetailRow
+{
+background-color:#FFFFFF;	
+	}
+	.RptTsDataCell
+	{
+		white-space:nowrap;
+		padding:2px 4px 2px 4px;
+}
+.RptTsDataCellHeader
+{
+white-space:nowrap;
+padding:2px 4px 2px 4px;
+}
+.RptTsTotalDataCell
+{
+padding:2px 4px 2px 4px;
+text-align:right;
+}
+.RptTsDetailCell
+{
+white-space:nowrap;
+padding:2px 4px 2px 4px;
+}
+.RptTsSpacer
+{
+margin-top:35px;
+margin-bottom:35px;
+background-color:#efefed;
+	}
+
+
+	.RptExp
+	{
+		text-align:center;
+		background-color:#efefed;
+font-size:smaller;
+}
+.RptExpTable
+{
+text-align:left;
+}
+.RptExpRow
+{
+background-color:#B5C7DE;
+		margin: 2px;
+}
+.RptExpAltRow
+{
+background-color:#A5B6CE;
+		margin: 2px;
+}
+.RptExpSpacer
+{
+margin-top:35px;
+margin-bottom:35px;
+background-color:#efefed;
+	}
+	.RptExpTitle
+	{
+		font-weight:bold;
+		font-size:large;
+	}
+	.RptExpSectionHeading
+	{
+		font-weight:bold;
+		text-align:left;
+	}
+	.RptExpHeading
+	{
+		font-weight:bold;
+	}
+	.RptExpHeaderRow
+	{
+		background-color:#31659C;
+color:#FFFFFF;
+		font-weight:bold;
+		text-align:center;
+		margin: 2px;
+}
+.RptExpDetailRow
+{
+background-color:#FFFFFF;	
+		margin: 2px;
+}
+.RptExpHeaderCell
+{
+}
+.RptExpDetailCell
+{
+}
+.RptExpTotalCell
+{
+}
+.RptExpCurrencyHeader
+{
+background-color:#31659C;
+		color:#FFFFFF;
+font-weight:bold;
+width:70px;
+text-align:center;
+margin: 2px;
+}
+.RptExpTotalRow
+{
+background-color:#E0E0E0;
+		color:#000000;
+font-weight:bold;
+margin: 2px;
+}
+.RptExpGrandTotalRow
+{
+background-color:#C0C0C0;
+		color:#000000;
+font-weight:bold;
+margin: 2px;
+}
+
+.ReportHeader
+{
+background-color: #dcdcdc;
+		padding: 0px;
+font-weight:bold;
+width: 100%;
+}
+.ReportHeaderName 
+{
+font-size: 12pt;
+text-align: right;
+font-weight: bold;
+}
+.ReportHeaderItem 
+{
+font-size: 8pt;
+font-weight: normal;
+text-align: left
+}
+.ReportHeaderTitle 
+{
+font-size: 8pt;
+font-weight: bold;
+text-align: left
+}
+}
+
+@media print 
+{
+.hideOnPrint
+{
+display: none; 
+}
+
+.collapsableContainer
+{
+display: block; 
+}
+
+.innerCollapsableContainer
+{
+display: block; 
+}
+
+collapsableContainerHeader
+{
+display: block; 
+}
+
+.collapsableContainerHeaderShrunk
+{
+display: block; 
+}
+
+.reportControlHeading
+{
+display: none; 
+}
+
+#FilterPanel
+	{
+	 display: none;
+}
+
+.ReportMeasureHeadingCell
+{
+font-style:italic;
+}
+.ReportCell
+{
+padding: 4px 5px 4px 5px;
+vertical-align:top;
+}
+.ReportHeadingCell
+{
+text-align: center;
+padding-left: 5px;
+padding-right: 5px;
+}
+.ReportTable
+{
+background-color: #f8f8f8;
+		border-collapse: collapse;
+text-align: left;
+padding: 4px 5px 4px 5px;
+vertical-align:top;
+font-size: 8pt;
+}
+.ReportTable th
+{
+font-size: 8pt;
+padding-left: 5px;
+padding-right: 5px;
+}
+.ReportTable td 
+{	
+font-size: 8pt;
+padding-left: 5px;
+padding-right: 5px;
+border: solid 1px #CDCDCD;
+	}
+	.ReportHeadingRow
+	{
+		background-color: #B0C4DE;
+		font-weight: bold;
+}
+.BorderBottom
+{
+border-bottom: solid 1px #FFFFFF;
+	}
+	.BorderRight 
+{
+border-right: solid 1px #FFFFFF;
+	}
+	.BorderLeft 
+{
+border-left: solid 1px #FFFFFF;
+	}
+	.ReportGroup
+	{
+		background-color: #E0E0E0;
+		border: inherit
+}
+.ReportGroupTotal
+{
+background-color: #E0E0E0;
+		font-weight: bold;
+border: inherit
+}
+.ReportGrandTotal
+{
+background-color: #B0C4DE;
+		font-weight: bold;
+border: inherit
+}
+.ReportRow
+{
+background-color: #FFFFFF;
+		border: inherit
+}
+.ReportAlternateRow
+{
+background-color: #FFFFFF;
+		border: inherit
+}
+.ReportCollapsedRow
+{
+}
+.ReportHierarchySpacer
+{
+width: 11px;
+height: 1px;
+float: left;
+overflow: hidden;
+}
+.ReportHierarchyPlus
+{
+background-image: url(/14-3-2012/common/plus.gif);
+width: 11px;
+height: 11px;
+float: left;
+overflow: hidden;
+position:relative;
+top:5px;
+}
+.ReportHierarchyMinus
+{
+background-image: url(/14-3-2012/common/minus.gif);
+width: 11px;
+height: 11px;
+float: left;
+overflow: hidden;
+top: 50%;
+position:relative;
+top:5px;
+}
+.RptTs
+{
+text-align:center;
+background-color:#ffffff;
+		color:#000000;
+font-size:smaller;
+}
+.RptTsTable
+{
+text-align:left;
+border-collapse:collapse;
+}
+.RptTsRow
+{
+background-color:#ffffff;
+		color:#000000;
+}
+.RptTsAltRow
+{
+background-color:#ffffff;
+		color:#000000;
+}
+.RptTsTotalRow
+{
+background-color:#ffffff;
+		color:#000000;
+font-weight:bold;
+}
+.RptTsCell 
+{
+background-color:#ffffff;
+		color:#000000;
+text-align:right;
+border: 1px solid black;
+}
+.RptTsTotalCell
+{
+background-color:#ffffff;
+		color:#000000;
+border: 1px solid black;
+}
+.RptTsHeaderRow td
+{
+background-color:#ffffff;
+		color:#000000;
+font-weight:bold;
+text-align:center;
+}
+.RptTsCellHeader
+{
+background-color:#ffffff !important;
+color:#000000 !important;	
+font-weight:bold;
+width:45px;
+border: 1px solid black;
+}
+.RptTsTotalCellHeader
+{
+background-color:#ffffff !important;
+color:#000000 !important;
+font-weight:bold;
+width:55px;
+border: 1px solid black;
+}
+.RptTsUserName
+{
+background-color:#ffffff;
+		color:#000000;
+font-size:medium;
+font-weight:bold;
+font-size:large;
+}
+.RptTsHeading
+{
+background-color:#ffffff;
+		color:#000000;
+font-weight:bold;
+}
+.RptTsDetailRow
+{
+background-color:#ffffff;
+		color:#000000;
+}
+.RptTsDataCell
+{
+background-color:#ffffff;
+		color:#000000;
+padding:2px 4px 2px 4px;
+border: 1px solid black;
+}
+.RptTsDataCellHeader 
+{
+background-color:#ffffff !important;
+color:#000000 !important;
+font-weight:bold;
+padding:2px 4px 2px 4px;
+border: 1px solid black;
+}
+.RptTsTotalDataCell
+{
+background-color:#ffffff;
+		color:#000000;
+padding:2px 4px 2px 4px;
+text-align:right;
+border: 1px solid black;
+}
+.RptTsDetailCell
+{
+background-color:#ffffff;
+		color:#000000;
+padding:2px 4px 2px 4px;
+border: 1px solid black;
+}
+.RptTsSpacer
+{
+margin-top:35px;
+margin-bottom:35px;
+background-color:#ffffff;
+		color:#000000;
+}
+
+
+.RptExp
+{
+text-align:center;
+background-color:#FFFFFF;
+		font-size:smaller;
+	}
+	.RptExpTable
+	{
+		border-collapse:collapse;
+		text-align:left;
+	}
+	.RptExpRow
+	{
+		margin:2px;
+		background-color:#FFFFFF !important;
+color:#000000 !important;
+}
+.RptExpAltRow
+{
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+}
+.RptExpSpacer
+{
+margin-top:35px;
+margin-bottom:35px;
+}
+.RptExpTitle
+{
+font-weight:bold;
+font-size:large;
+}
+.RptExpSectionHeading
+{
+font-weight:bold;
+text-align:left;
+}
+.RptExpHeading
+{
+font-weight:bold;
+}
+.RptExpHeaderRow
+{
+font-weight:bold;
+text-align:center;
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+}
+.RptExpDetailRow
+{
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+}
+.RptExpHeaderCell
+{
+border: 1px solid black;
+}
+.RptExpDetailCell
+{
+border: 1px solid black;
+}
+.RptExpTotalCell
+{
+border: 1px solid black;
+}
+.RptExpCurrencyHeader
+{
+font-weight:bold;
+width:70px;
+text-align:center;
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+}
+.RptExpTotalRow
+{
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+font-weight:bold;
+}
+.RptExpGrandTotalRow
+{
+margin:2px;
+background-color:#FFFFFF !important;
+color:#000000 !important;
+font-weight:bold;
+}
+
+.ReportHeader
+{
+background-color: #ffffff;
+		padding: 0px;
+font-weight:bold;
+width: 100%;	
+border-bottom: 2px solid black;
+}
+.ReportHeaderName 
+{
+font-size: 12pt;
+text-align: right;
+font-weight: bold;
+}
+.ReportHeaderItem 
+{
+font-size: 8pt;
+font-weight: normal;
+text-align: left
+}
+}
+.picker
+{
+  background-color: #FFFFFF;
+  border: 1px gray solid;
+  font-size: 12px;
+  font-family: "Verdana",monospace;
+  padding: 2px;
+  cursor: pointer;
+  width: 125px;
+}
+a.calendarfooter
+{
+  text-decoration:none;
+}
+a.calendarfooter:hover
+{
+  text-decoration:underline;
+  color:black;
+}
+
+.calendar_button
+{
+  border:none;
+  cursor:pointer;
+  width:25px;
+  height:22px;
+}
+
+.rcalendar td
+{
+  font-size:11px;
+}
+
+.title
+{
+  font-weight:bold;
+  background-color:#D7D7E5;
+}
+
+.day
+{
+  width:25px;
+  cursor:pointer;
+  text-align:center;
+  border-width:1px;
+  border-color:#F6F6F6;
+  border-style:solid;
+}
+
+.dayhover
+{
+  width:25px;
+  cursor:pointer;
+  text-align:center;
+  text-decoration:underline;
+  border-width:1px;
+  border-color:#F6F6F6;
+  border-style:solid;
+}
+
+.dayheader
+{
+  width:25px;
+  text-align:center;
+  border-width:1px;
+  border-color:white;
+  border-style:solid;
+  font-weight:bold;
+  background-color:#FFFFFF;
+}
+
+.othermonthday
+{
+  color:#999999;
+}
+
+.outofrangeday
+{
+  visibility:hidden;
+}
+
+.selectedday
+{
+  width:25px;
+  background-color:#FBE694;
+  color:#000000;
+  border-width:1px;
+  border-color:#BB5503 !important;
+  border-style:solid;
+  font-weight:bold;
+}
+
+.rcalendar
+{
+  border-style:solid;
+  border-width:1px;
+  border-color:Black;
+  border-collapse:collapse;
+  background-color:#FFFFFF;
+  cursor:default;
+}
+
+.month
+{
+  background-color:#F6F6F6;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:5px;
+  margin-top:0px;
+}
+
+.nextprev
+{
+  cursor:pointer;
+  height:25px;
+  vertical-align:center;
+  padding:0px 5px 0px 5px;
+}
+
+.selector
+{
+  width:14px;
+  cursor:pointer;
+  text-align:left;
+  vertical-align:center;
+  background-color:#FFFFFF;
+}
+
+.button { 
+  cursor: pointer;
+  cursor: hand;
+  border-spacing: 0;
+  border-collapse: collapse;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  }
+/* Apply rule to Safari & Chrome only.  It's safe but not needed for FF, and breaks badly on IE. */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .button { display: inline-table; } }
+.button td {
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: middle;
+  }
+.button td.text {
+  color: #ffffff !important;
+  font-size: 10pt;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 60px;
+  }
+.button td.text .spacer {
+  width: 60px;
+  height: 1px;
+  }
+.button td.textIconWidth {
+  width: 44px;
+  }
+.button td.textIconWidth .spacer {
+  width: 44px;
+  height: 1px;
+  }
+.button td.textShort {
+  width: 30px;
+  }
+.button td.textShort .spacer {
+  width: 30px;
+  height: 1px;
+  }
+.button td.icon {
+  width: 16px;
+  }
+
+.buttonSmall { 
+  cursor: pointer;
+  cursor: hand;
+  border-spacing: 0;
+  border-collapse: collapse;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  }
+/* Apply rule to Safari & Chrome only.  It's safe but not needed for FF, and breaks badly on IE. */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .buttonSmall { display: inline-table; } }
+.buttonSmall td {
+  margin: 0 !important;
+  padding: 0 !important;
+  }
+.buttonSmall td.text {
+  color: #ffffff !important;
+  font-size: 8pt;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 40px;
+  }
+.buttonSmall td.text .spacer {
+  width: 40px;
+  height: 1px;
+  }
+.buttonSmall td.textIconWidth {
+  width: 24px;
+  }
+.buttonSmall td.textIconWidth .spacer {
+  width: 24px;
+  height: 1px;
+  }
+.buttonSmall td.icon {
+  width: 16px;
+  }
+
+.verticalButton { 
+  cursor: pointer;
+  cursor: hand;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  }
+.verticalButton td {
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: middle;
+  }
+.verticalButton td.icon {
+  color: #ffffff !important;
+  text-align: center;
+  }
+@media print {
+  .button, .buttonSmall, .verticalButton {
+    display: none;
+  }
+}
+input[type="button"], input[type="submit"] {
+  padding:4px 8px;
+  margin-right:3px;
+  line-height:17px;
+  font-family:Arial,Sans-Serif;
+  font-size:12px;
+  font-weight:normal;
+  cursor:pointer;
+  color:#333333;
+  border:none;
+  border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+  background:#cccccc url("/html/common/default/buttons/new/buttonBack.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #ffffff, #cccccc);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
+  box-shadow:0 1px 4px rgba(0,0,0,0.6);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+  text-shadow:#ffffff 0 -1px 1px;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+  background:#dedddd url("/html/common/default/buttons/new/buttonBacko.png") repeat-x 0 0;
+  background:-moz-linear-gradient(top, #ffffff, #dedddd);
+  background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dedddd));
+}
+input[type="button"]:active, input[type="submit"]:active {
+  padding:3px 7px;
+  border:solid 1px #cccccc;
+  background:#ffffff url("/html/common/default/buttons/new/buttonBacka.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #dedddd, #ffffff);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#dedddd), to(#ffffff));
+  box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;
+}
+input[type="button"].small, input[type="submit"].small {
+  font-size:11px;
+  line-height:15px;
+  padding:1px 3px;
+}
+input[type="button"].small:active, input[type="submit"].small:active {
+  padding:0 2px;
+}
+input[type="button"].important, input[type="submit"].important {
+  color:#ffffff;
+  background:#368ebb url("/html/common/default/buttons/new/buttonBackI.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #80bfe0, #368ebb);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#80bfe0), to(#368ebb));
+  text-shadow:#226a8f 0 -1px 1px;
+}
+input[type="button"].important:hover, input[type="submit"].important:hover {
+  background:#3c9dce url("/html/common/default/buttons/new/buttonBackIo.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #8acdf0, #3c9dce);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#8acdf0), to(#3c9dce));
+}
+input[type="button"].important:active, input[type="submit"].important:active {
+  background:#8acdf0 url("/html/common/default/buttons/new/buttonBackIa.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #368ebb, #80bfe0);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#3c9dce), to(#8acdf0));
+}
+input[type="button"][disabled="disabled"], input[type="submit"][disabled="disabled"] {
+	opacity:0.5;
+  cursor:default;
+}
+input[type="button"][disabled="disabled"]:hover, input[type="submit"][disabled="disabled"]:hover, input[type="button"][disabled="disabled"]:active, input[type="submit"][disabled="disabled"]:active {
+	padding:4px 8px;
+	border:none;
+  background:#cccccc url("/html/common/default/buttons/new/buttonBack.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #ffffff, #cccccc);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc));
+  box-shadow:0 1px 3px rgba(0,0,0,0.6);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.6);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.6);
+}
+input[type="button"][disabled="disabled"].important:hover, input[type="submit"][disabled="disabled"].important:hover, input[type="button"][disabled="disabled"].important:active, input[type="submit"][disabled="disabled"].important:active {
+	background:#368ebb url("/html/common/default/buttons/new/buttonBackI.png") repeat-x 0 0;
+  background-image:-moz-linear-gradient(top, #80bfe0, #368ebb);
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#80bfe0), to(#368ebb));
+}
+input[type="button"][disabled="disabled"].small:hover, input[type="submit"][disabled="disabled"].small:hover, input[type="button"][disabled="disabled"].small:active, input[type="submit"][disabled="disabled"].small:active {
+  padding:1px 3px;
+}
+
+
+html {
+}
+.button { 
+height: 23px;
+}
+.button td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -559px 0px;
+width: 7px;
+height: 23px;
+}
+.button td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -328px -261px;
+width: 7px;
+height: 23px;
+}
+.button td.leftCap .spacer, .button td.rightCap .spacer {
+width: 7px;
+height: 1px;
+}
+.button td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -248px;
+height: 23px;
+color: #111111 !important;
+}
+.buttonOver td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -552px -29px;
+}
+.buttonOver td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -573px 0px;
+}
+.buttonOver td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -210px;
+color: #333333 !important;
+}
+.buttonDown td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -545px -29px;
+}
+.buttonDown td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -566px -23px;
+}
+.buttonDown td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -187px;
+color: #111111 !important;
+}
+.buttonDisabled td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -559px -23px;
+}
+.buttonDisabled td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -566px 0px;
+}
+.buttonDisabled td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -134px;
+color: #bfbfbf !important;
+}
+
+.buttonSmall { 
+height: 15px;
+}
+.buttonSmall td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -544px -187px;
+width: 6px;
+height: 15px;
+}
+.buttonSmall td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -516px -200px;
+width: 6px;
+height: 15px;
+}
+.buttonSmall td.leftCap .spacer, .buttonSmall td.rightCap .spacer {
+width: 6px;
+height: 1px;
+}
+.buttonSmall td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -157px;
+height: 15px;
+color: #111111 !important;
+}
+
+.buttonSmallOver td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -578px -23px;
+}
+.buttonSmallOver td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -578px -80px;
+}
+.buttonSmallOver td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -271px;
+color: #333333 !important;
+}
+.buttonSmallDown td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -578px -95px;
+}
+.buttonSmallDown td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -522px -200px;
+}
+.buttonSmallDown td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -233px;
+color: #111111 !important;
+}
+.buttonSmallDisabled td.leftCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -578px -110px;
+}
+.buttonSmallDisabled td.rightCap { 
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -568px -160px;
+}
+.buttonSmallDisabled td.text {
+background: transparent url(/a/WebResource.axd?d=q9LYsasT0IDsfDTrMTbtJqGMPJdxq30sQnvPAcBB5KnCg9mvlUqyWxveJ5_MSwbb5EDVicKzWnYri0cR8vWNBxpREdr5qNuT0vnYIF5-CmOQL7Q4nWIt47ZPceXXp94BHAZyJQ2&t=634672334300000000) no-repeat -28px -172px;
+color: #bfbfbf !important;
+}
+
+.verticalButton { 
+width: 23px;
+}
+.verticalButton td.topCap { 
+background: url("/14-3-2012/common/silver/buttons/topCap.gif") no-repeat bottom left;
+width: 23px;
+height: 3px;
+}
+.verticalButton td.bottomCap { 
+background: url("/14-3-2012/common/silver/buttons/bottomCap.gif") no-repeat top left;
+width: 23px;
+height: 3px;
+}
+.verticalButton td.topCap .spacer, .verticalButton td.bottomCap .spacer {
+width: 23px;
+height: 3px;
+}
+.verticalButton td.icon {
+background: url("/14-3-2012/common/silver/buttons/vBack.gif") no-repeat bottom left;
+width: 23px;
+height: 17px;
+color: #111111 !important;
+}
+.verticalButton td.icon .spacer {
+width: 23px;
+height: 1px;
+}
+
+.verticalButtonOver td.topCap { 
+background: url("/14-3-2012/common/silver/buttons/topCap_o.gif") no-repeat bottom left;
+}
+.verticalButtonOver td.bottomCap { 
+background: url("/14-3-2012/common/silver/buttons/bottomCap_o.gif") no-repeat top left;
+}
+.verticalButtonOver td.icon {
+background: url("/14-3-2012/common/silver/buttons/vBack_o.gif") no-repeat top left;
+color: #333333 !important;
+}
+.verticalButtonDown td.topCap { 
+background: url("/14-3-2012/common/silver/buttons/topCap_d.gif") no-repeat bottom left;
+}
+.verticalButtonDown td.bottomCap { 
+background: url("/14-3-2012/common/silver/buttons/bottomCap_d.gif") no-repeat top left;
+}
+.verticalButtonDown td.icon {
+background: url("/14-3-2012/common/silver/buttons/vBack_d.gif") repeat-y top left;
+color: #111111 !important;
+}
+.verticalButtonDisabled td.topCap { 
+background: url("/14-3-2012/common/silver/buttons/topCap_x.gif") no-repeat bottom left;
+}
+.verticalButtonDisabled td.bottomCap { 
+background: url("/14-3-2012/common/silver/buttons/bottomCap_x.gif") no-repeat top left;
+}
+.verticalButtonDisabled td.icon {
+background: url("/14-3-2012/common/silver/buttons/vBack_x.gif") repeat-y top left;
+color: #bfbfbf !important;
+}
+/*** dropdown control ***/
+.dropDownControlContainer,
+.dropDownControlContainer table,
+.dropDownControlContainer td,
+.dropDownControlContainer div
+{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.dropDownControl
+{
+	border: solid #bbbbbb 1px;
+}
+.dropDownControl td
+{
+	background-color: White;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.dropDownText
+{
+	border: none;
+	background-color: White;
+	vertical-align: middle;
+	margin: 0 0 0 6px;
+	width: 122px;
+	height: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	cursor: hand;
+}
+.buttonDropDownUp
+{
+  cursor: pointer;
+  cursor: hand;
+}
+.buttonDropDownDown
+{
+  cursor: pointer;
+  cursor: hand;
+}
+.buttonDropDownOver
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+/*** dropdown window ***/
+.dropDownWindowContainer
+{
+    position: absolute;
+}
+
+/* IE6 & IE7 only -- can't combine these CSS rules without breaking IE6 */
+* html .dropDownWindowContainer div               /* IE6 */
+{
+    position: absolute;
+}
+*:first-child+html .dropDownWindowContainer div  /* IE7 */
+{
+    position: absolute;
+}
+
+.dropDownWindowScrollable 
+{
+	border: solid #bbbbbb 1px;
+	background: #ffffff;
+	
+	height: 300px;
+	width: 200px; /*** width is zero in firefox ***/
+	overflow: auto;
+}
+
+/*** ensure iframe height and width match dropDownWindowScrollable ***/
+.dropDownWindowIFrame
+{
+	position: absolute;
+	height: 300px;
+	width: 200px;
+	top: 0px;
+	left: 0px;
+	border: none;
+	display: block;
+	zIndex: -1;
+}
+ 
+/*** combobox control ***/
+.comboBoxControlContainer,
+.comboBoxControlContainer table,
+.comboBoxControlContainer td,
+.comboBoxControlContainer div
+{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.comboBoxControl
+{
+	border: solid #bbbbbb 1px;
+}
+.comboBoxControl td
+{
+	background-color: White;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.comboBoxText
+{
+	border: none;
+	background-color: White;
+	vertical-align: middle;
+	margin: 0 0 0 6px;
+	width: 122px;
+	height: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	cursor: hand;
+}
+.buttonComboBoxUp
+{
+  cursor: pointer;
+  cursor: hand;
+}
+.buttonComboBoxDown
+{
+  cursor: pointer;
+  cursor: hand;
+}
+.buttonComboBoxOver
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+/*** combobox window ***/
+.comboBoxWindowContainer
+{
+    position: absolute;
+}
+
+/* IE6 & IE7 only -- can't combine these CSS rules without breaking IE6 */
+* html .comboBoxWindowContainer div               /* IE6 */
+{
+    position: absolute;
+}
+*:first-child+html .comboBoxWindowContainer div  /* IE7 */
+{
+    position: absolute;
+}
+
+.comboBoxWindowScrollable 
+{
+	border: solid #bbbbbb 1px;
+	background: #ffffff;
+	
+	height: 300px;
+	width: 200px; /*** width is zero in firefox ***/
+	overflow: auto;
+}
+
+/*** ensure iframe height and width match dropDownWindowScrollable ***/
+.comboBoxWindowIFrame
+{
+	position: absolute;
+	height: 300px;
+	width: 200px;
+	top: 0px;
+	left: 0px;
+	border: none;
+	display: block;
+	zIndex: -1;
+}
+
+
+html {
+}
+
+.hierarchyTreeScrollable {
+background: White;
+border: 1px solid #bbbbbb;
+ background: #ffffff;
+ overflow: auto;
+
+/*** height and width are set in JS ***/
+height: 300px;
+width: 200px; /*** width is zero in firefox ***/
+}
+.treeNodeOver {
+text-decoration: underline;
+}
+.treeNodeSelect {
+background-color: #336699 !important;
+color: #ffffff !important;
+}
+.treeNodeReadOnly {
+font-weight: bold;
+}
+.hierarchyListBox {
+width: 580px;
+height: 200px;
+}
+.listTree ul {
+list-style:none;
+padding:0;
+margin:0;
+}
+.listTree li {
+padding:0;
+margin:0 0 0 16px;
+display:block;
+background:transparent url(/14-3-2012/common/listTree/v.png) 5px 0 repeat-y;
+white-space:nowrap;
+}
+.listTree li.last {
+background-repeat:no-repeat;
+}
+.listTree div {
+padding:2px 0 2px 32px;
+margin:0;
+background:transparent url(/14-3-2012/common/listTree/h.png) 0 0 no-repeat;
+cursor:pointer;
+}
+.listTree div.textOnlyNode {
+padding:2px 0 2px 16px;
+background-image:url(/14-3-2012/common/listTree/hClear.png);
+}
+.listTree div.customIconNode {
+padding:2px 0 0 14px;
+background-image:url(/14-3-2012/common/listTree/hClear.png);
+}
+.listTree div.customIcon {
+padding:0 0 2px 18px;
+position:static;
+}
+.listTree .rootNode {
+background:none;
+margin:0;
+}
+.listTree .expandableNode ul {
+display:none;
+}
+
+/* expandableNode rules should come after collapsibleNode rules so that they
+* take precedence. In a multiple-level dept tree, both collapsible and 
+* expandable rules could apply at once since we can't use child or first-child
+* selectors (ie7-quirks); but collapsible takes precedence.
+*/
+.listTree .collapsibleNode div.expandableSubnode {
+background-image:url(/14-3-2012/common/listTree/hc.png);
+}
+.listTree .collapsibleNode div.expandableSubnode-textOnlyNode, .listTree .collapsibleNode div.expandableSubnode-customIconNode {
+background-image:url(/14-3-2012/common/listTree/hcClear.png);
+}
+.listTree .expandableNode div.expandableSubnode {
+background-image:url(/14-3-2012/common/listTree/he.png);
+}
+.listTree .expandableNode div.expandableSubnode-textOnlyNode, .listTree .expandableNode div.expandableSubnode-customIconNode {
+background-image:url(/14-3-2012/common/listTree/heClear.png);
+}
+
+.listTree .checkBox {
+background: transparent url(/14-3-2012/common/listTree/checkoff.gif) no-repeat 1px 2px;
+padding:0 0 0 15px;
+}
+.listTree .checkOff {
+}
+.listTree .checkOn {
+background-image:url(/14-3-2012/common/listTree/checkon.gif);
+}
+.listTree .checkDis {
+background-image:url(/14-3-2012/common/listTree/checkdis.gif);
+}
+.folderIcon {
+background-image:url(/14-3-2012/common/listTree/folder.png) !important;
+}
+.listTree ul div.selected, .listTree li.selected > div {
+background-color:#a1cde9;
+ color:#000000;
+}
+.listTree li.selected {
+background-color:#d9ebf7;
+ color:#000000;
+}
+
+
+.cblistTree ul {
+list-style:none;
+padding:0;
+margin:0;
+}
+.cblistTree li {
+padding:0;
+margin:0 0 0 2px;
+display:block;
+
+white-space:nowrap;
+}
+.cblistTree li.last {
+background-repeat:no-repeat;
+}
+.cblistTree div {
+padding:2px 0 2px 2px;
+margin:0;
+
+cursor:pointer;
+}
+.cblistTree div.textOnlyNode {
+padding:2px 0 2px 2px;
+
+}
+.cblistTree div.customIconNode {
+padding:2px 0 0 2px;
+
+}
+.cblistTree div.customIcon {
+padding:0 0 2px 2px;
+position:static;
+}
+.cblistTree .rootNode {
+background:none;
+margin:0;
+}
+.cblistTree .expandableNode ul {
+display:none;
+}
+
+/* expandableNode rules should come after collapsibleNode rules so that they
+* take precedence. In a multiple-level dept tree, both collapsible and 
+* expandable rules could apply at once since we can't use child or first-child
+* selectors (ie7-quirks); but collapsible takes precedence.
+*/
+.cblistTree .collapsibleNode div.expandableSubnode {
+
+}
+.cblistTree .collapsibleNode div.expandableSubnode-textOnlyNode, .listTree .collapsibleNode div.expandableSubnode-customIconNode {
+
+}
+.cblistTree .expandableNode div.expandableSubnode {
+
+}
+.cblistTree .expandableNode div.expandableSubnode-textOnlyNode, .listTree .expandableNode div.expandableSubnode-customIconNode {
+
+}
+
+.cblistTree .checkBox {
+background: transparent url(/14-3-2012/common/listTree/checkoff.gif) no-repeat 1px 2px;
+padding:0 0 0 15px;
+}
+.cblistTree .checkOff {
+}
+.cblistTree .checkOn {
+background-image:url(/14-3-2012/common/listTree/checkon.gif);
+}
+.cblistTree .checkDis {
+background-image:url(/14-3-2012/common/listTree/checkdis.gif);
+}
+html {
+}
+
+.SnapHeader
+{
+color: #ffffff;
+ background-color: #6699CC;
+ font-family: Tahoma;
+font-weight: bold;
+font-size: 11px;
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+border-spacing: 0px;
+border-collapse: collapse;
+width: 100%;
+border: none;
+/***
+padding-top: 2px;
+padding-left: 5px;
+filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= '#003499' , EndColorStr= '#6698CB' );
+/***/
+cursor: move;
+height: 12px;
+}
+
+.SnapHeaderClosed
+{
+color: #ffffff;
+ background-color: #E8E9F1;
+ font-family: Tahoma;
+font-weight: bold;
+font-size: 12px;
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+border-spacing: 0px;
+border-collapse: collapse;
+/***
+padding-top: 2px;
+padding-left: 5px;
+filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr= 'black' , EndColorStr= '#E8E9F1' );
+/***/
+width: 100%;
+border: none;
+}
+
+.SnapHeaderUp
+{
+background-image: url(/14-3-2012/common/default/up.gif);
+background-repeat:no-repeat;
+height: 16px;
+width: 16px;
+cursor: pointer;
+}
+.SnapHeaderDown
+{
+background-image: url(/14-3-2012/common/default/down.gif);
+background-repeat:no-repeat;
+height: 16px;
+width: 16px;
+cursor: pointer;
+}
+.SnapHeaderLeft
+{
+background-image: url(/14-3-2012/common/default/left.gif);
+background-repeat:no-repeat;
+height: 16px;
+width: 16px;
+cursor: pointer;
+}
+.SnapHeaderRight
+{
+background-image: url(/14-3-2012/common/default/right.gif);
+background-repeat:no-repeat;
+height: 16px;
+width: 16px;
+cursor: pointer;
+}
+.SnapHeaderX
+{
+background-image: url(/14-3-2012/common/default/x_white.gif);
+background-repeat:no-repeat;
+height: 19px;
+width: 19px;
+cursor: pointer;
+}
+.SnapHeaderWindows
+{
+background-image: url(/14-3-2012/common/default/windows.gif);
+background-repeat:no-repeat;
+height: 19px;
+width: 19px;
+cursor: pointer;
+}
+
+.SnapContentBlank
+{
+background-image: url(/14-3-2012/common/clear.gif);
+background-repeat: no-repeat;
+height: 2px;
+}
+.SnapContent
+{
+/* 
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+border-collapse: collapse;
+border-spacing: 0px;
+*/
+
+font-family: verdana;
+font-size: 11px;
+
+border: #4284b5 1px solid;
+background-color: white;
+cursor:default;
+
+padding: 3px;
+}
+
+.Dock
+{
+padding:3px;
+border:#AFAFAF 1px solid; 
+background-color:#D1D1D1;
+}
+
+.Links
+{
+ list-style-image:none;
+color:Black;
+font-size:11px;
+}
+
+.SnapDropDownCheck
+{
+width: 19px;
+}
+.SnapDropDownCheck img
+{
+display: block;
+background-color: #CCCCCC;
+}
+
+.SnapDropDownNoCheck
+{
+	width: 19px;
+}
+.SnapDropDownNoCheck img
+{
+display: none;
+background-color: #CCCCCC;
+}
+
+.SnapDropDown
+{
+	height: 19px;
+background-color: #CCCCCC;
+	cursor: pointer;
+white-space: nowrap;
+display: inline-block;
+}
+.SnapDropDownHover
+{
+background-color: #CCCCCC;
+	text-decoration: underline;
+cursor: pointer;
+white-space: nowrap;
+display: inline-block;
+}
+
+.SnapDropDownSpacer
+{
+height: 3px;
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+border-spacing: 0px;
+border-collapse: collapse;
+}
+html {
+}
+
+.buttonDropDownUp
+{
+background:url("/14-3-2012/common/default/dropdowns/down.png") no-repeat right center;
+height:18px;
+width:14px;
+margin:0px 0px 0px 0px;
+border-bottom:1px #bbbbbb solid;
+}
+.buttonDropDownDown
+{
+background:url("/14-3-2012/common/default/dropdowns/down.png") no-repeat right center;
+height:18px;
+width:14px;
+margin:0px 0px 0px 0px;
+border-bottom:1px #bbbbbb solid;
+}
+.buttonDropDownOver
+{
+background:url("/14-3-2012/common/default/dropdowns/downo.png") no-repeat right center;
+height:18px;
+width:14px;
+margin:0px 0px 0px 0px;
+border-bottom:1px #bbbbbb solid;
+}
+html {
+}
+
+.box
+{
+background: #f8f8f8 url(/14-3-2012/common/box/boxLeft.png) left repeat-y;
+margin: 0 2px 2px 0;
+}
+.boxRight
+{
+background: transparent url(/14-3-2012/common/box/boxRight.png) right repeat-y;
+}
+.boxTop
+{
+background: transparent url(/14-3-2012/common/box/boxTop.png) top repeat-x;
+}
+.boxBottom
+{
+background: transparent url(/14-3-2012/common/box/boxBottom.png) bottom repeat-x;
+}
+.boxTitle
+{
+background: transparent url(/14-3-2012/common/box/boxTopLeft.png) top left no-repeat;
+margin: 0;
+padding: 0;
+}
+.boxTitle span
+{
+display: block;
+background: transparent url(/14-3-2012/common/box/boxTopRight.png) top right no-repeat;
+padding: 10px 10px 0 10px;
+}
+.boxFooter
+{
+background: transparent url(/14-3-2012/common/box/boxBottomLeft.png) bottom left no-repeat;
+margin: 0;
+padding: 0;
+}
+.boxFooter div
+{
+background: transparent url(/14-3-2012/common/box/boxBottomRight.png) bottom right no-repeat;
+padding: 10px 10px 0 10px;
+}
+.boxContent
+{
+margin: 0 10px 0 10px;
+}
+
+.boxTopTabs
+{
+background: #efefed url(/14-3-2012/common/box/boxTop.png) 0 28px repeat-x;
+}
+.boxTopTabsRight
+{
+background: transparent url(/14-3-2012/common/box/boxTopRight.png) 100% 28px no-repeat;
+}
+
+@media print
+{
+.box
+{
+border: solid 2px #666666;
+ }
+.box, .boxRight, .boxTop, .boxBottom, .boxTitle, .boxTitle span, .boxFooter, .boxFooter div, .boxContent
+{
+background: #efefed;
+ }
+}
+
+.tabStrip
+{
+background: transparent url(/14-3-2012/common/box/boxTabLeft.png) top left repeat-y;
+height: 40px;
+margin: 0;
+padding: 0;
+font-size: 14pt;
+font-weight: bold;
+text-align: center;
+}
+.tabStrip ul
+{
+display: inline;
+margin: 0;
+padding: 0;
+}
+.tabStripLineStyle
+{
+background: #efefed url(/14-3-2012/common/box/boxTop.png) 0 28px repeat-x;
+padding: 0 0 0 6px;
+}
+.tabStrip li
+{
+display: block;
+margin: 0 2px 0 0;
+white-space: nowrap;
+float: left;
+background: transparent url(/14-3-2012/common/box/tabBack.png) 100% -100px no-repeat;
+padding: 0 17px 0 0;
+font-size: 10pt;
+}
+.tabStrip li a {
+display: block;
+cursor: pointer;
+float: left;
+color: black;
+background: transparent url(/14-3-2012/common/box/tabBack.png) 0% -100px no-repeat;
+padding: 10px 0 0 17px;
+height: 33px;
+text-align: center;
+min-width: 100px;
+text-decoration: none;
+}
+
+.tabStrip li:hover a
+{
+background-position: 0% -200px;
+}
+.tabStrip li:hover
+{
+background-position: 100% -200px;
+}
+.tabStrip li.selected a
+{
+cursor: auto;
+background-position: 0% 0;
+}
+.tabStrip li.selected
+{
+background-position: 100% 0;
+}
+.tabStrip .errorTab
+{
+color: #FF3030;
+}
+
+
+  
+.editAccrualRows
+{
+    width: 96%;    
+}
+
+.editRows .labelCell
+{
+    width: 12em;
+    height: 22px;
+    margin: 0px;
+    padding: 2px;
+    vertical-align: top;
+    text-align:left;
+	white-space: nowrap;
+}
+.editRows .labelText
+{
+    white-space: nowrap;
+}
+.editRows .requiredMark
+{
+    float: right;
+}
+.editRows .controlCell
+{
+    vertical-align: top;
+}
+.editRows .labeledColumnLayout .requiredMark
+{
+    float:none;
+}
+.controlCell .controlError
+{
+	border: 3px solid red;
+}
+.editRows .labelError .labelText
+{
+    border: 1px solid red;
+    background: #FFAAAA;
+}
+.editRows .labelText .disabled, .editRows option.disabled
+{
+    color: #808080;
+}
+.editRows option.disabled
+{
+    text-decoration: line-through;
+}
+
+.editSection
+{
+    padding-bottom: 20px;
+}
+
+.errorPanel
+{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+.errorPanel span
+{
+    font-size: 130%;
+    font-weight: bold;
+}
+.errorPanel a
+{
+    font-weight: bold;
+    color: red;
+    display: block;
+}
+.scrollingErrorPanel
+{
+    border: 1px solid black;
+    padding: 1em;
+    max-height: 50px;
+    overflow: auto;
+}
+.scrollingErrorPanel span
+{
+    font-size: 100%;
+    font-weight: bold;
+    color: red;
+    display: block;
+}
+
+.alternateMark
+{
+	font-weight: bold;
+	color: red !important;
+}
+.legend
+{
+    padding: 0.2em 0.2em 0.2em 2em;
+    float: left;
+    text-align: left;
+}
+
+.bottomButtons
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.editRowsBlockContainer
+{
+    text-align: center;
+    width: 100%;        
+}
+
+.editRowsBlock
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+.editRowsBlock .labelCell
+{
+    width: 140px;
+    margin: 0px;
+    padding: 4px;
+    vertical-align: top;
+    text-align:left;
+	white-space: nowrap;
+}
+.editRowsBlock .labelText
+{
+}
+.editRowsBlock .requiredMark
+{
+    float: right;
+}
+.editRowsBlock th
+{
+    text-align: left;
+}
+.editRowsBlock .controlCell
+{
+    vertical-align: top;
+    text-align: left;
+}
+.editRowsBlock .labelError
+{
+    border: 2px solid red;
+}
+
+
+.editPage option.disabled
+{
+    text-decoration: line-through;
+    color: #808080;
+}
+.editPage .disabled .labelText
+{
+    color: #808080;
+}
+.editPage .alignedLayoutStructure
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+#massEditConfirmationDialog div.body,
+#massEditErrorDialog div.body
+{
+    height: 350px;
+    overflow: auto;
+}
+
+.updateProgress
+{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 5px;
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.textBoxNumeric
+{
+	width: 60px;
+}
+.textBoxMoney
+{
+	width: 60px;
+}
+
+.borderlessRowLayout
+{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.saveResetMessageBox
+{
+	margin: 10px; 
+	font-weight: bold; 
+	font-style: italic; 
+	font-size: 12pt; 
+}
+
+
+.labelText {
+color: #000000;
+}
+
+.loginArea {
+background: #A4C2E0;
+color: #000000;
+}
+
+.loginAreaError {
+background: #4A87C3;
+color: #ffffff;
+}
+
+/* form page formating */
+.label {
+background: #A4C2E0;
+}
+.label, .label td {
+color: #000000;
+}
+.labelBox {
+border: 3px solid #A4C2E0;
+}
+
+.titleBox {
+border: 3px solid #A4C2E0;
+}
+.titleBox th {
+background: #A4C2E0;
+color: #000000;
+}
+
+/* color select formating */
+.colorSelect .chooserTable {
+border: 3px solid #A4C2E0;
+}
+
+/* list pages formating */
+.filterBox {
+border: 3px solid #A4C2E0;
+}
+.filterBox th {
+background: #A4C2E0;
+color: #000000;
+}
+
+.listGUI .recordList th {
+background: #4A87C3;
+color: #ffffff;
+}
+.listGUI .recordList th a {
+color: #ffffff;
+}
+.listGUI .recordList .menu {
+background: #A4C2E0;
+}
+.listGUI .recordList .colFooter {
+background: #4A87C3;
+color: #ffffff;
+}
+.listGUI .recordList .colFooter a{
+background: #4A87C3;
+color: #ffffff;
+}
+.listGUI .recordList .menuFooter {
+background: #4A87C3;
+color: #ffffff;
+}
+.listGUI .recordList .actionList {
+background: #A4C2E0;
+}
+
+.listGUI .displayList th {
+background: #4A87C3;
+color: #ffffff;
+}
+.listGUI .displayList th a {
+color: #ffffff;
+}
+.listGUI .displayList td {
+background: #A4C2E0;
+color: #000000;
+}
+.listPage .treeNodeDown {
+background-color: #A4C2E0;
+color: #000000;
+}
+.listPage .dataGrid .rowSelect td {
+background-color: #4A87C3;
+color: #ffffff;
+}
+.listPage .treeNodeSelect {
+background-color: #4A87C3 !important;
+color: #ffffff !important;
+}
+.listPage .dragItem {
+background: #4A87C3;
+color: #ffffff;
+}
+.listPage .viewRow .panel .cap1 {
+background-color: #4A87C3;
+}
+.listPage .viewRow .panel .cap2 {
+background-color: #4A87C3;
+}
+.listPage .viewRow .panel h2 {
+background-color: #4A87C3;
+color: #ffffff;
+}
+.listPage .viewRow .panel h2 a {
+color: #ffffff;
+}
+
+
+
+/* menu formating */
+.sideMenu, .sideMenuSmall {
+background-color: #4A87C3;
+color: #ffffff;
+}
+.sideMenu ul li.expandable ul li, ul li.collapsible ul li, .sideMenu ul li.heading ul li {
+color: #ffffff;
+}
+.sideMenu a, .sideMenu .sideMenuHeader a {
+color: #ffffff;
+}
+.sideMenu a:hover, .sideMenu .sideMenuHeader a:hover {
+color: #ffff00;
+}
+
+#mainMenu {
+background-color: #4A87C3;
+color: #ffffff;
+}
+#mainMenu a, #mainMenu .menuSection .menuSectionHeading {
+color: #ffffff;
+}
+
+.helpMenu {
+background: #336699;
+ }
+
+.classicReportsIcon {
+vertical-align: middle;
+margin: 0px 0px 0px 4px;
+padding: 0;
+}
+
+/* timesheet formating */
+.tsGUI .timesheet th {
+background: #4A87C3;
+color: #ffffff;
+}
+.tsGUI .timesheet th a {
+color: #ffffff;
+}
+.tsGUI .timesheet .filterHeading {
+background: #a0b4ce;
+ color: black;
+}
+.tsGUI .timesheet .weekday {
+background: #A4C2E0;
+color: #000000;
+}
+.tsGUI .timesheet .holiday, .tsGUI .timesheet .durationTitle {
+background: #81ABD4;
+color: #000000;
+}
+.tsGUI .timesheet .etcTitle, .tsGUI .timesheet .inTitle, .tsGUI .timesheet .outTitle {
+background: #A4C2E0;
+color: #000000;
+}
+.tsGUI .timesheet .evenRow td, .tsGUI .timesheet .evenRow .etcCell {
+background: #A4C2E0;
+color: #000000;
+}
+.tsGUI .timesheet .oddRow td, .tsGUI .timesheet .oddRow .etcCell {
+background: #90B5D9;
+color: #000000;
+}
+.tsGUI .timesheet .evenRow td td, .tsGUI .timesheet .oddRow td td {
+background: transparent;
+}
+.tsGUI .timesheet .taskTimeOffFooter {
+background: #A4C2E0;
+}
+.tsGUI .timesheet .dayHeaderRow td.normalday a {
+color: #385ac6;
+ }
+.tsGUI .timesheet .dayHeaderRow td.dayoff a {
+color: #688ab6;
+ }
+.tsGUI .timesheet .dayTotalRow td {
+background: #90B5D9;
+color: #000000;
+}
+.tsGUI .timesheet .warning, .tsGUI .timesheet .columnTotalRow td {
+background: #4A87C3;
+color: #ffffff;
+}
+.tsGUI .cellInfoBar {
+background: #A4C2E0;
+color: #000000;
+}
+.tsGUI .commentView th, .tsGUI .commentTable th, .tsGUI .approvalDetailsTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.tsGUI .summaryTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.tsGUI textarea#comment {
+resize: none;
+}
+
+/* expense sheet formating */
+.expGUI .expense th, .expGUI .summaryTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+.expGUI .expense .menu {
+background: #A4C2E0;
+color: #000000;
+}
+.expGUI .expense td.actionBar {
+background: #A4C2E0;
+color: #000000;
+}
+.expGUI .approvalDetailsTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.expenseReceipt h1 {
+background-color: #4A87C3;
+color: #ffffff;
+height: 60px;
+text-align: center;
+font-weight: bold;
+font-size: 16pt;
+margin: 0;
+padding: 12px 0px 0px 0px;
+}
+
+.expenseReceipt h1 img {
+vertical-align: middle;
+border: none;
+}
+
+/* calendar formating */
+.calendar {
+border: solid 2px #ffffff;
+}
+.calendar td {
+border: solid 1px #4A87C3;
+}
+.calendar .info, .calendar .info a, .calendar .info a:hover {
+background: #4A87C3;
+color: #ffffff;
+}
+.calendar .colHeading {
+background: #4A87C3;
+color: #ffffff;
+}
+.calendar .unused {
+background-color: #B0B0B0;
+color: #000000;
+ }
+.calendar .holiday, .calendar .holiday a, .calendar .holiday a:hover {
+background: #81ABD4;
+color: #000000;
+}
+.calendar .weekday, .calendar .weekday a, .calendar .weekday a:hover {
+background: #A4C2E0;
+color: #000000;
+}
+.calendar .overduePeriod, .calendar .overduePeriod a, .calendar .overduePeriod a:hover {
+background: #cf122e;
+color: #ffffff;
+}
+.calendar .currentPeriod, .calendar .currentPeriod a, .calendar .currentPeriod a:hover {
+background: #3973AE;
+color: #ffffff;
+}
+
+/* report formating */
+.report .reportFilter {
+background: #A4C2E0;
+}
+.report .reportFilter td {
+color: #000000;
+}
+
+div.collapsableContainerHeader {
+background: #4A87C3;
+color: #ffffff;
+}
+div.collapsableContainerHeaderShrunk {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.ReportHeadingRow
+{
+background: #4A87C3;
+color: #ffffff;
+}
+.ReportGrandTotal
+{
+background-color: #A4C2E0;
+color: #000000;
+}
+
+.RptTsRow
+{
+background: #A4C2E0;
+color: #000000;
+}
+.RptTsAltRow
+{
+background: #90B5D9;
+color: #000000;
+}
+.RptTsTotalRow
+{
+background: #4A87C3;
+color: #ffffff;
+}
+.RptTsHeaderRow td
+{
+background: #4A87C3;
+color: #ffffff;
+}
+.RptTsCellHeader
+{
+background: #A4C2E0;
+color: #000000;
+}
+
+.dashboardHeading {
+border: 3px solid #A4C2E0;
+}
+.dashboardHeading h4 {
+background: #A4C2E0;
+color: #000000;
+}
+
+
+/* expense sheet formating */
+.expGUI .expense th, .expGUI .summaryTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+.expGUI .expense .menu {
+background: #A4C2E0;
+color: #000000;
+}
+.expGUI .expense td.actionBar {
+background: #A4C2E0;
+color: #000000;
+}
+.expGUI .approvalDetailsTable th {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.RptExpHeaderRow, .RptExpCurrencyHeader
+{
+background: #4A87C3;
+color: #ffffff;
+}
+
+.divDropDownList li.selected {
+background-color: #A4C2E0;
+}
+.divDropDownList li.selected a {
+color: #000000;
+}
+.divDropDownList li a:hover {
+background-color: #4A87C3;
+color: #ffffff;
+}
+
+/* Software update information table */
+.newsDisplayTable {
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 3px solid #A4C2E0;
+margin-bottom: 2em;
+}
+
+.newsDisplayTable tr.newsDisplayHeader {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.newsDisplayTable tr.newsDisplayHeader td {
+padding: 0.2em;
+font-size: 130%;
+}
+
+.newsDisplayTable tr.newsDisplayHeader td + td {
+text-align: right;
+}
+
+.newsDisplayTable tr.newsDisplayContent td {
+padding: 1em;
+border-left: 3px solid #A4C2E0;
+border-right: 3px solid #A4C2E0;
+}
+
+.newsDisplayTable tr.newsDisplayNoData td {
+padding: 3em;
+text-align: center;
+border-top: 3px solid #A4C2E0;
+}
+
+#softwareUpdateHeaderTable {
+font-weight: bold;
+margin: 1em auto;
+}
+
+#softwareUpdateHeaderTable tr td {
+padding-right: 2em;
+}
+
+.softwareUpdateCalculatedInfo {
+border: 3px solid yellow;
+padding: 0.5em;
+margin: 1.5em 1em 0.5em;
+}
+
+.softwareUpdateGood {
+border: 3px solid green;
+}
+
+.softwareUpdateBad {
+border: 3px solid red;
+}
+
+.popupDialog {
+background: #ffffff;
+ border: 3px solid #A4C2E0;
+padding: 2px 2px 2px 2px;
+width: 75%;
+}
+
+.popupTitleBar {
+background: #4A87C3;
+color: #ffffff;
+width: 100%;
+}
+
+.popupBackground{
+background-color: Gray;
+filter: alpha(opacity=75);
+opacity: 0.75;
+overflow: visible;
+}
+
+.InlinePopup
+{
+border-color: #A4C2E0;
+background-color: #FFFFFF;
+ }
+
+.InlinePopup .header
+{
+color: #ffffff;
+background-color: #4A87C3;
+}
+
+.modalDialog {
+border-color: #A4C2E0;
+}
+
+.modalTitleBar {
+background: #4A87C3;
+color: #ffffff;
+}
+
+.TimeOffCalendar .calendar .header
+{
+color: #ffffff;
+background-color: #4A87C3;
+}
+
+.TimeOffCalendar .header span
+{
+color: #ffffff;
+}
+
+.TimeOffCalendar .titleBar
+{
+color: #ffffff;
+background-color: #4A87C3;
+}
+
+.miniCalendar
+{
+border-color: #ffffff;
+background-color: #4A87C3;
+color: #ffffff;
+}
+
+.miniCalendar .nextPrevStyle
+{
+color: #ffffff;
+}
+
+.miniCalendar .dayStyle
+{
+background: #A4C2E0;
+color: #000000;
+}
+
+.miniCalendar .weekendDayStyle
+{
+background: #81ABD4;
+color: #000000;
+}
+
+.miniCalendar .todayDayStyle
+{
+background: #3973AE;
+color: #ffffff;
+}
+
+.editRowsBlock .labelCell
+{
+background-color: #A4C2E0;
+}
+
+
+
+
+
+/* ******************* ExpandableOptionList Class Style ******************* */
+
+.expandableOptionList
+{
+}
+.expandableOptionList .collapsable
+{
+border: 1px solid #A4C2E0;
+margin: 20px 0px 0px 0px;
+}
+.expandableOptionList .collapsableHeader
+{
+padding: 3px;
+background: #4A87C3;
+color: #ffffff;
+}
+.expandableOptionList .collapsableHeader a
+{
+background: #4A87C3;
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+}
+.expandableOptionList .collapsableToggleButton
+{
+}
+.expandableOptionList .collapsableCheckbox
+{
+}
+.expandableOptionList .collapsableItemText
+{
+}
+.expandableOptionList .collapsableContent
+{	
+padding: 0px 0px 8px 0px;
+margin: 0px 0px 10px 0px;
+border-left: 1px solid #A4C2E0;
+border-right: 1px solid #A4C2E0;
+border-bottom: 1px solid #A4C2E0;
+
+}
+
+
+
+/* Styles for Replicon.TimeSheet.UI.reports.FormulaEditControl */
+.formulaEditControl
+{
+border: 1px solid #8F97A2;
+ margin-top: 5px;
+padding: 2px;
+}
+.formulaEditControl .formula
+{
+/* IE7 interprets a relative width (eg. 99%) as relative to the textbox
+content size when loaded, which will cause the textbox to break its box */
+width: 527px;
+}
+.customColumnsTitle
+{
+font-weight: bold;
+}
+#udcEdit table.button
+{
+margin-bottom: 10px;
+}
+#udcEdit table.columnTable
+{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+#udcEdit div.columnNoColumns
+{
+margin-top: 10px;
+}
+
+
+/* Themed styles for Replicon.UI.Controls.DateSelector */
+.dscal td.dsday:hover, .dscal td.dsday.dshover {
+color: #ffffff !important;
+background-color: #4A87C3 !important;
+}
+.dscal td.dsselected {
+color: #000000 !important;
+background-color: #A4C2E0 !important;
+}
+.dsshortcut:hover, .dsshortcut.dshover {
+color: #ffffff !important;
+background-color: #4A87C3 !important;
+}
+
+
+/* styles for the main.aspx */
+.mainMenu {
+color: #ffffff;
+background-color: #4A87C3;
+}
+.mainMenu a {
+color: #ffffff;
+}
+.mainMenu a:hover {
+color: #ffffff;
+}
+
+/* .NET timesheet menu calendar */
+.tscal 
+{
+background: #4A87C3;
+color: #ffffff;
+border: #ffffff solid 2px;
+}
+.tsday
+{
+background: #A4C2E0;
+color: #000000;
+border: #4A87C3 solid 1px;
+}
+.tsday a
+{
+color: #000000;
+}
+.tsday a:hover
+{
+color: #000000;
+}
+.tsdayoff 
+{
+background: #81ABD4;
+color: #000000;
+}
+.tsdayoff a
+{
+color: #000000;
+}
+.tsdayoff a:hover
+{
+color: #000000;
+}
+.tsdayothermonth
+{
+color: #888888;
+ background-color: rgb(176, 176, 176);
+}
+.tsdayothermonth a
+{
+color: #888888;
+ }
+.tsdayothermonth a:hover
+{
+color: #888888;
+ }
+.tscaloverdue 
+{
+background: #cf122e;
+color: #ffffff;
+}
+.tscaloverdue a
+{
+color: #ffffff;
+}
+.tscaloverdue a:hover
+{
+color: #ffffff;
+}
+.tscalcurrent 
+{
+background: #3973AE;
+color: #ffffff;
+}
+.tscalcurrent a
+{
+color: #ffffff;
+}
+.tscalcurrent a:hover
+{
+color: #ffffff;
+}
+.tstoday
+{
+color: #ffffff;
+}
+.tstoday a
+{
+color: #ffffff;
+}
+.tstoday a:hover
+{
+color: #ffffff;
+}

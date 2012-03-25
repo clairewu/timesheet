@@ -1,0 +1,265 @@
+function HierarchyTreeNode(id,parent,text,iconClass)
+{this.id=id;this.parent=parent;this.childNodes=new Array();this.collapsed=false;this.text=text;this.iconClass=null;if(iconClass)
+this.iconClass=iconClass;this.elementHovered=null;this.bStateMutex=false;this.bShowIcon=true;this.bReadOnly=false;this.bDisabled=false;if(parent!=null)
+this.parent.childNodes.push(this);}
+HierarchyTreeNode.prototype.setStateTextOnly=function()
+{this.bStateMutex=true;this.bShowIcon=false;}
+HierarchyTreeNode.prototype.setStateDisabled=function(bValue)
+{this.bDisabled=bValue;}
+HierarchyTreeNode.prototype.getDisabled=function()
+{return this.bDisabled;}
+HierarchyTreeNode.prototype.setStateReadOnly=function(bValue)
+{this.bReadOnly=bValue;}
+HierarchyTreeNode.prototype.getId=function()
+{return this.id;}
+HierarchyTreeNode.prototype.getChildNodes=function()
+{return this.childNodes;}
+HierarchyTreeNode.prototype.getParent=function()
+{return this.parent;}
+HierarchyTreeNode.prototype.getCollapsed=function()
+{return this.collapsed;}
+HierarchyTreeNode.prototype.setCollapsed=function(s)
+{this.collapsed=s;}
+HierarchyTreeNode.prototype.getText=function()
+{return this.text;}
+HierarchyTreeNode.prototype.setText=function(t)
+{this.text=t;}
+HierarchyTreeNode.prototype.setShowIcon=function(bEnabled)
+{this.bShowIcon=bEnabled;}
+HierarchyTreeNode.prototype.getIconClass=function()
+{return this.iconClass;}
+HierarchyTreeNode.prototype.setIconClass=function(iconClass)
+{this.iconClass=iconClass;}
+HierarchyTreeNode.prototype.getHierarchyText=function()
+{var hSeparator=' / ';var hText=this.getText();var p=this.getParent();while(!IsNullOrUndefined(p))
+{hText=p.getText()+hSeparator+hText;p=p.getParent();}
+return hText;}
+function HierarchyTree(id,rootNodeList,nodeMap)
+{this.id=id;this.readOnlyHomeId=null;this.selectedItemIdList=new Object();this.idAll='All';this.idNone='None';this.idNoChange='NoChange';this.textAll=window['ResourcesInfrastructure']['All'];this.textNone=window['ResourcesInfrastructure']['None'];this.textNoChange=window['ResourcesInfrastructure']['NoChange'];this.enableCheckBox=false;this.enableCheckBoxTriState=false;this.onClickCheckBox=new REvent();this.rootNodeList=IsNullOrUndefined(rootNodeList)?new Array():rootNodeList;this.nodeMap=IsNullOrUndefined(nodeMap)?new Object():nodeMap;this.nodeImageMap=new Object();this.onClickItem=new REvent();this.onExpand=new REvent();this.onCollapse=new REvent();this.onMouseOver=new REvent();this.onMouseOut=new REvent();this.onSelectItem=new REvent();RegisterControl.statics.getInstance().add(this);}
+HierarchyTree.prototype.setReadOnlyHomeId=function(id)
+{this.readOnlyHomeId=id;}
+HierarchyTree.prototype.getReadOnlyHomeId=function()
+{return this.readOnlyHomeId;}
+HierarchyTree.statics=new Object();HierarchyTree.prototype.getId=function()
+{return this.id;}
+HierarchyTree.prototype.getCheckBoxId=function(nodeId)
+{return this.getId()+"CheckBox"+nodeId;}
+HierarchyTree.prototype.setEnableCheckBox=function(bEnable)
+{this.enableCheckBox=bEnable;if(bEnable==true)
+{this.onClickItem.addEventListener(new REventListener(HierarchyTree.prototype.onClickItemCheckBoxListener,this));}}
+HierarchyTree.prototype.getCheckState=function(checkBox)
+{var state=null;var className=checkBox["className"];if(className=='checkBox checkDis')
+state='checkDisabled';else if(className=='checkBox checkOn')
+state=true;else if(className=='checkBox checkOff')
+state=false;return state;}
+HierarchyTree.prototype.onClickItemCheckBoxListener=function(nodeId,nodeText)
+{var checkBoxId=this.getCheckBoxId(nodeId);var checkBox=$(checkBoxId);var state=null;if(!this.enableCheckBoxTriState)
+{var className=checkBox["className"];if(className=='checkBox checkOn')
+{state=false;checkBox["className"]='checkBox checkOff';}
+else
+{state=true;checkBox["className"]='checkBox checkOn';}}
+else
+{var className=checkBox["className"];if(className=='checkBox checkDis')
+{state='checkDisabled';checkBox["className"]='checkBox checkOn';}
+else if(className=='checkBox checkOn')
+{state=true;checkBox["className"]='checkBox checkOff';}
+else if(className=='checkBox checkOff')
+{state=false;checkBox["className"]='checkBox checkDis';}}
+this.onClickCheckBox.trigger(state,nodeId);}
+HierarchyTree.prototype.deselectAll=function(ignoreId)
+{for(var nodeId in this.nodeMap)
+{if(nodeId!=ignoreId)
+{var node=this.nodeMap[nodeId];var state=IsNullOrUndefined(this.selectedItemIdList[nodeId])?false:this.selectedItemIdList[nodeId];if(state)
+{if(this.enableCheckBox)
+{var checkBoxId=this.getCheckBoxId(nodeId);var checkBox=$(checkBoxId);checkBox["className"]='checkBox checkOff';this.onClickCheckBox.trigger(!state,nodeId);}
+this.onSelectItem.trigger(!state,nodeId);}}}}
+HierarchyTree.prototype.unselectAll=function(ignoreId)
+{if(!this.enableCheckBoxTriState)
+{this.deselectAll();return;}
+for(var nodeId in this.nodeMap)
+{var selectedState=this.selectedItemIdList[nodeId];if(selectedState==true||selectedState==false)
+{var checkBoxId=this.getCheckBoxId(nodeId);var checkBox=$(checkBoxId);checkBox["className"]='checkBox checkDis';this.selectedItemIdList[nodeId]='checkDisabled';}}}
+HierarchyTree.prototype.deselectStateMutexNodes=function(ignoreId)
+{for(var i=0;i<this.rootNodeList.length;i++)
+{var node=this.rootNodeList[i];var nodeId=node.id;if(!node.bStateMutex)
+{break;}
+else
+{var state=IsNullOrUndefined(this.selectedItemIdList[nodeId])?false:this.selectedItemIdList[nodeId];if(state)
+{if(this.enableCheckBox)
+{var checkBoxId=this.getCheckBoxId(nodeId);var checkBox=$(checkBoxId);checkBox["className"]='checkBox checkOff';this.onClickCheckBox.trigger(!state,nodeId);}
+this.onSelectItem.trigger(!state,nodeId);}}}}
+HierarchyTree.prototype.getNode=function(id)
+{return this.nodeMap[id];}
+HierarchyTree.prototype.addTextNodeToTop=function(id,text,iconClass)
+{if(IsNullOrUndefined(this.nodeMap[id]))
+{var node=new HierarchyTreeNode(id,null,text,iconClass);node.setStateTextOnly();this.nodeMap[id]=node;this.rootNodeList.splice(0,0,node);}}
+HierarchyTree.prototype.addNode=function(id,parentId,text,iconClass,bReadOnly,bDisabled)
+{var parent=null;if(parentId&&this.nodeMap[parentId])
+parent=this.nodeMap[parentId];var node=new HierarchyTreeNode(id,parent,text,iconClass);if(bReadOnly){node.setStateReadOnly(bReadOnly);}
+if(bDisabled){node.setStateDisabled(bDisabled);}
+this.nodeMap[id]=node;if(!parentId||!this.nodeMap[parentId])
+this.rootNodeList[this.rootNodeList.length]=node;}
+HierarchyTree.prototype.appendNode=function(id,text,iconClass)
+{var node=new HierarchyTreeNode(id,null,text,iconClass);this.nodeMap[id]=node;this.rootNodeList[this.rootNodeList.length]=node;var container=$(RegisterControl.statics.encodeId(this,"tree"));var list=null;for(var i=container.childNodes.length-1;0<=i&&null==list;i--)
+{if('UL'==container.childNodes[i].nodeName)
+list=container.childNodes[i];}
+if(list)
+{var li=$C('li');li.className='rootNode';var iconClass=node.getIconClass();var classes=[];if(this.readOnlyHomeId==id)
+classes[classes.length]='treeNodeReadOnly';else if(!this.enableCheckBoxTriState&&this.selectedItemIdList[id]==true&&!this.enableCheckBox)
+classes[classes.length]='treeNodeSelect';if(iconClass)
+classes[classes.length]='customIconNode';if(!node.bShowIcon)
+classes[classes.length]='textOnlyNode';var o=['<div id="'];o[o.length]=RegisterControl.statics.encodeId(this,id,"node");o[o.length]='" class="'
+o[o.length]=classes.join(' ');o[o.length]='" instanceId="'
+o[o.length]=this.getId();o[o.length]='" nodeId="'
+o[o.length]=node.getId();o[o.length]='" onmouseout="HierarchyTree.statics._mouseOut(this, event);" onclick="HierarchyTree.statics._clickItem(this, event);" onmouseover="HierarchyTree.statics._mouseOver(this, event);">';if(iconClass)
+{o[o.length]='<div class="customIcon ';o[o.length]=iconClass;o[o.length]='">';}
+o[o.length]=HierarchyTree.statics.htmlEscape(node.getText());if(iconClass)
+o[o.length]='</div>';o[o.length]='</div>';li.innerHTML=o.join('');list.appendChild(li);}
+return node;}
+HierarchyTree.prototype.removeNode=function(node)
+{if(node)
+{var childNodes=node.getChildNodes();for(var i=0,iCnt=childNodes.length;i<iCnt;i++)
+{var childNode=childNodes[i];this.removeNode(childNode);}
+for(var j=0;j<this.rootNodeList.length;j++)
+{if(this.rootNodeList[j].getId()==node.getId())
+{this.rootNodeList.splice(j,1);break;}}
+delete this.nodeMap[node.getId()];var div=document.getElementById(RegisterControl.statics.encodeId(this,node.getId(),"node"));if(div&&div.parentNode&&div.parentNode.parentNode)
+div.parentNode.parentNode.removeChild(div.parentNode);}}
+HierarchyTree.prototype.attach=function(e)
+{var container=$C("div");container["className"]="listTree";container.id=RegisterControl.statics.encodeId(this,"tree");e.appendChild(container);}
+HierarchyTree.prototype.refresh=function()
+{var container=$(RegisterControl.statics.encodeId(this,"tree"));var o=['<ul>'];var ol=1;var instance=this;function recurseNode(node,subnode)
+{var nodeId=node.getId();var iconClass=node.getIconClass();var showCheck=false;if(instance.enableCheckBox)
+{if(instance.readOnlyHomeId!=nodeId&&(!node.bReadOnly||instance.selectedItemIdList[nodeId]==true))
+{showCheck=true;if(null==iconClass)
+iconClass='folderIcon';}}
+var expandableSubnode=subnode&&!(g_browser.msie&&g_browser.majorVersion<7)&&(node.childNodes.length>0);var classes=[];if(expandableSubnode)
+classes[classes.length]='expandableSubnode';if(instance.readOnlyHomeId==nodeId)
+classes[classes.length]='treeNodeReadOnly';else if(!instance.enableCheckBoxTriState&&instance.selectedItemIdList[nodeId]==true&&!instance.enableCheckBox)
+classes[classes.length]='treeNodeSelect';if(node.bReadOnly||node.bDisabled)
+classes[classes.length]='disabled';if(iconClass)
+{classes[classes.length]='customIconNode';if(expandableSubnode)
+classes[classes.length]='expandableSubnode-customIconNode';}
+if(!node.bShowIcon)
+{classes[classes.length]='textOnlyNode';if(expandableSubnode)
+classes[classes.length]='expandableSubnode-textOnlyNode';}
+o[ol++]='<div id="';o[ol++]=RegisterControl.statics.encodeId(instance,nodeId,"node");o[ol++]='" class="'
+o[ol++]=classes.join(' ');o[ol++]='" instanceId="'
+o[ol++]=instance.getId();o[ol++]='" nodeId="'
+o[ol++]=node.getId();o[ol++]='" onmouseout="HierarchyTree.statics._mouseOut(this, event);" onclick="HierarchyTree.statics._clickItem(this, event);"';if(!node.bReadOnly)
+o[ol++]=' onmouseover="HierarchyTree.statics._mouseOver(this, event);"';o[ol++]='>';if(showCheck)
+{o[ol++]='<div id="';o[ol++]=instance.getCheckBoxId(nodeId);o[ol++]='" class="checkBox ';if(instance.selectedItemIdList[nodeId]==true)
+o[ol++]='checkOn';else if(instance.selectedItemIdList[nodeId]==false||!instance.enableCheckBoxTriState)
+o[ol++]='checkOff';else
+o[ol++]='checkDis';o[ol++]='">';}
+if(iconClass)
+{o[ol++]='<div class="customIcon ';o[ol++]=iconClass;o[ol++]='">';}
+o[ol++]=HierarchyTree.statics.htmlEscape(node.getText());if(node.bDisabled)
+o[ol++]=' ('+window['ResourcesInfrastructure']['Disabled']+')';if(showCheck)
+o[ol++]='</div>';if(iconClass)
+o[ol++]='</div>';o[ol++]='</div>';if(0<node.childNodes.length)
+{o[ol++]='<ul>';for(var i=0;i<node.childNodes.length;i++)
+{classes=[];if(0<node.childNodes[i].childNodes.length)
+{if(node.childNodes[i].getCollapsed())
+classes[classes.length]='expandableNode';else
+classes[classes.length]='collapsibleNode';}
+if(i==node.childNodes.length-1)
+classes[classes.length]='last';o[ol++]='<li class="';o[ol++]=classes.join(' ');o[ol++]='">';recurseNode(node.childNodes[i],true);o[ol++]='</li>';}
+o[ol++]='</ul>';}}
+for(var i=0;i<this.rootNodeList.length;i++)
+{o[ol++]='<li class="rootNode">';recurseNode(this.rootNodeList[i],false);o[ol++]='</li>';}
+o[ol++]='</ul>';container.innerHTML=o.join('');}
+HierarchyTree.prototype.isNodeVisible=function(nodeId)
+{for(var node=this.nodeMap[nodeId];node!=null;node=node.getParent())
+if(node.getCollapsed())
+return false;return true;}
+HierarchyTree.prototype.getSelectedItemArray=function()
+{var selectedItemArray=new Array();for(var item in this.selectedItemIdList)
+{if(this.selectedItemIdList[item]==true)
+selectedItemArray[selectedItemArray.length]=item;}
+return selectedItemArray;}
+HierarchyTree.prototype.getDeselectedItemArray=function()
+{var selectedItemArray=new Array();for(var item in this.selectedItemIdList)
+{if(this.selectedItemIdList[item]==false)
+selectedItemArray[selectedItemArray.length]=item;}
+return selectedItemArray;}
+HierarchyTree.prototype.setSelectedItemArray=function(selectedItemArray)
+{for(var i=0;i<selectedItemArray.length;i++)
+{this.selectedItemIdList[selectedItemArray[i]]=true;}}
+HierarchyTree.prototype.setDeselectedItemArray=function(deselectedItemArray)
+{for(var i=0;i<deselectedItemArray.length;i++)
+{this.selectedItemIdList[deselectedItemArray[i]]=false;}}
+HierarchyTree.statics._clickItem=function(domNode,event)
+{if(!event)
+event=window.event;var instance=$I(domNode.getAttribute('instanceId'));var node=instance.getNode(domNode.getAttribute('nodeId'));if(!node)return;var clickPos=Coordinate.Statics.findEventPosition(event);var nodePos=Coordinate.Statics.findAbsolutePos(domNode);if(17>(clickPos.x-nodePos.x))
+{if(0<node.childNodes.length&&null!=node.getParent())
+{if(!g_browser.msie||6<g_browser.majorVersion)
+{var collapsed=!node.getCollapsed();node.setCollapsed(collapsed)
+var li=domNode.parentNode;if(collapsed)
+{HierarchyTree.statics.removeCssClass(li,'collapsibleNode');HierarchyTree.statics.addCssClass(li,'expandableNode');instance.onCollapse.trigger(node);}
+else
+{HierarchyTree.statics.removeCssClass(li,'expandableNode');HierarchyTree.statics.addCssClass(li,'collapsibleNode');instance.onExpand.trigger(node);}
+return;}}}
+if(node.bReadOnly||instance.readOnlyHomeId==node.getId())
+return;if(!instance.enableCheckBox)
+{for(var id in instance.nodeMap)
+{if(id!=this.nodeId)
+instance.selectedItemIdList[id]=false;}}
+var bSelected=instance.selectedItemIdList[node.getId()];if(IsNullOrUndefined(bSelected))
+bSelected=true;else
+{if(!instance.enableCheckBoxTriState)
+{bSelected=!bSelected;}
+else
+{if(bSelected==true)
+bSelected=false;else if(bSelected==false)
+bSelected='checkDisabled';else bSelected=true;}}
+instance.selectedItemIdList[node.getId()]=bSelected;instance.onSelectItem.trigger(bSelected,node.getId());instance.onClickItem.trigger(node.getId(),node.getText());}
+HierarchyTree.statics.addCssClass=function(domNode,cssClass)
+{var classes=domNode.className.split(' ');var alreadyHasClass=false;for(var i=0;i<classes.length&&!alreadyHasClass;i++)
+if(classes[i]==cssClass)
+alreadyHasClass=true;if(!alreadyHasClass)
+{classes.push(cssClass);domNode.className=classes.join(' ');}}
+HierarchyTree.statics.removeCssClass=function(domNode,cssClass)
+{var classes=domNode.className.split(' ');for(var i=0;i<classes.length;i++)
+if(classes[i]==cssClass)
+{classes.splice(i,1);domNode.className=classes.join(' ');break;}}
+HierarchyTree.statics.htmlEscape=function(target)
+{if(0==target.length)
+return'&nbsp;';var div=document.createElement('div');var text=document.createTextNode(target);div.appendChild(text);return div.innerHTML;}
+HierarchyTree.statics._mouseOver=function(node)
+{var instance=$I(node.getAttribute('instanceId'));var domElement=$(node.id);if(!g_browser.msie||6<g_browser.majorVersion)
+instance.setMouseOverStyle(domElement);var node=instance.getNode(node.getAttribute('nodeId'));instance.onMouseOver.trigger(node)}
+HierarchyTree.statics._mouseOut=function(node)
+{var instance=$I(node.getAttribute('instanceId'));var domElement=$(node.id);instance.setMouseOutStyle(domElement);var node=instance.getNode(node.getAttribute('nodeId'));instance.onMouseOut.trigger(node)}
+HierarchyTree.prototype.setMouseOverStyle=function(domElement)
+{if(this.elementHovered!=null)
+{this.setMouseOutStyle(this.elementHovered);}
+this.elementHovered=domElement;HierarchyTree.statics.addCssClass(domElement,'treeNodeOver');}
+HierarchyTree.prototype.setMouseOutStyle=function(domElement)
+{HierarchyTree.statics.removeCssClass(domElement,'treeNodeOver');}
+HierarchyTree.prototype.addNoneOptionToNodeMap=function()
+{this.addTextNodeToTop(this.idNone,this.textNone);}
+HierarchyTree.prototype.addAllOptionToNodeMap=function()
+{this.addTextNodeToTop(this.idAll,this.textAll);}
+HierarchyTree.prototype.addNoChangeOptionToNodeMap=function()
+{this.addTextNodeToTop(this.idNoChange,this.textNoChange);}
+HierarchyTree.prototype.setOptionAllText=function(text)
+{this.textAll=text;}
+HierarchyTree.prototype.setOptionNoneText=function(text)
+{this.textNone=text;}
+HierarchyTree.prototype.setOptionNoChangeText=function(text)
+{this.textNoChange=text;}
+subclass(HierarchyTreeScrollable,HierarchyTree);function HierarchyTreeScrollable(id,rootNodeList,nodeMap)
+{HierarchyTree.call(this,id);this.width='200px';this.height='300px';this.rootNodeList=rootNodeList;this.nodeMap=nodeMap;this.onSelectItem.addEventListener(new REventListener(HierarchyTreeScrollable.prototype.changeListener,this));}
+HierarchyTreeScrollable.prototype.setSize=function(width,height)
+{this.width=width;this.height=height;}
+HierarchyTreeScrollable.prototype.attach=function(e)
+{var div=$C("div");div['className']='hierarchyTreeScrollable';div.style.width=this.width;div.style.height=this.height;HierarchyTree.prototype.attach.call(this,div);e.appendChild(div);}
+HierarchyTreeScrollable.prototype.changeListener=function(bSelected,id)
+{if(this.readOnlyHomeId==id)return;this.selectedItemIdList[id]=bSelected;var node=this.getNode(id);if(bSelected==true&&node.bStateMutex)this.deselectAll(id);var element=$(RegisterControl.statics.encodeId(this,id,"node"));if(bSelected==true&&!this.enableCheckBoxTriState)
+{if(!node.bStateMutex)
+this.deselectStateMutexNodes(id);if(!this.enableCheckBox)
+{HierarchyTree.statics.addCssClass(element,"treeNodeSelect");}}
+else
+{HierarchyTree.statics.removeCssClass(element,"treeNodeSelect");}}
+ResourcesInfrastructure={"DateSelectorSpecificDate":"Specific Date:","MoveForward1Day":"Move forward 1 day","NoChange":"\u003c No Change \u003e","All":"\u003c All \u003e","Today":"Today","Disabled":"Disabled","MoveBack1Day":"Move back 1 day","TodayDateSelector":"Today:","None":"\u003c None \u003e"};

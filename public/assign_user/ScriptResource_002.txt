@@ -1,0 +1,17 @@
+function GetFunctionObjectName(functionObject)
+{var toReturn=functionObject.name;if(!toReturn)
+{toReturn=""+functionObject
+var startOfBraces=toReturn.indexOf("(");var startPosition="function ".length;toReturn=toReturn.substr(startPosition,startOfBraces-startPosition);}
+return toReturn;}
+function CallParent(instance,parentName)
+{var parentInstance=eval("new "+parentName+"()");for(var property in parentInstance)
+{if(instance[property]==null)
+instance[property]=parentInstance[property];}}
+function subclass(childClass,superClass)
+{if(arguments.length>1)
+{if(!childClass.statics)
+childClass.statics=new Object();childClass.statics.parents={};for(var i=1;i<arguments.length;i++)
+{var parentPrototype=arguments[i].prototype;for(var property in parentPrototype)
+{childClass.prototype[property]=parentPrototype[property];}
+childClass.statics.parents[GetFunctionObjectName(arguments[i])]=arguments[i];}
+childClass.prototype["parent"]=function(parentName){CallParent(this,parentName);};}}
